@@ -1,5 +1,5 @@
 {
-  "name": "test_npm",
+  "name": "project",
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
@@ -16,5 +16,9 @@
     "gulp-uglify": "^2.0.0",
     "imagemin-jpegtran": "^5.0.2"
   },
-  "author": "Mariusz Gałka <galechus@gmail.com>"
+  "author": "IguanaStudio",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/IguanaStudio/html-scss-template.git"
+  }
 }
