@@ -1,0 +1,106 @@
+// 
+// body
+// 
+
+// font
+$default-font-family: 'Roboto', sans-serif;
+$default-font-weight: 400;
+$default-font-weight-bold: bold;
+$default-font-size: 1.6rem; 
+
+// iconfont
+$default-font-family-icon: 'Icons';
+$list-li-icon-content: '\f0da';
+$list-li-icon-size: 1rem;
+$list-li-icon-color: red;
+$list-li-icon-top: .5rem;
+$list-li-icon-right: .5rem;
+$list-li-icon-bottom: .5rem;
+$list-li-icon-left: 0;
+
+
+// line-height
+$default-line-height: 1.5;
+
+// margin/padding
+$clear-padding: 0;
+$clear-margin: 0;
+$default-padding: 0 0 2.5rem;
+$default-margin: 0 0 2.5rem;
+$list-li-padding: 0 0 0 2rem;
+$list-li-margin: 0 0 1rem;
+
+
+// colors
+$key-color-1: #000;
+$key-color-2: #ccc;
+$default-font-color: #000;
+
+// links
+$link-color: $key-color-1;
+$link-weight: $default-font-weight;
+
+// ::selection 
+$selection-bg-color: red;
+$selection-color: #fff;
+
+//
+// heading
+//
+$heading-weight: bold !default;
+$heading-color: $default-font-color;
+$heading-line-height: 1.2;
+$heading-margin: 0 0 2rem !default;
+
+// h1
+$heading-1-size: 2rem !default;
+$heading-1-weight: $heading-weight;
+$heading-1-margin: $heading-margin;
+$heading-1-color: $heading-color;
+$heading-1-line-height: $heading-line-height;
+
+// h2
+$heading-2-size: 2rem !default;
+$heading-2-weight: $heading-weight;
+$heading-2-margin: $heading-margin;
+$heading-2-color: $heading-color;
+$heading-2-line-height: $heading-line-height;
+
+// h3
+$heading-3-size: 2rem !default;
+$heading-3-weight: $heading-weight;
+$heading-3-margin: $heading-margin;
+$heading-3-color: $heading-color;
+$heading-3-line-height: $heading-line-height;
+
+// h4
+$heading-4-size: 2rem !default;
+$heading-4-weight: $heading-weight;
+$heading-4-margin: $heading-margin;
+$heading-4-color: $heading-color;
+$heading-4-line-height: $heading-line-height;
+
+// h5
+$heading-5-size: 2rem !default;
+$heading-5-weight: $heading-weight;
+$heading-5-margin: $heading-margin;
+$heading-5-color: $heading-color;
+$heading-5-line-height: $heading-line-height;
+
+// h6
+$heading-6-size: 2rem !default;
+$heading-6-weight: $heading-weight;
+$heading-6-margin: $heading-margin;
+$heading-6-color: $heading-color;
+$heading-6-line-height: $heading-line-height;
+
+// 
+// MEDIA QUERIES
+// 
+
+$xxs: 479px;
+$xs: 768px;
+$sm: 1023px;
+$md: 1199px;
+$lg: 1679px;
+

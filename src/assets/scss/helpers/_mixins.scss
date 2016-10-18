@@ -1,0 +1,21 @@
+@mixin transition($property: all, $duration: .3s, $timing-function: ease-out, $delay: 0s) {
+	transition: $property $duration $timing-function $delay;
+}
+
+@mixin hover($self: false) {
+    @if $self {
+    	@include min-screen(1200px) {
+	        &,
+	        &:hover {
+	            @content;
+	        }
+    	}
+    } @else {
+    	@include min-screen(1200px) {
+	        &:hover {
+	            @content;
+	        }
+        }
+    }
+}
+

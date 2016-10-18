@@ -1,0 +1,366 @@
+*,
+*:before,
+*:after,
+*:hover,
+*:focus {
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+    overflow-x: hidden; 
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    font-family: $default-font-family;
+    font-weight: $default-font-weight;
+    color: $default-font-color;
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    margin: $clear-margin;
+    padding: $clear-padding;
+    position: relative;
+    -webkit-appearance: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: $heading-weight;
+    color: $heading-color;
+    line-height: $heading-line-height;
+    margin: $heading-margin;
+}
+
+h1,
+.h1 {
+    font-size: $heading-1-size;
+    font-weight: $heading-1-weight;
+    margin: $heading-1-margin;
+    color: $heading-1-color;
+    line-height: $heading-1-line-height;
+}
+
+h2,
+.h2 {
+    font-size: $heading-2-size;
+    font-weight: $heading-2-weight;
+    margin: $heading-2-margin;
+    color: $heading-2-color;
+    line-height: $heading-2-line-height;
+}
+
+h3,
+.h3 {
+    font-size: $heading-3-size;
+    font-weight: $heading-3-weight;
+    margin: $heading-3-margin;
+    color: $heading-3-color;
+    line-height: $heading-3-line-height;
+}
+
+h4,
+.h4 {
+    font-size: $heading-4-size;
+    font-weight: $heading-4-weight;
+    margin: $heading-4-margin;
+    color: $heading-4-color;
+    line-height: $heading-4-line-height;
+}
+
+h5,
+.h5 {
+    font-size: $heading-5-size;
+    font-weight: $heading-5-weight;
+    margin: $heading-5-margin;
+    color: $heading-5-color;
+    line-height: $heading-5-line-height;
+}
+
+h6,
+.h6 {
+    font-size: $heading-6-size;
+    font-weight: $heading-6-weight;
+    margin: $heading-6-margin;
+    color: $heading-6-color;
+    line-height: $heading-6-line-height;
+}
+
+p {
+    margin: $default-margin;
+}
+
+strong,
+b {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    font-weight: $default-font-weight-bold;
+}
+
+em,
+i {
+    color: inherit;
+}
+
+a,
+svg {
+    @include transition();
+
+}
+
+a {
+    font-weight: $link-weight;
+    color: $link-color;
+    text-decoration: none;
+    
+    @include hover() {
+        color: red;
+    }
+}
+
+a[href^=tel] {
+    color: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+}
+
+svg {
+    width: inherit;
+    height: inherit;
+}
+
+ul {
+    padding: $clear-padding;
+    margin: $clear-margin;
+    list-style: none;
+}
+
+ol,
+ul.list-styled {
+    margin: $default-margin;
+    li {
+        margin: $list-li-margin;
+        padding: $list-li-padding;
+        position: relative;
+        &::before {
+            content: $list-li-icon-content;
+            font-family: $default-font-family-icon;
+            font-size: $list-li-icon-size;
+            color: $list-li-icon-color;
+            position: absolute;
+            top: $list-li-icon-top;
+            left: $list-li-icon-left;
+        }
+    }
+}
+
+// ul.list-styled li ul {
+//     margin-top: 1px;
+//     margin-bottom: 0;
+//     padding: 0;
+// }
+
+// ul.list-styled li ol {
+//     margin-top: 1px;
+//     margin-bottom: 0;
+// }
+
+// ul.list-styled li ul li {
+//     padding-left: 11px;
+// }
+
+// ul.list-styled li ul li:before {
+//     font-size: 0.8rem;
+//     color: #4a4d52;
+//     top: 7px;
+// }
+
+// ul.list-styled li ol li {
+//     padding-left: 0;
+// }
+
+// ul.list-styled li ol li:before {
+//     display: none;
+//     content: '';
+// }
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+small {
+    font-size: 85%;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+mark,
+.mark {
+    padding: .2rem .5rem;
+    background-color: #fcf8e3;
+}
+
+abbr[title],
+abbr[data-original-title] {
+    cursor: help;
+    border-bottom: 1px dotted #777;
+}
+
+address {
+  margin-bottom: 2rem;
+  font-style: normal;
+  line-height: 1.42857143;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+code {
+    padding: .2rem .4rem;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+}
+
+kbd {
+    padding: .2rem .4rem;
+    font-size: 90%;
+    color: #fff;
+    background-color: #333;
+    border-radius: 3px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .25);
+}
+
+kbd kbd {
+    padding: 0;
+    font-size: 100%;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+pre {
+    font-family: inherit; 
+    font-size: inherit; 
+    white-space: pre-wrap;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+pre code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+sup,
+sub {
+    font-size: 80%;
+    height: 0;
+    line-height: 1;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    bottom: 1ex;
+}
+
+sub {
+    top: .5ex;
+}
+
+hr {
+    background: #D0D0D0;
+    border: 0 none;
+    font-size: 0;
+    height: 1px;
+    line-height: 0;
+    margin: 25px 0;
+    clear: both;
+}
+
+::selection {
+    background: $selection-bg-color;
+    color: $selection-color;
+}
+
+::-moz-selection {
+    background: $selection-bg-color;
+    color: $selection-color;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: $default-margin;
+    font-family: inherit;
+}
+
+table th, table td {
+    padding: 1rem 1.5rem;
+    line-height: 1.35;
+    vertical-align: middle;
+    border: 1px #ccc solid;
+}
+
+table th {
+    font-weight: bold;
+    text-align: left;
+    background-color: #f5f5f5;
+}
+
+blockquote {
+    color: #5c5c5c;
+    background-color: #f6f6f6;
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
+    margin: $default-margin;
+    padding: 2rem 2.5rem;
+    position: relative;
+}
+
+blockquote p {
+    margin: $clear-margin;
+}
+
+blockquote cite {
+    display: block;
+    margin: .5rem 0 0;
+    color: #2D2D2D;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: $default-font-weight-bold;
+}
+
