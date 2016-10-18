@@ -41,9 +41,9 @@ var gulp = require('gulp'),
 gulp.task('default', ['serve']);
 
 
-// 
+//
 // MAIN
-// 
+//
 
 // clean
 gulp.task('clean', function(){
@@ -79,9 +79,9 @@ gulp.task('build', ['clean', 'scss-to-css', 'vendor-scripts', 'main-js'], functi
 		.pipe(gulp.dest(paths.dist.images));
 });
 
-// 
+//
 // SCRIPTS
-// 
+//
 
 // vendor scripts
 gulp.task('vendor-scripts', function(){
@@ -100,9 +100,9 @@ gulp.task('main-js', function(){
 		.pipe(browserSync.stream());
 });
 
-// 
+//
 // STYLES
-// 
+//
 gulp.task('scss-to-css', function() {
     return scss_files = gulp.src(paths.src.scss)
         .pipe(sass().on('error', sass.logError))
@@ -113,9 +113,9 @@ gulp.task('scss-to-css', function() {
 		.pipe(browserSync.stream());
 });
 
-// 
+//
 // IMAGES
-// 
+//
 
 // jump to build task
 // gulp.task('html-min', function () {
