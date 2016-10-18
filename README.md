@@ -1,1 +1,2 @@
-HTML/SCSS Template
+# HTML/SCSS Template
+HTML/SCSS Template.
