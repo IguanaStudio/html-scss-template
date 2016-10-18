@@ -1,1 +1,1 @@
-# html-scss-template
+HTML/SCSS Template
