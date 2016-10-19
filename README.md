@@ -1,1 +1,2 @@
-# html-scss-template
+# HTML/SCSS Template
+HTML/SCSS Template.

@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 	autoprefixer = require('gulp-autoprefixer'),
 	rename = require('gulp-rename'),
 	imagemin = require('gulp-imagemin'),
-		imageminJpegtran = require('imagemin-jpegtran'),
+	imageminJpegtran = require('imagemin-jpegtran'),
 	browserSync = require('browser-sync').create(),
 	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
@@ -76,6 +76,7 @@ gulp.task('build', ['clean', 'styles', 'vendor-scripts', 'main-js'], function(){
 		.pipe(gulp.dest(paths.dist.images));
 });
 
+
 // 
 // STYLES
 // 
@@ -108,9 +109,9 @@ gulp.task('styles', ['scss-to-css'], function(){
 		.pipe(browserSync.stream());
 });
 
-// 
+//
 // SCRIPTS
-// 
+//
 
 // vendor scripts
 gulp.task('vendor-scripts', function(){
@@ -129,9 +130,8 @@ gulp.task('main-js', function(){
 		.pipe(browserSync.stream());
 });
 
-// 
 // IMAGES
-// 
+//
 
 // jump to build task
 // gulp.task('html-min', function () {

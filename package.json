@@ -1,5 +1,5 @@
 {
-  "name": "test_npm",
+  "name": "project",
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
@@ -18,5 +18,9 @@
     "imagemin-jpegtran": "^5.0.2",
     "postcss-pxtorem": "^3.3.1"
   },
-  "author": "Eugene Poprotsky <eugene@poprotsky.eu> (www.poprotsky.eu)"
+  "author": "IguanaStudio",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/IguanaStudio/html-scss-template.git"
+  }
 }
