@@ -77,9 +77,9 @@ gulp.task('build', ['clean', 'styles', 'vendor-scripts', 'main-js'], function(){
 });
 
 
-// 
+//
 // STYLES
-// 
+//
 gulp.task('scss-to-css', function() {
     return gulp.src(paths.src.scss)
         .pipe(sass().on('error', sass.logError))
@@ -96,14 +96,14 @@ gulp.task('styles', ['scss-to-css'], function(){
 			rootValue: 16,
 		    unitPrecision: 5,
 		    propWhiteList: [],
-		    selectorBlackList: [],
+		    selectorBlackList: ['html'],
 		    replace: true,
 		    mediaQuery: false,
 		    minPixelValue: 0
 		})
 	];
 
-	return gulp.src(paths.src.css) 
+	return gulp.src(paths.src.css)
         .pipe(postcss(processors))
 		.pipe(gulp.dest(paths.src.css_dest))
 		.pipe(browserSync.stream());
