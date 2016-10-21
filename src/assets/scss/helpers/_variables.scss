@@ -1,12 +1,12 @@
-// 
+//
 // body
-// 
+//
 
 // font
 $default-font-family: 'Roboto', sans-serif;
 $default-font-weight: 400;
 $default-font-weight-bold: bold;
-$default-font-size: 1.6rem; 
+$default-font-size: 1.6rem;
 
 // iconfont
 $default-font-family-icon: 'Icons';
@@ -38,9 +38,10 @@ $default-font-color: #000;
 
 // links
 $link-color: $key-color-1;
+$link-color-hover: $key-color-2;
 $link-weight: $default-font-weight;
 
-// ::selection 
+// ::selection
 $selection-bg-color: red;
 $selection-color: #fff;
 
@@ -94,9 +95,9 @@ $heading-6-margin: $heading-margin;
 $heading-6-color: $heading-color;
 $heading-6-line-height: $heading-line-height;
 
-// 
+//
 // MEDIA QUERIES
-// 
+//
 
 $xxs: 479px;
 $xs: 768px;

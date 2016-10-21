@@ -11,7 +11,7 @@
 
 html,
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 html {
@@ -130,9 +130,9 @@ a {
     font-weight: $link-weight;
     color: $link-color;
     text-decoration: none;
-    
+
     @include hover() {
-        color: red;
+        color: $link-color-hover;
     }
 }
 
@@ -265,8 +265,8 @@ kbd kbd {
 }
 
 pre {
-    font-family: inherit; 
-    font-size: inherit; 
+    font-family: inherit;
+    font-size: inherit;
     white-space: pre-wrap;
     word-break: break-all;
     word-wrap: break-word;
