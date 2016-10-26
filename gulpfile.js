@@ -95,7 +95,20 @@ gulp.task('styles', ['scss-to-css'], function(){
 		pxtorem({
 			rootValue: 16,
 		    unitPrecision: 5,
-		    propWhiteList: [],
+		    propWhiteList: [
+                'font',
+                'font-size',
+                'margin',
+                'margin-top',
+                'margin-right',
+                'margin-bottom',
+                'margin-left',
+                'padding',
+                'padding-top',
+                'padding-right',
+                'padding-bottom',
+                'padding-left'
+            ],
 		    selectorBlackList: ['html'],
 		    replace: true,
 		    mediaQuery: false,
