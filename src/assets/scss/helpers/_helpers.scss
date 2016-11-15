@@ -1,3 +1,673 @@
+//
+// flex
+//
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    &--start-x {
+        justify-content: flex-start;
+    }
+    &--center-x {
+        justify-content: center;
+    }
+    &--end-x {
+        justify-content: flex-end;
+    }
+    &--space-around {
+        justify-content: space-around;
+    }
+    &--space-between {
+        justify-content: space-between;
+    }
+    &--start-y {
+        align-items: flex-start;
+    }
+    &--center-y {
+        align-items: center;
+    }
+    &--end-y {
+        align-items: flex-end;
+    }
+    &--stretch {
+        align-items: stretch;
+    }
+    &--center {
+        justify-content: center;
+        align-items: center;
+    }
+    &--inline {
+        display: inline-flex;
+    }
+    &--nowrap {
+        flex-wrap: nowrap;
+    }
+    &--wrap {
+        flex-wrap: wrap;
+    }
+    &--row {
+        flex-direction: row;
+    }
+    &--row-reverse {
+        flex-direction: row-reverse;
+    }
+    &--column {
+        flex-direction: column;
+    }
+    &--column-reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+//
+// flex-columns
+//
+.flex-col-1 {
+    &>* {
+        flex-basis: 100%;
+    }
+    @include max-screen($xxs-max) {
+        &--xxs >* {
+            flex-basis: 100% !important;
+        }
+    }
+    @include screen($xs-min, $xs-max) {
+        &--xs >* {
+            flex-basis: 100% !important;
+        }
+    }
+    @include screen($sm-min, $sm-max) {
+        &--sm >* {
+            flex-basis: 100% !important;
+        }
+    }
+    @include screen($md-min, $md-max) {
+        &--md >* {
+            flex-basis: 100% !important;
+        }
+    }
+    @include min-screen($lg-min) {
+        &--lg >* {
+            flex-basis: 100% !important;
+        }
+    }
+}
+.flex-col-2 {
+    &>* {
+        flex-basis: 50%;
+    }
+    @include max-screen($xxs-max) {
+        &--xxs >* {
+            flex-basis: 50% !important;
+        }
+    }
+    @include screen($xs-min, $xs-max) {
+        &--xs >* {
+            flex-basis: 50% !important;
+        }
+    }
+    @include screen($sm-min, $sm-max) {
+        &--sm >* {
+            flex-basis: 50% !important;
+        }
+    }
+    @include screen($md-min, $md-max) {
+        &--md >* {
+            flex-basis: 50% !important;
+        }
+    }
+    @include min-screen($lg-min) {
+        &--lg >* {
+            flex-basis: 50% !important;
+        }
+    }
+}
+.flex-col-3 {
+    &>* {
+        flex-basis: 33.33%;
+    }
+    @include max-screen($xxs-max) {
+        &--xxs >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+    @include screen($xs-min, $xs-max) {
+        &--xs >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+    @include screen($sm-min, $sm-max) {
+        &--sm >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+    @include screen($md-min, $md-max) {
+        &--md >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+    @include min-screen($lg-min) {
+        &--lg >* {
+            flex-basis: 33.33% !important;
+        }
+    }
+}
+.flex-col-4 {
+    &>* {
+        flex-basis: 25%;
+    }
+    @include max-screen($xxs-max) {
+        &--xxs >* {
+            flex-basis: 25% !important;
+        }
+    }
+    @include screen($xs-min, $xs-max) {
+        &--xs >* {
+            flex-basis: 25% !important;
+        }
+    }
+    @include screen($sm-min, $sm-max) {
+        &--sm >* {
+            flex-basis: 25% !important;
+        }
+    }
+    @include screen($md-min, $md-max) {
+        &--md >* {
+            flex-basis: 25% !important;
+        }
+    }
+    @include min-screen($lg-min) {
+        &--lg >* {
+            flex-basis: 25% !important;
+        }
+    }
+}
+
+//
+// orders
+//
+.order-1 {
+    order:-1;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            order:-1;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs-l {
+            order:-1;
+        }
+    }
+    // XS only
+    @include screen($xs-min, $xs-max) {
+        &--xs {
+            order:-1;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm-l {
+            order:-1;
+        }
+    }
+    // SM only
+    @include screen($sm-min, $sm-max) {
+        &--sm {
+            order:-1;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md-l {
+            order:-1;
+        }
+    }
+    // MD only
+    @include screen($md-min, $md-max) {
+        &--md {
+            order:-1;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            order:-1;
+        }
+    }
+}
+.order-2 {
+    order:0;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            order:0;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs-l {
+            order:0;
+        }
+    }
+    // XS only
+    @include screen($xs-min, $xs-max) {
+        &--xs {
+            order:0;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm-l {
+            order:0;
+        }
+    }
+    // SM only
+    @include screen($sm-min, $sm-max) {
+        &--sm {
+            order:0;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md-l {
+            order:0;
+        }
+    }
+    // MD only
+    @include screen($md-min, $md-max) {
+        &--md {
+            order:0;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            order:0;
+        }
+    }
+}
+
+.order-3 {
+    order:1;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            order:1;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs-l {
+            order:1;
+        }
+    }
+    // XS only
+    @include screen($xs-min, $xs-max) {
+        &--xs {
+            order:1;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm-l {
+            order:1;
+        }
+    }
+    // SM only
+    @include screen($sm-min, $sm-max) {
+        &--sm {
+            order:1;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md-l {
+            order:1;
+        }
+    }
+    // MD only
+    @include screen($md-min, $md-max) {
+        &--md {
+            order:1;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            order:1;
+        }
+    }
+}
+
+.order-last {
+    order:99;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            order:99;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs-l {
+            order:99;
+        }
+    }
+    // XS only
+    @include screen($xs-min, $xs-max) {
+        &--xs {
+            order:99;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm-l {
+            order:99;
+        }
+    }
+    // SM only
+    @include screen($sm-min, $sm-max) {
+        &--sm {
+            order:99;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md-l {
+            order:99;
+        }
+    }
+    // MD only
+    @include screen($md-min, $md-max) {
+        &--md {
+            order:99;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            order:99;
+        }
+    }
+}
+
+//
+// visible/hidden
+//
+.hidden {
+    display: none !important;
+}
+
+// 0 - XXS only
+@include max-screen($xxs-max) {
+    .visible-xxs {
+        display: block !important;
+    }
+    .hidden-xxs {
+        display: none !important;
+    }
+}
+
+// XS and lower
+@include max-screen($xs-max) {
+    .visible-xs-l {
+        display: block !important;
+    }
+    .hidden-xs-l {
+        display: none !important;
+    }
+}
+
+// XS only
+@include screen($xs-min, $xs-max) {
+    .visible-xs {
+        display: block !important;
+    }
+    .hidden-xs {
+        display: none !important;
+    }
+}
+
+// SM and lower
+@include max-screen($sm-max) {
+    .visible-sm-l {
+        display: block !important;
+    }
+    .hidden-sm-l {
+        display: none !important;
+    }
+}
+
+// SM only
+@include screen($sm-min, $sm-max) {
+    .visible-sm {
+        display: block !important;
+    }
+    .hidden-sm {
+        display: none !important;
+    }
+}
+
+// MD and lower
+@include max-screen($md-max) {
+    .visible-md-l {
+        display: block !important;
+    }
+    .hidden-md-l {
+        display: none !important;
+    }
+}
+
+// MD only
+@include screen($md-min, $md-max) {
+    .visible-md {
+        display: block !important;
+    }
+    .hidden-md {
+        display: none !important;
+    }
+}
+
+// LG and higher
+@include min-screen($lg-min) {
+    .visible-lg {
+        display: block !important;
+    }
+    .hidden-lg {
+        display: none !important;
+    }
+}
+
+
+//
+// text aligns
+//
+.text-left {
+    text-align: left;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            text-align: left;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs-l {
+            text-align: left;
+        }
+    }
+    // XS only
+    @include screen($xs-min, $xs-max) {
+        &--xs {
+            text-align: left;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm-l {
+            text-align: left;
+        }
+    }
+    // SM only
+    @include screen($sm-min, $sm-max) {
+        &--sm {
+            text-align: left;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md-l {
+            text-align: left;
+        }
+    }
+    // MD only
+    @include screen($md-min, $md-max) {
+        &--md {
+            text-align: left;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            text-align: left;
+        }
+    }
+}
+
+.text-center {
+    text-align: center;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            text-align: center;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs-l {
+            text-align: center;
+        }
+    }
+    // XS only
+    @include screen($xs-min, $xs-max) {
+        &--xs {
+            text-align: center;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm-l {
+            text-align: center;
+        }
+    }
+    // SM only
+    @include screen($sm-min, $sm-max) {
+        &--sm {
+            text-align: center;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md-l {
+            text-align: center;
+        }
+    }
+    // MD only
+    @include screen($md-min, $md-max) {
+        &--md {
+            text-align: center;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            text-align: center;
+        }
+    }
+}
+
+.text-right {
+    text-align: right;
+    // 0 - XXS only
+    @include max-screen($xxs-max) {
+        &--xxs {
+            text-align: right;
+        }
+    }
+    // XS and lower
+    @include max-screen($xs-max) {
+        &--xs-l {
+            text-align: right;
+        }
+    }
+    // XS only
+    @include screen($xs-min, $xs-max) {
+        &--xs {
+            text-align: right;
+        }
+    }
+    // SM and lower
+    @include max-screen($sm-max) {
+        &--sm-l {
+            text-align: right;
+        }
+    }
+    // SM only
+    @include screen($sm-min, $sm-max) {
+        &--sm {
+            text-align: right;
+        }
+    }
+    // MD and lower
+    @include max-screen($md-max) {
+        &--md-l {
+            text-align: right;
+        }
+    }
+    // MD only
+    @include screen($md-min, $md-max) {
+        &--md {
+            text-align: right;
+        }
+    }
+    // LG and higher
+    @include min-screen($lg-min) {
+        &--lg {
+            text-align: right;
+        }
+    }
+}
+
+//
+// bg colors
+//
+.gray-bg {
+    background-color: $bg-color-lighten; 
+}
+
+//
+// disabled scroll
+//
+.disabled-scroll {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+}
+
+// 
+// table responsive
+// 
+.table-responsive {
+    min-width: .1px;
+    overflow-x: auto;
+}
+//
+// imgs
+//
 .img-left {
     float: left;
     margin: 0 3rem 1.5rem;

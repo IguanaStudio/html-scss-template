@@ -1,23 +1,33 @@
-//
+// 
 // body
-//
+// 
+
+// colors
+$key-color-1: #ff7800;
+$key-color-2: #f75b06;
+$default-font-color: #6b6a6a;
+$heading-color: #393939;
+$bg-color-lighten: #f2f2f2;
+$bg-color-alt: #f7f7f7;
+$bg-color-darken: #1d1c1c;
+
+
 
 // font
-$default-font-family: 'Roboto', sans-serif;
+$default-font-family: 'Ubuntu', sans-serif;
 $default-font-weight: 400;
 $default-font-weight-bold: bold;
-$default-font-size: 1.6rem;
+$default-font-size: 16px; 
 
 // iconfont
-$default-font-family-icon: 'Icons';
-$list-li-icon-content: '\f0da';
-$list-li-icon-size: 1rem;
-$list-li-icon-color: red;
-$list-li-icon-top: .5rem;
-$list-li-icon-right: .5rem;
-$list-li-icon-bottom: .5rem;
+$default-font-family-icon: 'icomoon';
+$list-li-icon-content: '\e900';
+$list-li-icon-size: 10px;
+$list-li-icon-color: $key-color-1;
+$list-li-icon-top: 5px;
+$list-li-icon-right: 5px;
+$list-li-icon-bottom: 5px;
 $list-li-icon-left: 0;
-
 
 // line-height
 $default-line-height: 1.5;
@@ -25,83 +35,80 @@ $default-line-height: 1.5;
 // margin/padding
 $clear-padding: 0;
 $clear-margin: 0;
-$default-padding: 0 0 2.5rem;
-$default-margin: 0 0 2.5rem;
-$list-li-padding: 0 0 0 2rem;
-$list-li-margin: 0 0 1rem;
-
-
-// colors
-$key-color-1: #000;
-$key-color-2: #ccc;
-$default-font-color: #000;
+$default-padding: 0 0 25px;
+$default-margin: 0 0 25px;
+$list-li-padding: 0 0 0 20px;
+$list-li-margin: 0 0 10px;
 
 // links
 $link-color: $key-color-1;
-$link-color-hover: $key-color-2;
+$link-color-hover: lighten($key-color-1, 15%);
 $link-weight: $default-font-weight;
 
-// ::selection
-$selection-bg-color: red;
+// ::selection 
+$selection-bg-color: $key-color-1;
 $selection-color: #fff;
 
 //
 // heading
 //
-$heading-weight: bold !default;
-$heading-color: $default-font-color;
+$heading-weight: 700 !default;
 $heading-line-height: 1.2;
-$heading-margin: 0 0 2rem !default;
+$heading-margin: 0 0 20px !default;
 
 // h1
-$heading-1-size: 2rem !default;
+$heading-1-size: 30px !default;
 $heading-1-weight: $heading-weight;
 $heading-1-margin: $heading-margin;
 $heading-1-color: $heading-color;
 $heading-1-line-height: $heading-line-height;
 
 // h2
-$heading-2-size: 2rem !default;
+$heading-2-size: 24px !default;
 $heading-2-weight: $heading-weight;
 $heading-2-margin: $heading-margin;
 $heading-2-color: $heading-color;
 $heading-2-line-height: $heading-line-height;
 
 // h3
-$heading-3-size: 2rem !default;
+$heading-3-size: 20px !default;
 $heading-3-weight: $heading-weight;
 $heading-3-margin: $heading-margin;
 $heading-3-color: $heading-color;
 $heading-3-line-height: $heading-line-height;
 
 // h4
-$heading-4-size: 2rem !default;
+$heading-4-size: 18px !default;
 $heading-4-weight: $heading-weight;
 $heading-4-margin: $heading-margin;
 $heading-4-color: $heading-color;
 $heading-4-line-height: $heading-line-height;
 
 // h5
-$heading-5-size: 2rem !default;
+$heading-5-size: 16px !default;
 $heading-5-weight: $heading-weight;
 $heading-5-margin: $heading-margin;
 $heading-5-color: $heading-color;
 $heading-5-line-height: $heading-line-height;
 
 // h6
-$heading-6-size: 2rem !default;
+$heading-6-size: 15px !default;
 $heading-6-weight: $heading-weight;
 $heading-6-margin: $heading-margin;
 $heading-6-color: $heading-color;
 $heading-6-line-height: $heading-line-height;
 
-//
+// 
 // MEDIA QUERIES
-//
+// 
 
-$xxs: 479px;
-$xs: 768px;
-$sm: 1023px;
-$md: 1199px;
-$lg: 1679px;
+$xxs-max: 479px;
+$xs-min: 480px;
+$xs-max: 767px;
+$sm-min: 768px;
+$sm-max: 991px;
+$md-min: 992px;
+$md-max: 1199px;
+$lg-min: 1200px;
+// $lg-max: 1679px;
 
