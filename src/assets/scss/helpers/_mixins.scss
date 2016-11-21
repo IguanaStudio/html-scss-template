@@ -2,6 +2,22 @@
 	transition: $property $duration $timing-function $delay;
 }
 
+@mixin transform($transforms) {
+	transform: $transforms;
+}
+
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+ 
+@mixin scale($scale) {
+	@include transform(scale($scale));
+} 
+
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
 @mixin hover($self: false) {
     @if $self {
     	@include min-screen(1200px) {
@@ -23,4 +39,37 @@
     @keyframes #{$name} {
         @content;
     }
+}
+
+@mixin theme-generator($color) {
+    h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+	    color: $color;
+	}
+	
+    a {
+	    @include hover() {
+	        color: darken($color, 15%);
+	    }
+	}
+	
+    hr {
+    	background-color: $color;	
+    }
+    
+    mark,
+	.mark {
+		color: inherit;
+	    background-color: lighten($color, 18%);
+	}
 }

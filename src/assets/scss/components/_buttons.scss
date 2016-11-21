@@ -1,0 +1,44 @@
+.btn {
+	margin: 0;
+	border: 0 none;
+	overflow: visible;
+	cursor: pointer;
+	line-height: 1.2;
+	display: inline-block;
+	text-align: center;
+	text-decoration: none;
+	font-weight: $default-font-weight;
+	padding: 25px 40px;
+	background: #ffcad5;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #FFF;
+	font-family: $default-font-family;
+	letter-spacing: 0.1em;
+	border-radius: 3px;
+	@include transition();
+	@include hover() {
+        border-bottom: 0 none;
+		text-decoration: none;
+		background-color: $key-color-2;
+		color: #FFF;
+    }
+	&-block {
+		display: block;
+		width: 100%;
+		min-width: 0;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	&-xs {}
+	&-sm {
+		padding: 18px 35px;
+	}
+	&-lg {}
+}
+
+
+
+
+
+

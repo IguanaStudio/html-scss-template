@@ -1,0 +1,30 @@
+.footer {
+	color: #cd9ea8;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 30px 0;
+	p {
+		margin-bottom: 0;
+	}
+	&__copy {
+		
+	}
+	&__nav {
+		ul {
+			li {
+				display: inline-block;
+				margin: 0 15px;
+				a {
+					color: #cd9ea8;
+					@include hover() {
+				        color: $link-color;
+				    }
+				}
+			}
+		}
+	}
+}
+
+
+
+

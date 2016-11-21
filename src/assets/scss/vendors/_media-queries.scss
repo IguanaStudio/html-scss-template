@@ -69,6 +69,30 @@
   }
 }
 
+@mixin max-screen-md() {
+  @include mq($max-width: $md-max) {
+    @content;
+  }
+}
+
+@mixin max-screen-sm() {
+  @include mq($max-width: $sm-max) {
+    @content;
+  }
+}
+
+@mixin max-screen-xs() {
+  @include mq($max-width: $xs-max) {
+    @content;
+  }
+}
+
+@mixin max-screen-xxs() {
+  @include mq($max-width: $xxs-max) {
+    @content;
+  }
+}
+
 // --- hdpi --------------------------------------------------------------------
 
 @mixin hdpi($ratio: 1.3) {

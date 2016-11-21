@@ -1,0 +1,38 @@
+.download {
+	margin: $default-margin;
+	li {
+		margin: 0 0 15px;
+		padding: 0;
+		font-weight: $default-font-weight;
+		a {
+			display: inline-block;
+			font-weight: $default-font-weight;
+			color: $default-font-color;
+			position: relative;
+			padding-left: 40px;
+			@include transition();
+			&:before {
+				content: "\e90f";
+				font-family: 'Icons';
+				font-size: 25px;
+				color: $key-color-1;
+				position: absolute;
+				top: -5px;
+				left: 1px;
+				@include transition(left);
+			}
+			span {
+				color: lighten($default-font-color, 40%);
+				font-weight: 300;
+			}
+			@include hover() {
+		        text-decoration: none;
+				color: $key-color-2;
+				padding-left: 50px;
+				&:before {
+					left: 11px;
+				}
+		    }
+		}
+	}	
+}

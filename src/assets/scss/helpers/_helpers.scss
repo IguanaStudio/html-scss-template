@@ -481,7 +481,6 @@
     }
 }
 
-
 //
 // text aligns
 //
@@ -642,13 +641,6 @@
 }
 
 //
-// bg colors
-//
-.gray-bg {
-    background-color: $bg-color-lighten; 
-}
-
-//
 // disabled scroll
 //
 .disabled-scroll {
@@ -665,20 +657,92 @@
     min-width: .1px;
     overflow-x: auto;
 }
+
 //
 // imgs
 //
 .img-left {
     float: left;
-    margin: 0 3rem 1.5rem;
+    margin: 5px 30px 15px 0;
 }
 
 .img-center {
     text-align: center;
-    margin: 0 0 1.5rem;
+    margin: 0 0 15px;
 }
 
 .img-right {
     float: right;
-    margin: 0 0 1.5rem 3rem;
+    margin: 0 0 15px 30px;
+}
+
+// 
+// embed, iframe
+// 
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border: 0;
+}
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}
+
+//
+// background colors
+//
+.bg-white {
+	background-color: #FFF;
+}
+
+.bg-pink {
+	background-color: #f9f1f3;
+	color: $color-pink-darken;
+	@include theme-generator($color-pink);
+}
+
+
+//
+// others
+//
+.fullhd-limiter {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.preload {
+	display: none;
+}
+
+.relative {
+	position: relative;
+}
+
+.disabled {
+	pointer-events: none;
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+html.is-open,
+.is-open body {
+	overflow-y: hidden;
 }

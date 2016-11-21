@@ -1,3 +1,187 @@
-html {
-	background: white;
+.top {
+	padding: 40px 0;
+	@include transition();
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 990;
+	&__logo {
+		float: left;
+		margin-left: 15px;
+		white-space: nowrap;
+		a {
+			@include hover() {
+		        img {
+		        	opacity: 0.5;
+		        }
+		    }
+		}
+		span {
+			font-size: 16px;
+			margin-right: 15px;
+			line-height: 1;
+		}
+		img {
+			@include transition();
+			width: 207px;
+		}
+	}
+	&__nav {
+		float: right;
+		margin-right: 15px;
+	}
+	.nav {
+		ul {
+			float: left;
+			margin-right: 130px;
+			li {
+				float: left;
+				position: relative;
+				a {
+					display: block;
+					color: #000;
+					padding: 13px 0;
+					@include hover() {
+				        color: #36bddf;
+				        &:before {
+				        	width: 100%;
+				        }
+				    }
+				    &:before {
+						background-color: #2ec5f0;
+					    bottom: 0;
+					    content: " ";
+					    height: 3px;
+					    left: 50%;
+						transform: translateX(-50%);
+					    position: absolute;
+					    width: 0;
+					    @include transition(width);
+					}
+				    &.active {
+				    	font-weight: 700;
+				    	color: #36bddf;
+				    	&:before {
+				    		width: 100%;
+				    	}
+				    }
+				}	
+			}
+			li + li {
+				margin-left: 70px;
+			}
+		}
+		.btn {
+			border-radius: 0;
+		}
+	}
+}
+
+.minimize {
+	.top {
+		padding: 15px 0;
+		box-shadow: 0 2px 2px rgba(0,0,0,0.025);
+		&__logo img {
+			width: 175px;
+			height: auto;
+		}
+	}
+}
+
+.menu-trigger {
+	display: none;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	cursor: pointer;
+	float: right;
+	overflow: hidden;
+	margin-right: 15px;
+	border-radius: 50%;
+	background: $key-color-1;
+	@include transition(all,.5s,ease-in-out);
+	@include rotate(0);
+	&__inner {
+		margin: 12px;
+		position: relative;
+		display: block;
+		width: 26px;
+		height: 26px;
+		span {
+			display: block;
+			position: absolute;
+			height: 4px;
+			width: 50%;
+			background: #FFF;
+			opacity: 1;
+			@include transition(all,.25s,ease-in-out);
+			@include rotate(0);
+			&:nth-child(even) {
+				right: 0;
+				border-radius: 0 4px 4px 0;
+			}
+			&:nth-child(odd) {
+				left: 0;
+				border-radius: 4px 0 0 4px;
+			}
+			&:nth-child(1), 
+			&:nth-child(2) {
+				top: 2px;
+			}
+			&:nth-child(3), 
+			&:nth-child(4) {
+				top: 11px;
+			}
+			&:nth-child(4) {
+				right: auto;
+				left: 50%;
+			}
+			&:nth-child(5), 
+			&:nth-child(6) {
+				top: 20px;
+			}	
+		}
+	}
+}
+
+.is-open {
+	.menu-trigger {
+		background-color: $key-color-2;
+		&__inner span {
+			&:nth-child(1), 
+			&:nth-child(6) {
+				@include rotate(45);
+			}
+			&:nth-child(2),
+			&:nth-child(5) {
+				@include rotate(-45);
+			}
+			&:nth-child(1) {
+				left: 3px;
+				top: 8px;
+			}
+			&:nth-child(2) {
+				right: 3px;
+				left: auto;
+				top: 8px;
+			}
+			&:nth-child(3) {
+				left: -50%;
+				opacity: 0;
+			}
+			&:nth-child(4) {
+				left: 100%;
+				opacity: 0;
+			}
+			&:nth-child(5) {
+				left: 3px;
+				top: 15px;
+			}
+			&:nth-child(6) {
+				right: 3px;
+				left: auto;
+				top: 15px;
+			}
+		}	
+	}
 }

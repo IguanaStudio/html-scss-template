@@ -1,0 +1,89 @@
+.pagination {
+    text-align: left;
+    padding: 0;
+    font-size: 85%;
+    color: $default-font-color;
+    margin: $default-margin;
+    clear: both;
+    .pages {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    ol {
+        list-style: none;
+        display: inline;
+        margin: 0; 
+        li {
+            margin: 0 2px;
+            padding: 0;
+            background: none;
+            float: left;
+            &.prev,
+            &.next {
+                a {
+                    color: #FFF;
+                    @include hover() {
+				        color: #fff;
+                        background-color: $key-color-2;
+				    }
+                }
+            }
+            &.prev {
+                margin-left: 0;
+                margin-right: 5px;
+                font-size: 10px;
+            }
+            &.next {
+                margin-right: 0;
+                margin-left: 5px;
+                font-size: 10px;
+            }
+            &.disabled {
+            	opacity: 0.5;
+            	pointer-events: none;
+				-webkit-touch-callout: none;
+				user-select: none;
+            }
+            a,
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 35px;
+                height: 35px;
+                color: #FFF;
+                font-weight: $default-font-weight-bold;
+                text-align: center;
+                @include transition();
+                background-color: $key-color-1;
+            }
+            a {
+				@include hover() {
+				    color: #FFF;
+					background-color: $key-color-2; 
+				}
+            }
+            span {
+                color: #FFF;
+                background-color: $key-color-2; 
+            }
+        }
+    }
+    @include max-screen-sm() {
+    	text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
+		ol {
+			li {
+				&:not([class]) {
+					display: none;
+				}
+				&.prev
+				&.active
+				&.next {
+					display: flex;
+				}
+			}	
+		} 
+    }
+}

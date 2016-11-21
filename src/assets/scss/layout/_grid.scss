@@ -1,0 +1,46 @@
+//
+// custom gaps
+//
+.no-gutter {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutter > [class*='col-'],
+.no-gutter > [class*='flex-'] > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.gutter-4 {
+    margin-right: -2px;
+    margin-left: -2px;
+}
+
+.gutter-4 > [class*='col-'],
+.gutter-4 > [class*='flex-'] > [class*='col-'] {
+    padding-right: 2px;
+    padding-left: 2px;
+}
+
+.gutter-12 {
+    margin-right: -6px;
+    margin-left: -6px;
+}
+
+.gutter-12 > [class*='col-'],
+.gutter-12 > [class*='flex-'] > [class*='col-'] {
+    padding-right: 6px;
+    padding-left: 6px;
+}
+
+.gutter-20 {
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.gutter-20 > [class*='col-'],
+.gutter-20 > [class*='flex-'] > [class*='col-'] {
+    padding-right: 10px;
+    padding-left: 10px;
+}

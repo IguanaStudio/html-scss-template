@@ -1,1 +1,88 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700&amp;subset=latin-ext');
+
+@font-face {
+  font-family: 'Icons';
+  src:  url('../fonts/icons.eot?c9lpec');
+  src:  url('../fonts/icons.eot?c9lpec#iefix') format('embedded-opentype'),
+    url('../fonts/icons.ttf?c9lpec') format('truetype'),
+    url('../fonts/icons.woff?c9lpec') format('woff'),
+    url('../fonts/icons.svg?c9lpec#Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ico {
+  font-family: 'Icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ico-pinterest:before {
+  content: "\e914";
+}
+.ico-chevron-right:before {
+  content: "\e912";
+}
+.ico-chevron-left:before {
+  content: "\e913";
+}
+.ico-file:before {
+  content: "\e90f";
+}
+.ico-search-plus:before {
+  content: "\e910";
+}
+.ico-search:before {
+  content: "\e911";
+}
+.ico-arrow-right:before {
+  content: "\e90c";
+}
+.ico-arrow-down:before {
+  content: "\e90d";
+}
+.ico-arrow-up:before {
+  content: "\e90e";
+}
+.ico-arrow-left:before {
+  content: "\e90b";
+}
+.ico-circle-plus:before {
+  content: "\e900";
+}
+.ico-circle-minus:before {
+  content: "\e901";
+}
+.ico-shield:before {
+  content: "\e902";
+}
+.ico-cart:before {
+  content: "\e903";
+}
+.ico-box:before {
+  content: "\e904";
+}
+.ico-mail:before {
+  content: "\e905";
+}
+.ico-marker:before {
+  content: "\e906";
+}
+.ico-facebook-logo:before {
+  content: "\e907";
+}
+.ico-instagram-logo:before {
+  content: "\e908";
+}
+.ico-twitter-logo:before {
+  content: "\e909";
+}
+.ico-youtube-logo:before {
+  content: "\e90a";
+}

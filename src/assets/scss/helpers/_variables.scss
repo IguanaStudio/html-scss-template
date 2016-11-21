@@ -3,25 +3,22 @@
 // 
 
 // colors
-$key-color-1: #ff7800;
-$key-color-2: #f75b06;
-$default-font-color: #6b6a6a;
-$heading-color: #393939;
-$bg-color-lighten: #f2f2f2;
-$bg-color-alt: #f7f7f7;
-$bg-color-darken: #1d1c1c;
+$key-color-1: #f88fa5;
+$key-color-2: #36bddf;
+$default-font-color: #384a63;
+$heading-color: #384a63;
 
-
+$bg-color-body: #FFF;
 
 // font
-$default-font-family: 'Ubuntu', sans-serif;
+$default-font-family: 'Roboto', sans-serif;
 $default-font-weight: 400;
-$default-font-weight-bold: bold;
-$default-font-size: 16px; 
+$default-font-weight-bold: 700;
+$default-font-size: 18px; 
 
 // iconfont
-$default-font-family-icon: 'icomoon';
-$list-li-icon-content: '\e900';
+$default-font-family-icon: 'Icons';
+$list-li-icon-content: '\e912';
 $list-li-icon-size: 10px;
 $list-li-icon-color: $key-color-1;
 $list-li-icon-top: 5px;
@@ -30,7 +27,7 @@ $list-li-icon-bottom: 5px;
 $list-li-icon-left: 0;
 
 // line-height
-$default-line-height: 1.5;
+$default-line-height: 1.35;
 
 // margin/padding
 $clear-padding: 0;
@@ -39,6 +36,7 @@ $default-padding: 0 0 25px;
 $default-margin: 0 0 25px;
 $list-li-padding: 0 0 0 20px;
 $list-li-margin: 0 0 10px;
+$list-sub-margin: 10px 0 0;
 
 // links
 $link-color: $key-color-1;
@@ -46,53 +44,53 @@ $link-color-hover: lighten($key-color-1, 15%);
 $link-weight: $default-font-weight;
 
 // ::selection 
-$selection-bg-color: $key-color-1;
+$selection-bg-color: lighten($key-color-1, 20%);
 $selection-color: #fff;
 
 //
 // heading
 //
-$heading-weight: 700 !default;
-$heading-line-height: 1.2;
-$heading-margin: 0 0 20px !default;
+$heading-weight: 300 !default;
+$heading-line-height: 1.25;
+$heading-margin: 0 0 25px !default;
 
 // h1
-$heading-1-size: 30px !default;
+$heading-1-size: 36px !default;
 $heading-1-weight: $heading-weight;
 $heading-1-margin: $heading-margin;
 $heading-1-color: $heading-color;
 $heading-1-line-height: $heading-line-height;
 
 // h2
-$heading-2-size: 24px !default;
+$heading-2-size: 30px !default;
 $heading-2-weight: $heading-weight;
 $heading-2-margin: $heading-margin;
 $heading-2-color: $heading-color;
 $heading-2-line-height: $heading-line-height;
 
 // h3
-$heading-3-size: 20px !default;
+$heading-3-size: 26px !default;
 $heading-3-weight: $heading-weight;
 $heading-3-margin: $heading-margin;
 $heading-3-color: $heading-color;
 $heading-3-line-height: $heading-line-height;
 
 // h4
-$heading-4-size: 18px !default;
+$heading-4-size: 24px !default;
 $heading-4-weight: $heading-weight;
 $heading-4-margin: $heading-margin;
 $heading-4-color: $heading-color;
 $heading-4-line-height: $heading-line-height;
 
 // h5
-$heading-5-size: 16px !default;
+$heading-5-size: 22px !default;
 $heading-5-weight: $heading-weight;
 $heading-5-margin: $heading-margin;
 $heading-5-color: $heading-color;
 $heading-5-line-height: $heading-line-height;
 
 // h6
-$heading-6-size: 15px !default;
+$heading-6-size: 20px !default;
 $heading-6-weight: $heading-weight;
 $heading-6-margin: $heading-margin;
 $heading-6-color: $heading-color;
@@ -101,7 +99,6 @@ $heading-6-line-height: $heading-line-height;
 // 
 // MEDIA QUERIES
 // 
-
 $xxs-max: 479px;
 $xs-min: 480px;
 $xs-max: 767px;
@@ -111,4 +108,11 @@ $md-min: 992px;
 $md-max: 1199px;
 $lg-min: 1200px;
 // $lg-max: 1679px;
+
+
+//
+// THEME
+//
+$color-pink: #f88fa5;
+$color-pink-darken: #cd9ea8;
 

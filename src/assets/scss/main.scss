@@ -1,25 +1,35 @@
 /*
-Project: GN group;
-Date create: 2016-10-18;
-Date last modification: 2016-10-18;
-Author: Mariusz Gałka;
-Company: Iguana studio;
-Version: 1.0;
+Project: fun2bemum;
+Author: Damian Bonar;
+Company: Iguana Studio;
 */
 
 @import
-    'vendor/_bootstrap.min.scss',
-    'vendor/_media-queries.scss',
-    'vendor/_magnific-popup.scss',
-    'helpers/_helpers.scss',
-    'helpers/_mixins.scss',
+    'vendors/_bootstrap.min.scss',
+    'vendors/_media-queries.scss',
+    'vendors/_magnific-popup.scss',
+    
     'helpers/_variables.scss',
+    'helpers/_mixins.scss',
+    'helpers/_helpers.scss',
+    
     'base/_normalize.scss',
     'base/_global.scss',
-    'components/_form.scss',
-    'components/_pagination.scss',
-    'layout/_breadcrumbs.scss',
+    'base/_fonts.scss',
+    
+    'components/_forms.scss',
+    'components/_paginations.scss',
+    'components/_gallery.scss',
+    'components/_files.scss',
+    'components/_buttons.scss',
+    'components/_alerts.scss',
+    'components/_lists.scss',
+    
+	'layout/_breadcrumbs.scss',
     'layout/_grid.scss',
     'layout/_header.scss',
-    'layout/_footer.scss';
+    'layout/_footer.scss',
 
+	'pages/_text.scss';
+	
+	

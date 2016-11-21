@@ -1,0 +1,23 @@
+.socials-list {
+	font-size: 20px;
+	li {
+		float: left;
+		line-height: 1;
+	}
+	li + li {
+		margin-left: 20px;
+		.ico-twitter-logo {
+			position: relative;
+			top: 1px;
+		}
+	}
+	&--grey {
+		a {
+			color: #b7b2ad;
+			@include hover() {
+		        color: $link-color;
+		    }
+		}
+	}
+}
+
