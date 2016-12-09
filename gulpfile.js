@@ -23,7 +23,7 @@ var gulp = require('gulp'),
 		  	scripts_dest: 'src/assets/js',
 		  	scripts: 'src/assets/js/*.min.js',
 		  	fonts: 'src/assets/fonts/*',
-		  	images: ['src/assets/img/*.jpg', 'src/assets/img/*.png'],
+		  	images: ['src/assets/img/*', 'src/assets/img/**/*']
 		},
 		dist: {
 		  	html: 'dist',
@@ -47,19 +47,18 @@ gulp.task('clean', function(){
 });
 
 // serve
-gulp.task('serve', ['styles', 'vendor-scripts', 'main-js'], function() {
+gulp.task('serve', ['vendor-scripts', 'main-js'], function() {
     browserSync.init({ server: ["src/"] });
 
     gulp.watch(paths.src.scss, ['scss-to-css']);
-    gulp.watch(paths.src.css, ['styles']);
     gulp.watch(paths.src.main_js, ['main-js']);
-    // gulp.watch(paths.images, ['images']);
+    gulp.watch(paths.src.vendor_scripts, ['vendor-scripts']);
     gulp.watch(paths.src.html).on('change', browserSync.reload);
 });
 
 
 // build
-gulp.task('build', ['clean', 'styles', 'vendor-scripts', 'main-js'], function(){
+gulp.task('build', ['clean', 'vendor-scripts', 'main-js'], function(){
 	var html = gulp.src(paths.src.html)
 		.pipe(gulp.dest(paths.dist.html));
 
@@ -80,22 +79,12 @@ gulp.task('build', ['clean', 'styles', 'vendor-scripts', 'main-js'], function(){
 // STYLES
 // 
 gulp.task('scss-to-css', function() {
-    return gulp.src(paths.src.scss)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer())
-        .pipe(concat('main.min.css'))
-		.pipe(cssnano())
-		.pipe(gulp.dest(paths.src.css_dest));
-});
-
-// pxtorem
-gulp.task('styles', ['scss-to-css'], function(){
-	var processors = [
-		pxtorem({
-			rootValue: 16,
-		    unitPrecision: 5,
-		    propWhiteList: [
-		    	'font',
+    var processors = [
+        pxtorem({
+            rootValue: 16,
+            unitPrecision: 5,
+            propWhiteList: [
+                'font',
                 'font-size',
                 'margin',
                 'margin-top',
@@ -114,20 +103,24 @@ gulp.task('styles', ['scss-to-css'], function(){
                 'bottom',
                 'left'
             ],
-		    selectorBlackList: [
+            selectorBlackList: [
                 'html',
                 '.menu-trigger'
             ],
-		    replace: true,
-		    mediaQuery: false,
-		    minPixelValue: 0
-		})
-	];
+            replace: true,
+            mediaQuery: false,
+            minPixelValue: 0
+        })
+    ];
 
-	return gulp.src(paths.src.css) 
+    return gulp.src(paths.src.scss)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(autoprefixer())
+        .pipe(concat('main.min.css'))
+        .pipe(cssnano())
         .pipe(postcss(processors))
-		.pipe(gulp.dest(paths.src.css_dest))
-		.pipe(browserSync.stream());
+        .pipe(gulp.dest(paths.src.css_dest))
+        .pipe(browserSync.stream());
 });
 
 // 
