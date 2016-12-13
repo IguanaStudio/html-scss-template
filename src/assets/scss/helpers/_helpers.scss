@@ -8,55 +8,485 @@
     align-items: flex-start;
     &--start-x {
         justify-content: flex-start;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: flex-start;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: flex-start;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: flex-start;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: flex-start;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: flex-start;
+            }
+        }
     }
     &--center-x {
         justify-content: center;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: center;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: center;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: center;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: center;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: center;
+            }
+        }
     }
     &--end-x {
         justify-content: flex-end;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: flex-end;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: flex-end;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: flex-end;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: flex-end;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: flex-end;
+            }
+        }
     }
     &--space-around {
         justify-content: space-around;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: space-around;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: space-around;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: space-around;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: space-around;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: space-around;
+            }
+        }
     }
     &--space-between {
         justify-content: space-between;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: space-between;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: space-between;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               justify-content: space-between;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: space-between;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: space-between;
+            }
+        }
     }
     &--start-y {
         align-items: flex-start;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                align-items: flex-start;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-items: flex-start;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               align-items: flex-start;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-items: flex-start;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-items: flex-start;
+            }
+        }
     }
     &--center-y {
         align-items: center;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                align-items: center;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-items: center;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               align-items: center;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-items: center;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-items: center;
+            }
+        }
     }
     &--end-y {
         align-items: flex-end;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                align-items: flex-end;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-items: flex-end;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               align-items: flex-end;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-items: flex-end;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-items: flex-end;
+            }
+        }
     }
     &--stretch {
         align-items: stretch;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                align-items: stretch;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-items: stretch;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               align-items: stretch;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-items: stretch;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-items: stretch;
+            }
+        }
     }
     &--center {
         justify-content: center;
         align-items: center;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
     &--inline {
         display: inline-flex;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                display: inline-flex;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                display: inline-flex;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+               display: inline-flex;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                display: inline-flex;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                display: inline-flex;
+            }
+        }
     }
     &--nowrap {
         flex-wrap: nowrap;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-wrap: nowrap;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-wrap: nowrap;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-wrap: nowrap;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-wrap: nowrap;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-wrap: nowrap;
+            }
+        }
     }
     &--wrap {
         flex-wrap: wrap;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-wrap: wrap;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-wrap: wrap;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-wrap: wrap;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-wrap: wrap;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-wrap: wrap;
+            }
+        }
     }
     &--row {
         flex-direction: row;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-direction: row;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-direction: row;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-direction: row;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-direction: row;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-direction: row;
+            }
+        }
     }
     &--row-reverse {
         flex-direction: row-reverse;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-direction: row-reverse;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-direction: row-reverse;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-direction: row-reverse;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-direction: row-reverse;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-direction: row-reverse;
+            }
+        }
     }
     &--column {
         flex-direction: column;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-direction: column;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-direction: column;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-direction: column;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-direction: column;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-direction: column;
+            }
+        }
     }
     &--column-reverse {
         flex-direction: column-reverse;
+        @include max-screen($xxs-max) {
+            &--xxs {
+                flex-direction: column-reverse;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                flex-direction: column-reverse;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                flex-direction: column-reverse;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                flex-direction: column-reverse;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                flex-direction: column-reverse;
+            }
+        }
     }
 }
 
@@ -72,17 +502,17 @@
             flex-basis: 100% !important;
         }
     }
-    @include screen($xs-min, $xs-max) {
+    @include max-screen($xs-max) {
         &--xs >* {
             flex-basis: 100% !important;
         }
     }
-    @include screen($sm-min, $sm-max) {
+    @include max-screen($sm-max) {
         &--sm >* {
             flex-basis: 100% !important;
         }
     }
-    @include screen($md-min, $md-max) {
+    @include max-screen($md-max) {
         &--md >* {
             flex-basis: 100% !important;
         }
@@ -102,17 +532,17 @@
             flex-basis: 50% !important;
         }
     }
-    @include screen($xs-min, $xs-max) {
+    @include max-screen($xs-max) {
         &--xs >* {
             flex-basis: 50% !important;
         }
     }
-    @include screen($sm-min, $sm-max) {
+    @include max-screen($sm-max) {
         &--sm >* {
             flex-basis: 50% !important;
         }
     }
-    @include screen($md-min, $md-max) {
+    @include max-screen($md-max) {
         &--md >* {
             flex-basis: 50% !important;
         }
@@ -132,17 +562,17 @@
             flex-basis: 33.33% !important;
         }
     }
-    @include screen($xs-min, $xs-max) {
+    @include max-screen($xs-max) {
         &--xs >* {
             flex-basis: 33.33% !important;
         }
     }
-    @include screen($sm-min, $sm-max) {
+    @include max-screen($sm-max) {
         &--sm >* {
             flex-basis: 33.33% !important;
         }
     }
-    @include screen($md-min, $md-max) {
+    @include max-screen($md-max) {
         &--md >* {
             flex-basis: 33.33% !important;
         }
@@ -162,17 +592,17 @@
             flex-basis: 25% !important;
         }
     }
-    @include screen($xs-min, $xs-max) {
+    @include max-screen($xs-max) {
         &--xs >* {
             flex-basis: 25% !important;
         }
     }
-    @include screen($sm-min, $sm-max) {
+    @include max-screen($sm-max) {
         &--sm >* {
             flex-basis: 25% !important;
         }
     }
-    @include screen($md-min, $md-max) {
+    @include max-screen($md-max) {
         &--md >* {
             flex-basis: 25% !important;
         }
@@ -197,36 +627,18 @@
     }
     // XS and lower
     @include max-screen($xs-max) {
-        &--xs-l {
-            order:-1;
-        }
-    }
-    // XS only
-    @include screen($xs-min, $xs-max) {
         &--xs {
             order:-1;
         }
     }
-    // SM and lower
-    @include max-screen($sm-max) {
-        &--sm-l {
-            order:-1;
-        }
-    }
     // SM only
-    @include screen($sm-min, $sm-max) {
+    @include max-screen($sm-max) {
         &--sm {
             order:-1;
         }
     }
     // MD and lower
     @include max-screen($md-max) {
-        &--md-l {
-            order:-1;
-        }
-    }
-    // MD only
-    @include screen($md-min, $md-max) {
         &--md {
             order:-1;
         }
@@ -248,36 +660,18 @@
     }
     // XS and lower
     @include max-screen($xs-max) {
-        &--xs-l {
-            order:0;
-        }
-    }
-    // XS only
-    @include screen($xs-min, $xs-max) {
         &--xs {
             order:0;
         }
     }
     // SM and lower
     @include max-screen($sm-max) {
-        &--sm-l {
-            order:0;
-        }
-    }
-    // SM only
-    @include screen($sm-min, $sm-max) {
         &--sm {
             order:0;
         }
     }
     // MD and lower
     @include max-screen($md-max) {
-        &--md-l {
-            order:0;
-        }
-    }
-    // MD only
-    @include screen($md-min, $md-max) {
         &--md {
             order:0;
         }
@@ -300,36 +694,18 @@
     }
     // XS and lower
     @include max-screen($xs-max) {
-        &--xs-l {
-            order:1;
-        }
-    }
-    // XS only
-    @include screen($xs-min, $xs-max) {
         &--xs {
             order:1;
         }
     }
     // SM and lower
     @include max-screen($sm-max) {
-        &--sm-l {
-            order:1;
-        }
-    }
-    // SM only
-    @include screen($sm-min, $sm-max) {
         &--sm {
             order:1;
         }
     }
     // MD and lower
     @include max-screen($md-max) {
-        &--md-l {
-            order:1;
-        }
-    }
-    // MD only
-    @include screen($md-min, $md-max) {
         &--md {
             order:1;
         }
@@ -352,36 +728,18 @@
     }
     // XS and lower
     @include max-screen($xs-max) {
-        &--xs-l {
-            order:99;
-        }
-    }
-    // XS only
-    @include screen($xs-min, $xs-max) {
         &--xs {
             order:99;
         }
     }
     // SM and lower
     @include max-screen($sm-max) {
-        &--sm-l {
-            order:99;
-        }
-    }
-    // SM only
-    @include screen($sm-min, $sm-max) {
         &--sm {
             order:99;
         }
     }
     // MD and lower
     @include max-screen($md-max) {
-        &--md-l {
-            order:99;
-        }
-    }
-    // MD only
-    @include screen($md-min, $md-max) {
         &--md {
             order:99;
         }
@@ -413,16 +771,6 @@
 
 // XS and lower
 @include max-screen($xs-max) {
-    .visible-xs-l {
-        display: block !important;
-    }
-    .hidden-xs-l {
-        display: none !important;
-    }
-}
-
-// XS only
-@include screen($xs-min, $xs-max) {
     .visible-xs {
         display: block !important;
     }
@@ -433,16 +781,6 @@
 
 // SM and lower
 @include max-screen($sm-max) {
-    .visible-sm-l {
-        display: block !important;
-    }
-    .hidden-sm-l {
-        display: none !important;
-    }
-}
-
-// SM only
-@include screen($sm-min, $sm-max) {
     .visible-sm {
         display: block !important;
     }
@@ -451,18 +789,9 @@
     }
 }
 
+
 // MD and lower
 @include max-screen($md-max) {
-    .visible-md-l {
-        display: block !important;
-    }
-    .hidden-md-l {
-        display: none !important;
-    }
-}
-
-// MD only
-@include screen($md-min, $md-max) {
     .visible-md {
         display: block !important;
     }
@@ -481,6 +810,7 @@
     }
 }
 
+
 //
 // text aligns
 //
@@ -494,36 +824,18 @@
     }
     // XS and lower
     @include max-screen($xs-max) {
-        &--xs-l {
-            text-align: left;
-        }
-    }
-    // XS only
-    @include screen($xs-min, $xs-max) {
         &--xs {
             text-align: left;
         }
     }
     // SM and lower
     @include max-screen($sm-max) {
-        &--sm-l {
-            text-align: left;
-        }
-    }
-    // SM only
-    @include screen($sm-min, $sm-max) {
         &--sm {
             text-align: left;
         }
     }
     // MD and lower
     @include max-screen($md-max) {
-        &--md-l {
-            text-align: left;
-        }
-    }
-    // MD only
-    @include screen($md-min, $md-max) {
         &--md {
             text-align: left;
         }
@@ -546,36 +858,18 @@
     }
     // XS and lower
     @include max-screen($xs-max) {
-        &--xs-l {
-            text-align: center;
-        }
-    }
-    // XS only
-    @include screen($xs-min, $xs-max) {
         &--xs {
             text-align: center;
         }
     }
     // SM and lower
     @include max-screen($sm-max) {
-        &--sm-l {
-            text-align: center;
-        }
-    }
-    // SM only
-    @include screen($sm-min, $sm-max) {
         &--sm {
             text-align: center;
         }
     }
     // MD and lower
     @include max-screen($md-max) {
-        &--md-l {
-            text-align: center;
-        }
-    }
-    // MD only
-    @include screen($md-min, $md-max) {
         &--md {
             text-align: center;
         }
@@ -598,36 +892,18 @@
     }
     // XS and lower
     @include max-screen($xs-max) {
-        &--xs-l {
-            text-align: right;
-        }
-    }
-    // XS only
-    @include screen($xs-min, $xs-max) {
         &--xs {
             text-align: right;
         }
     }
     // SM and lower
     @include max-screen($sm-max) {
-        &--sm-l {
-            text-align: right;
-        }
-    }
-    // SM only
-    @include screen($sm-min, $sm-max) {
         &--sm {
             text-align: right;
         }
     }
     // MD and lower
     @include max-screen($md-max) {
-        &--md-l {
-            text-align: right;
-        }
-    }
-    // MD only
-    @include screen($md-min, $md-max) {
         &--md {
             text-align: right;
         }
@@ -638,6 +914,39 @@
             text-align: right;
         }
     }
+}
+
+//
+// bg colors
+//
+.gray-bg {
+    background-color: $bg-color-lighten; 
+}
+
+.key-color-bg {
+    background-color: $key-color-1; 
+}
+
+// absolute
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.padding-clear {
+    padding: 0 !important;
+}
+
+.margin-clear {
+    margin: 0 !important;
+}
+
+.fullhd-limiter {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
 //
@@ -656,93 +965,4 @@
 .table-responsive {
     min-width: .1px;
     overflow-x: auto;
-}
-
-//
-// imgs
-//
-.img-left {
-    float: left;
-    margin: 5px 30px 15px 0;
-}
-
-.img-center {
-    text-align: center;
-    margin: 0 0 15px;
-}
-
-.img-right {
-    float: right;
-    margin: 0 0 15px 30px;
-}
-
-// 
-// embed, iframe
-// 
-.embed-responsive {
-  position: relative;
-  display: block;
-  height: 0;
-  padding: 0;
-  overflow: hidden;
-}
-.embed-responsive .embed-responsive-item,
-.embed-responsive iframe,
-.embed-responsive embed,
-.embed-responsive object,
-.embed-responsive video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  border: 0;
-}
-.embed-responsive-16by9 {
-  padding-bottom: 56.25%;
-}
-.embed-responsive-4by3 {
-  padding-bottom: 75%;
-}
-
-//
-// background colors
-//
-.bg-white {
-	background-color: #FFF;
-}
-
-.bg-pink {
-	background-color: #f9f1f3;
-	color: $color-pink-darken;
-	@include theme-generator($color-pink);
-}
-
-
-//
-// others
-//
-.fullhd-limiter {
-	max-width: 1920px;
-	margin: 0 auto;
-}
-
-.preload {
-	display: none;
-}
-
-.relative {
-	position: relative;
-}
-
-.disabled {
-	pointer-events: none;
-	-webkit-touch-callout: none;
-	user-select: none;
-}
-
-html.is-open,
-.is-open body {
-	overflow-y: hidden;
 }
