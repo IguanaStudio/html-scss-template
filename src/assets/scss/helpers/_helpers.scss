@@ -489,8 +489,6 @@
         }
     }
 	
-	
-	
 	&--self-start-y {
 		align-self: flex-start;
 		@include max-screen($xxs-max) {
@@ -1035,7 +1033,7 @@
 }
 
 .fullhd-limiter {
-    max-width: 1920px;
+    max-width: $fullhd-limiter;
     margin: 0 auto;
 }
 
@@ -1056,13 +1054,6 @@
     min-width: .1px;
     overflow-x: auto;
 }
-
-
-
-
-
-
-
 
 .relative {
 	position: relative;
@@ -1119,16 +1110,3 @@ html.is-open,
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
