@@ -35,13 +35,11 @@ body {
     position: relative;
     -webkit-appearance: none;
     background: $bg-color-body;
-    padding-top: 145px;
     @include transition(padding-top);
+	padding-top: 135px;
 }
 
-.minimize body {
-	padding-top: 85px;
-}
+.minimize body {}
 
 h1,
 h2,
@@ -334,13 +332,13 @@ table th, table td {
     padding: 15px 25px;
     line-height: $default-line-height;
     vertical-align: middle;
-    border: 1px $key-color-1 solid;
+    border: 1px $key-color-2 solid;
 }
 
 table th {
     font-weight: $default-font-weight-bold;
     text-align: left;
-    background-color: $key-color-1;
+    background-color: $key-color-2;
     color: #FFF;
 }
 

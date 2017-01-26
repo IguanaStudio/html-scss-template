@@ -1,15 +1,17 @@
 /*
-Project: fun2bemum;
-Author: Damian Bonar;
-Company: Iguana Studio;
+Project: ...........;
+Author: ............;
+Company: Iguana Sp. z o.o.;
 */
 
 @import
-    'vendors/_bootstrap.min.scss',
+	'helpers/_variables.scss',
+	
+    'vendors/_flexboxgrid.scss',
     'vendors/_media-queries.scss',
     'vendors/_magnific-popup.scss',
+	'vendors/owl/_owl.carousel.scss',
     
-    'helpers/_variables.scss',
     'helpers/_mixins.scss',
     'helpers/_helpers.scss',
     
@@ -17,19 +19,22 @@ Company: Iguana Studio;
     'base/_global.scss',
     'base/_fonts.scss',
     
-    'components/_forms.scss',
+	'components/_alerts.scss',
+	'components/_buttons.scss',
+	'components/_files.scss',
+	'components/_forms.scss',
+	'components/_galleries.scss',
+	'components/_lists.scss',
+    'components/_maps.scss',
     'components/_paginations.scss',
-    'components/_gallery.scss',
-    'components/_files.scss',
-    'components/_buttons.scss',
-    'components/_alerts.scss',
-    'components/_lists.scss',
-    
-	'layout/_breadcrumbs.scss',
-    'layout/_grid.scss',
+	'components/_sliders.scss',
+    'components/_wysiwyg.scss',
+	
+	'layout/_grid.scss',
+	'layout/_breadcrumbs.scss', 
     'layout/_header.scss',
     'layout/_footer.scss',
-
-	'pages/_text.scss';
+	
+	'pages/_common.scss';
 	
 	

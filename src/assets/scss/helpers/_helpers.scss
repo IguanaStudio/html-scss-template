@@ -488,6 +488,93 @@
             }
         }
     }
+	
+	
+	
+	&--self-start-y {
+		align-self: flex-start;
+		@include max-screen($xxs-max) {
+            &--xxs {
+                align-self: flex-start;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-self: flex-start;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                align-self: flex-start;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-self: flex-start;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-self: flex-start;
+            }
+        }
+	}
+	&--self-center-y {
+		align-self: center;
+		@include max-screen($xxs-max) {
+            &--xxs {
+                align-self: center;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-self: center;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                align-self: center;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-self: center;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-self: center;
+            }
+        }
+	}
+	&--self-end-y {
+		align-self: flex-end;
+		@include max-screen($xxs-max) {
+            &--xxs {
+                align-self: flex-end;
+            }
+        }
+        @include max-screen($xs-max) {
+            &--xs {
+                align-self: flex-end;
+            }
+        }
+        @include max-screen($sm-max) {
+            &--sm {
+                align-self: flex-end;
+            }
+        }
+        @include max-screen($md-max) {
+            &--md {
+                align-self: flex-end;
+            }
+        }
+        @include max-screen($lg-max) {
+            &--lg {
+                align-self: flex-end;
+            }
+        }
+	}
 }
 
 //
@@ -916,18 +1003,21 @@
     }
 }
 
-//
-// bg colors
-//
-.gray-bg {
-    background-color: $bg-color-lighten; 
+.img-left {
+    float: left;
+    margin: 5px 30px 15px 0;
 }
 
-.key-color-bg {
-    background-color: $key-color-1; 
+.img-center {
+    text-align: center;
+    margin: 0 0 15px;
 }
 
-// absolute
+.img-right {
+    float: right;
+    margin: 0 0 15px 30px;
+}
+
 .absolute {
     position: absolute;
     top: 0;
@@ -966,3 +1056,79 @@
     min-width: .1px;
     overflow-x: auto;
 }
+
+
+
+
+
+
+
+
+.relative {
+	position: relative;
+}
+
+.disabled {
+	pointer-events: none;
+	-webkit-touch-callout: none;
+	user-select: none;
+}
+
+html.is-open,
+.is-open body {
+	overflow-y: hidden;
+}
+
+*[data-preload] {
+	visibility: hidden;
+	
+	&.loaded {
+		overflow: visible;
+	}
+}
+
+*[data-preloader] {
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+
+	@include max-screen-sm() {
+		height: 400px;
+	}
+
+	@include max-screen-xs() {
+		height: 300px;
+	}
+
+	&:before {
+		@include pseudo;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0; 
+		z-index: 100;
+		background: #fff url("../img/preloader.gif") no-repeat center center;
+	}
+	
+	&.loaded {
+		height: auto !important;
+		overflow: visible;
+		
+		&:before {
+			display: none;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

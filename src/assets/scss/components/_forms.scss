@@ -21,7 +21,7 @@ select,
 textarea {
     width: 100%;
     margin: 0;
-    padding: 8px 10px;
+    padding: 15px 20px;
     font-size: $default-font-size;
     color: $default-font-color;
     border: 1px solid #E2E2E2;
@@ -49,7 +49,7 @@ input[type="radio"] {
 }
 
 select {
-    padding: 7px 6px;
+    padding: 14px 18px;
 }
 
 textarea {
@@ -78,7 +78,7 @@ label {
     color: #000;
     font-size: $default-font-size;
     font-weight: $default-font-weight;
-    padding: 19px 0;
+    padding: 15px 0;
     width: 100%;
 }
 
@@ -108,32 +108,9 @@ label {
 	&-horizontal {
 		label {
 			text-align: left;
-			margin-top: 8px;
-			@include max-screen-sm() {
-				margin-top: 0;
-			}
-		}
-		.form-group {
-			margin-bottom: 10px;
-			margin-left: -15px;
-			margin-right: -15px;
-			&:before,
-			&:after {
-				display: table;
-				line-height: 0;
-				content: "";
-			}
-			&:after {
-				clear: both;
-			}	
-		}
-	}
-	&-horizontal-fixed {
-		label {
-			text-align: left;
-			margin-top: 8px;
+			margin-top: 17px;
 			float: left;
-			width: 150px;
+			width: 180px;
 			@include max-screen-sm() {
 				margin-top: 0;
 				width: 100%;
@@ -155,7 +132,7 @@ label {
 		}
 		.field-group,
 		.button-group  {
-			margin-left: 170px;
+			margin-left: 200px;
 			@include max-screen-sm() {
 				margin-left: 0;
 				clear: both;
@@ -181,7 +158,7 @@ label {
 		margin-top: 4px;
 	}
 	label {
-		margin: 0 0 0 35px;
+		margin: 0 0 0 25px;
 		overflow: hidden;
 		display: block;
 		text-align: left;

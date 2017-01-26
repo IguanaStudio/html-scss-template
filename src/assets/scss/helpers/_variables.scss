@@ -3,10 +3,10 @@
 // 
 
 // colors
-$key-color-1: #f88fa5;
-$key-color-2: #36bddf;
-$default-font-color: #384a63;
-$heading-color: #384a63;
+$key-color-1: #39c81d;
+$key-color-2: #29445a;
+$default-font-color: #000;
+$heading-color: #000;
 
 $bg-color-body: #FFF;
 
@@ -14,10 +14,11 @@ $bg-color-body: #FFF;
 $default-font-family: 'Roboto', sans-serif;
 $default-font-weight: 400;
 $default-font-weight-bold: 700;
-$default-font-size: 18px; 
-
-// iconfont
+$default-font-size: 16px; 
+$default-lead-font-size: 18px; 
 $default-font-family-icon: 'Icons';
+
+// list
 $list-li-icon-content: '\e912';
 $list-li-icon-size: 10px;
 $list-li-icon-color: $key-color-1;
@@ -107,12 +108,4 @@ $sm-max: 991px;
 $md-min: 992px;
 $md-max: 1199px;
 $lg-min: 1200px;
-// $lg-max: 1679px;
-
-
-//
-// THEME
-//
-$color-pink: #f88fa5;
-$color-pink-darken: #cd9ea8;
-
+$lg-max: 1679px;

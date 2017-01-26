@@ -8,19 +8,17 @@
 	text-align: center;
 	text-decoration: none;
 	font-weight: $default-font-weight;
-	padding: 25px 40px;
-	background: #ffcad5;
-	font-size: 14px;
+	padding: 20px 30px;
+	background: $key-color-2;
 	text-transform: uppercase;
 	color: #FFF;
 	font-family: $default-font-family;
-	letter-spacing: 0.1em;
-	border-radius: 3px;
+	border-radius: 0;
 	@include transition();
 	@include hover() {
         border-bottom: 0 none;
 		text-decoration: none;
-		background-color: $key-color-2;
+		background-color: $key-color-1;
 		color: #FFF;
     }
 	&-block {
@@ -31,9 +29,7 @@
 		padding-right: 15px;
 	}
 	&-xs {}
-	&-sm {
-		padding: 18px 35px;
-	}
+	&-sm {}
 	&-lg {}
 }
 

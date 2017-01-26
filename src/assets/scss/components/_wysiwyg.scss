@@ -3,10 +3,12 @@
 	    height: auto !important;
 	    max-width: 100% !important;
 	}
+	
 	.img {
     	&-left, 
 		&-right {
 			max-width: 45%;
+			
 			img {
 				display: block;
 			    height: auto;
@@ -19,6 +21,7 @@
 				    width: auto !important;
 		    	} 
 			}
+			
 			@include max-screen($xs-min) {
 				max-width: 100% !important;
 				float: none !important;
@@ -26,6 +29,7 @@
 				text-align: center !important;
 			}
 		}
+		
 		&-center img {
 			max-width: 100% !important;
 			height: auto !important;
@@ -36,7 +40,4 @@
 			}
 		}
     }
-    .lead {
-		font-size: 120%;
-	}
 }
