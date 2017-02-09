@@ -1,6 +1,6 @@
 $(document).ready(function(){
-	
-	
+
+
 	$('.slider').owlCarousel({
 		items: 1,
 		margin: 0,
@@ -25,25 +25,25 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
-	
-	minimize();
+
+
+	minimizeTop();
 });
 
 $(window).on('load', function(){
-	
+
 });
 
-function minimize()
+function minimizeTop()
 {
 	var scrollOffset = parseInt($('.top').data('minimize-offset')) > 0 ? parseInt($('.top').data('minimize-offset')) : false;
 	if (scrollOffset !== false)
 	{
 		$(window).scroll(function(){
 			if ($(window).scrollTop() >= scrollOffset)
-				$('body').addClass('minimize');
+				$('html').addClass('is-minimize');
 			else
-				$('body').removeClass('minimize');
+				$('html').removeClass('is-minimize');
 		}).scroll();
 	}
 }
