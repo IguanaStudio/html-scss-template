@@ -7,7 +7,15 @@
 	z-index: 500;
 	box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 	@include transition();
-	
+
+	.is-minimize & {
+		padding: 15px 0;
+
+		&__logo {
+			max-width: 115px;
+		}
+	}
+
 	&__logo {
 		margin-right: 30px;
 		max-width: 150px;
@@ -44,7 +52,7 @@
 						font-weight: 700;
 						color: $key-color-1;
 					}
-				}	
+				}
 			}
 
 			li + li {
@@ -52,19 +60,7 @@
 			}
 		}
 	}
-	
-	
-	
-	.minimize & {
-		padding: 15px 0;
 
-		&__logo {
-			max-width: 115px;
-		}
-	}
-	
-	
-	
 }
 
 
@@ -121,11 +117,11 @@
 				left: 0;
 				border-radius: 4px 0 0 4px;
 			}
-			&:nth-child(1), 
+			&:nth-child(1),
 			&:nth-child(2) {
 				top: 2px;
 			}
-			&:nth-child(3), 
+			&:nth-child(3),
 			&:nth-child(4) {
 				top: 11px;
 			}
@@ -133,10 +129,10 @@
 				right: auto;
 				left: 50%;
 			}
-			&:nth-child(5), 
+			&:nth-child(5),
 			&:nth-child(6) {
 				top: 20px;
-			}	
+			}
 		}
 	}
 }
@@ -145,7 +141,7 @@
 	.menu-trigger {
 		background-color: $key-color-2;
 		&__inner span {
-			&:nth-child(1), 
+			&:nth-child(1),
 			&:nth-child(6) {
 				@include rotate(45);
 			}
@@ -179,6 +175,6 @@
 				left: auto;
 				top: 15px;
 			}
-		}	
+		}
 	}
 }
