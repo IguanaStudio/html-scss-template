@@ -488,7 +488,7 @@
             }
         }
     }
-	
+
 	&--self-start-y {
 		align-self: flex-start;
 		@include max-screen($xxs-max) {
@@ -1047,9 +1047,9 @@
     position: fixed;
 }
 
-// 
+//
 // table responsive
-// 
+//
 .table-responsive {
     min-width: .1px;
     overflow-x: auto;
@@ -1072,7 +1072,7 @@ html.is-open,
 
 *[data-preload] {
 	visibility: hidden;
-	
+
 	&.loaded {
 		overflow: visible;
 	}
@@ -1096,17 +1096,28 @@ html.is-open,
 		top: 0;
 		right: 0;
 		bottom: 0;
-		left: 0; 
+		left: 0;
 		z-index: 100;
 		background: #fff url("../img/preloader.gif") no-repeat center center;
 	}
-	
+
 	&.loaded {
 		height: auto !important;
 		overflow: visible;
-		
+
 		&:before {
 			display: none;
 		}
 	}
+}
+
+.cf {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
 }
