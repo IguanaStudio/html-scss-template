@@ -105,7 +105,10 @@ gulp.task('scss-to-css', function() {
             ],
             selectorBlackList: [
                 'html',
-                '.menu-trigger'
+                '.menu-trigger',
+				'.container',
+				'.container-fluid',
+				'.container-wide'
             ],
             replace: true,
             mediaQuery: false,
