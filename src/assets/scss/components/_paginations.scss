@@ -69,7 +69,8 @@
             }
         }
     }
-    @include max-screen-sm() {
+	
+    @include max-screen($sm-max) {
     	text-align: center;
 		padding-left: 15px;
 		padding-right: 15px;

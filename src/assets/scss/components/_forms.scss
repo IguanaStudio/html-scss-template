@@ -91,7 +91,7 @@ label {
 	margin-top: 20px;
 	overflow: hidden;
 	.btn {
-		@include max-screen-xs() {
+		@include max-screen($xs-max) {
 			width: 100%;
 		    clear: both;
 		    display: block;
@@ -105,17 +105,19 @@ label {
 
 .form {
 	margin: $default-margin;
+	
 	&-horizontal {
 		label {
 			text-align: left;
 			margin-top: 17px;
 			float: left;
 			width: 180px;
-			@include max-screen-sm() {
+			@include max-screen($sm-max) {
 				margin-top: 0;
 				width: 100%;
 			}
 		}
+		
 		.form-group {
 			margin-bottom: 10px;
 			margin-left: 0;
@@ -130,10 +132,11 @@ label {
 				clear: both;
 			}
 		}
+		
 		.field-group,
 		.button-group  {
 			margin-left: 200px;
-			@include max-screen-sm() {
+			@include max-screen($sm-max) {
 				margin-left: 0;
 				clear: both;
 			}
@@ -150,13 +153,16 @@ label {
 		line-height: 0;
 		content: "";
 	}
+	
 	&:after {
 		clear: both;
 	}
+	
 	input {
 		float: left;
 		margin-top: 4px;
 	}
+	
 	label {
 		margin: 0 0 0 25px;
 		overflow: hidden;
@@ -166,6 +172,7 @@ label {
 		width: auto;
 		padding-top: 0;
 	}
+	
 	.radio-info,
 	.checkbox-info {
 		margin: 2px 0 8px 35px;
