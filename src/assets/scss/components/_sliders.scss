@@ -125,5 +125,10 @@ $dot-background-active:	$color-base !default;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		
+		> .container {
+			margin-left: 0;
+			margin-right: 0;
+		}
 	}
 }

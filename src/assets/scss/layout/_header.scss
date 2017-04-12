@@ -8,7 +8,7 @@
 	box-shadow: 0 2px 15px rgba(0,0,0,0.1);
 	@include transition();
 
-	.is-minimize & {
+	.is-top-minimize & {
 		padding: 15px 0;
 
 		&__logo {
@@ -31,6 +31,7 @@
 
 		img {
 			@include transition();
+			width: 100%;
 		}
 	}
 
@@ -63,24 +64,6 @@
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .menu-trigger {
 	display: none;
 	width: 50px;
@@ -94,12 +77,14 @@
 	background: $key-color-1;
 	@include transition(all,.5s,ease-in-out);
 	@include rotate(0);
+	
 	&__inner {
 		margin: 12px;
 		position: relative;
 		display: block;
 		width: 26px;
 		height: 26px;
+		
 		span {
 			display: block;
 			position: absolute;
@@ -135,10 +120,8 @@
 			}
 		}
 	}
-}
-
-.is-open {
-	.menu-trigger {
+	
+	.is-menu-open & {
 		background-color: $key-color-2;
 		&__inner span {
 			&:nth-child(1),
@@ -177,4 +160,6 @@
 			}
 		}
 	}
+	
+	
 }

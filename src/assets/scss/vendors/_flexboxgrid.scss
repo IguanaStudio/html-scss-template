@@ -46,7 +46,7 @@
   padding: 0 15px;
 }
 
-@media only screen and (max-width: $xxs-max) {
+/*@media only screen and (max-width: $xxs-max) {*/
 
   .col-xxs,
   .col-xxs-1,
@@ -271,12 +271,12 @@
     -webkit-box-ordinal-group: 2;
     order: 1;
   }
-}
+/*}*/
 
 @media only screen and (min-width: $xs-min) {
   .container,
   .container-wide {
-    width: 470px;
+    //width: 470px;
   }
 
   .col-xs,

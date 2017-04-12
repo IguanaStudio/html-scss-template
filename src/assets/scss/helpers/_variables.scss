@@ -11,7 +11,7 @@ $heading-color: #000;
 $bg-color-body: #FFF;
 
 // font
-$default-font-family: 'Catamaran', sans-serif;
+$default-font-family: 'Roboto', sans-serif;
 $default-font-weight: 400;
 $default-font-weight-bold: 700;
 $default-font-size: 16px; 
@@ -30,11 +30,15 @@ $list-li-icon-left: 0;
 // line-height
 $default-line-height: 1.35;
 
+// radius
+$default-radius: 3px;
+
 // margin/padding
 $clear-padding: 0;
 $clear-margin: 0;
 $default-padding: 0 0 25px;
 $default-margin: 0 0 25px;
+$default-margin-bottom: 25px;
 $list-li-padding: 0 0 0 20px;
 $list-li-margin: 0 0 10px;
 $list-sub-margin: 10px 0 0;

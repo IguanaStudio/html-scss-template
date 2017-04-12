@@ -838,6 +838,40 @@
 }
 
 //
+// display block
+//
+
+.block {
+    display: block;
+    
+    @include max-screen($xxs-max) {
+        &--xxs {
+            display: block;
+        }
+    }
+    @include max-screen($xs-max) {
+        &--xs {
+            display: block;
+        }
+    }
+    @include max-screen($sm-max) {
+        &--sm {
+           display: block;
+        }
+    }
+    @include max-screen($md-max) {
+        &--md {
+            display: block;
+        }
+    }
+    @include max-screen($lg-max) {
+        &--lg {
+            display: block;
+        }
+    }
+}
+
+//
 // visible/hidden
 //
 .hidden {
@@ -1001,6 +1035,10 @@
     }
 }
 
+
+//
+// images positions
+//
 .img-left {
     float: left;
     margin: 5px 30px 15px 0;
@@ -1016,6 +1054,9 @@
     margin: 0 0 15px 30px;
 }
 
+//
+// positions
+//
 .absolute {
     position: absolute;
     top: 0;
@@ -1024,6 +1065,13 @@
     bottom: 0;
 }
 
+.relative {
+	position: relative;
+}
+
+//
+// clears
+//
 .padding-clear {
     padding: 0 !important;
 }
@@ -1032,6 +1080,55 @@
     margin: 0 !important;
 }
 
+.cmt {
+	margin-top: 0 !important;	
+}
+
+.cmr {
+	margin-right: 0 !important;	
+}
+
+.cmb {
+	margin-bottom: 0 !important;	
+}
+
+.cml {
+	margin-left: 0 !important;	
+}
+
+.cpt {
+	padding-top: 0 !important;	
+}
+
+.cpr {
+	padding-right: 0 !important;	
+}
+
+.cpb {
+	padding-bottom: 0 !important;	
+}
+
+.cpl {
+	padding-left: 0 !important;	
+}
+
+//
+// clearfix
+//
+.cf {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//
+// fullhd limiter
+//
 .fullhd-limiter {
     max-width: $fullhd-limiter;
     margin: 0 auto;
@@ -1047,34 +1144,75 @@
     position: fixed;
 }
 
-//
-// table responsive
-//
-.table-responsive {
-    min-width: .1px;
-    overflow-x: auto;
-}
-
-.relative {
-	position: relative;
-}
-
 .disabled {
 	pointer-events: none;
 	-webkit-touch-callout: none;
 	user-select: none;
 }
 
-html.is-open,
-.is-open body {
-	overflow-y: hidden;
+//
+// embed
+//
+.embed-responsive {
+	position: relative;
+	display: block;
+	height: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	border: 0;
+}
+
+.embed-responsive--16by9 {
+	padding-bottom: 56.25%;
+}
+
+.embed-responsive--4by3 {
+	padding-bottom: 75%;
+}
+
+//
+// responsive table
+//
+.table-responsive {
+	overflow-x: auto;
+	min-height: 0.01%;
+
+	@include max-screen($xs-max) {
+		width: 100%;
+		//margin-bottom: $default-margin-bottom;
+		overflow-y: hidden;
+		-ms-overflow-style: -ms-autohiding-scrollbar;
+		border: 1px $key-color-2 solid;
+	}
+
+	table {
+		@include max-screen($xs-max) {
+			min-width: 500px;
+		}
+	}
+}
+
+//
+// preloaders
+//
 *[data-preload] {
 	visibility: hidden;
 
 	&.loaded {
-		overflow: visible;
+		visibility: visible;
 	}
 }
 
@@ -1083,11 +1221,11 @@ html.is-open,
 	overflow: hidden;
 	position: relative;
 
-	@include max-screen-sm() {
+	@include max-screen($sm-max) {
 		height: 400px;
 	}
 
-	@include max-screen-xs() {
+	@include max-screen($xs-max) {
 		height: 300px;
 	}
 
@@ -1111,13 +1249,10 @@ html.is-open,
 	}
 }
 
-.cf {
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+//
+// rwd menu helper
+//
+html.is-menu-open,
+.is-menu-open body {
+	overflow-y: hidden;
 }

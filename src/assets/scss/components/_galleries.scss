@@ -1,11 +1,36 @@
+$gallery-margin-bottom:                             0;
+$gallery-gutter10-margin-bottom:                    0;
+$gallery-gutter20-margin-bottom:                    0;
+$gallery-xxs-margin-bottom:                         0;
+
+$gallery-thumbnail-margin-bottom:                   30px;
+$gallery-thumbnail-xxs-margin-bottom:               15px;
+$gallery-thumbnail-gutter10-margin-bottom: 			10px;
+$gallery-thumbnail-gutter20-margin-bottom: 			20px;
+
+$gallery-thumbnail-background-color: 				$key-color-1;
+$gallery-thumbnail-background-color-opacity: 		0;
+$gallery-thumbnail-background-color-opacity-hover: 	1;
+
+$gallery-thumbnail-icon-font-size:                  45px;
+$gallery-thumbnail-icon-font-size-small:            25px;
+$gallery-thumbnail-icon-opacity-hover:              1;
+$gallery-thumbnail-icon-zoom-out-scale:             2;
+$gallery-thumbnail-icon-zoom-out-scale-hover:       1;
+
+$gallery-thumbnail-img-opacity-hover:               0.2;
+$gallery-thumbnail-img-zoom-scale-hover:            1.1;
+
+
+
 .thumbnail {
 	position: relative;
 	display: block;
 	width: 100%;
 	overflow: hidden;
-	background: rgba($key-color-1,0);
+	background-color: rgba($gallery-thumbnail-background-color, $gallery-thumbnail-background-color-opacity);
 	@include transition(background);
-	
+
 	img {
 		display: block;
 		width: 100%;
@@ -13,72 +38,109 @@
 		transform: translateZ(0);
 		@include transition();
 	}
-	
+
 	@include hover() {
-        background: rgba($key-color-1,1);
-        
+        background: rgba($gallery-thumbnail-background-color, $gallery-thumbnail-background-color-opacity-hover);
+
 		img {
-        	opacity: 0.2;
+        	opacity: $gallery-thumbnail-img-opacity-hover;
         }
-		
+
         .ico {
-        	opacity: 1;
+        	opacity: $gallery-thumbnail-icon-opacity-hover;
         }
     }
-	
+
 	.ico {
-		font-size: 45px;
+		font-size: $gallery-thumbnail-icon-font-size;
 		color: #FFF;
 		position: absolute;
 		z-index: 2;
-		width: 42px;
-		height: 46px;
 		left: 50%;
 		top: 50%;
-		margin: -23px 0 0 -21px;
+		@include translate(-50%, -50%);
 		opacity: 0;
 		@include transition();
+		
+		&--small {
+			font-size: $gallery-thumbnail-icon-font-size-small;
+		}
 	}
-	
-	&.zoom-effect {
+
+	&--img-zoom {
 		img {
 			max-width: 100% !important;
-			@include transition(all,0.4s,ease);
+			@include transition(all, 0.4s, ease);
 			z-index: 1;
 		}
-		
+
 		@include hover() {
 	        img {
-				@include scale(1.1)
+				@include scale($gallery-thumbnail-img-zoom-scale-hover)
 	        }
 	    }
 	}
-	
-	&.slide-effect {
+
+	&--icon-slide {
 		.ico {
 			top: 25%;
 		}
-		
+
 		@include hover() {
 	        .ico {
 	        	top: 50%;
 	        }
 	    }
 	}
+
+	&--icon-zoom-out {
+		.ico {
+			transform-origin: center center;
+			transform: translate(-50%, -50%) scale($gallery-thumbnail-icon-zoom-out-scale);
+			@include transition($delay: 0s);
+		}
+
+		@include hover() {
+	        .ico {
+	        	transform: translate(-50%, -50%) scale($gallery-thumbnail-icon-zoom-out-scale-hover);
+				@include transition($delay: 0.15s);
+	        }
+	    }
+	}
 }
 
 .gallery {
-	//margin-bottom: 	
-	
+	margin-bottom: $gallery-margin-bottom;
+    
+    @include max-screen($xxs-max) {
+        margin-bottom: $gallery-xxs-margin-bottom;
+    }
+    
 	.thumbnail {
-		margin: $default-margin;	
+		margin-bottom: $gallery-thumbnail-margin-bottom;
 	}
-	
-	&.gutter-10 .thumbnail {
-		margin-bottom: 10px;
+
+	&.gutter-10 {
+		margin-bottom: $gallery-gutter10-margin-bottom;
+
+		.thumbnail {
+			margin-bottom: $gallery-thumbnail-gutter10-margin-bottom;
+
+			@include max-screen($xxs-max) {
+				margin-bottom: $gallery-thumbnail-xxs-margin-bottom;
+			}
+		}
 	}
-	
-	&.gutter-20 .thumbnail {
-		margin-bottom: 20px;
+
+	&.gutter-20 {
+		margin-bottom: $gallery-gutter20-margin-bottom;
+
+		.thumbnail {
+			margin-bottom: $gallery-thumbnail-gutter20-margin-bottom;
+
+			@include max-screen($xxs-max) {
+				margin-bottom: $gallery-thumbnail-xxs-margin-bottom;
+			}
+		}
 	}
 }

@@ -15,13 +15,7 @@ body {
 }
 
 html {
-    font-size: 16px;
-    @include max-screen-md() {
-		font-size: 15px;
-	}
-    @include max-screen-sm() {
-		font-size: 14px;
-	}
+    font-size: 16px; 
 }
 
 body {
@@ -38,8 +32,6 @@ body {
     @include transition(padding-top);
 	padding-top: 135px;
 }
-
-.minimize body {}
 
 h1,
 h2,
@@ -174,7 +166,8 @@ ul {
     list-style: none;
 }
 
-ul.list-styled {
+ul.list-styled,
+.wysiwyg ul {
     margin: $default-margin;
     li {
         margin: $list-li-margin;

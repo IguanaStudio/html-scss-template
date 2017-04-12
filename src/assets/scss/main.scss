@@ -1,4 +1,4 @@
-/*
+/*!
 Project: ...........;
 Author: ............;
 Company: Iguana Sp. z o.o.;
@@ -6,10 +6,11 @@ Company: Iguana Sp. z o.o.;
 
 @import
 	'helpers/_variables.scss',
-	
+	 
     'vendors/_flexboxgrid.scss',
     'vendors/_media-queries.scss',
-    'vendors/_magnific-popup.scss',
+    'vendors/_fancybox.scss',
+	'vendors/_jcf.scss',
 	'vendors/owl/_owl.carousel.scss',
     
     'helpers/_mixins.scss',
@@ -29,12 +30,12 @@ Company: Iguana Sp. z o.o.;
     'components/_paginations.scss',
 	'components/_sliders.scss',
     'components/_wysiwyg.scss',
-	
+	 
 	'layout/_grid.scss',
 	'layout/_breadcrumbs.scss', 
     'layout/_header.scss',
     'layout/_footer.scss',
-	
-	'pages/_common.scss';
-	
+	  
+	'pages/_common.scss'; 
+	 
 	

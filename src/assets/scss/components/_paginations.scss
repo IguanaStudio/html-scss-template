@@ -1,77 +1,106 @@
+
+
+
 .pagination {
     text-align: left;
     padding: 0;
-    font-size: 85%;
+    font-size: 13px;
     color: $default-font-color;
     margin: $default-margin;
+	margin-top: 30px;
     clear: both;
+    
     .pages {
         display: inline-block;
         vertical-align: middle;
     }
+    
     ol {
         list-style: none;
         display: inline;
-        margin: 0; 
+        margin: 0;
+		padding: 0;
+        
         li {
             margin: 0 2px;
             padding: 0;
             background: none;
             float: left;
-            &.prev,
+
+			&::before {
+				display: none;
+			}
+
+			&.prev,
             &.next {
                 a {
-                    color: #FFF;
+                    color: #fff;
                     @include hover() {
-				        color: #fff;
-                        background-color: $key-color-2;
+				        //color: #fff;
+                        //background-color: $key-color-2;
 				    }
                 }
             }
+            
             &.prev {
                 margin-left: 0;
                 margin-right: 5px;
-                font-size: 10px;
+                font-size: 16px;
             }
+            
             &.next {
                 margin-right: 0;
                 margin-left: 5px;
-                font-size: 10px;
+                font-size: 16px;
             }
+            
             &.disabled {
             	opacity: 0.5;
             	pointer-events: none;
 				-webkit-touch-callout: none;
 				user-select: none;
-            }
+            } 
+            
             a,
-            span {
+            span,
+			em {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 35px;
-                height: 35px;
-                color: #FFF;
-                font-weight: $default-font-weight-bold;
+                width: 36px;
+                height: 36px;
+                color: #fff;
+                font-weight: $default-font-weight;
                 text-align: center;
                 @include transition();
-                background-color: $key-color-1;
+                background-color: $key-color-2;
+				border: 1px $key-color-2 solid;
+				border-radius: $default-radius;
+				overflow: hidden;
             }
+            
             a {
 				@include hover() {
 				    color: #FFF;
-					background-color: $key-color-2; 
+					border-color: $key-color-1;
+					background-color: $key-color-1;
 				}
             }
+            
             span {
                 color: #FFF;
-                background-color: $key-color-2; 
+				background-color: $key-color-1;
+                border-color: $key-color-1;
             }
+            
+			em {
+				font-style: normal;
+			}
         }
     }
-	
+    
     @include max-screen($sm-max) {
-    	text-align: center;
+    	text-align: center !important;
 		padding-left: 15px;
 		padding-right: 15px;
 		ol {
@@ -84,7 +113,15 @@
 				&.next {
 					display: flex;
 				}
-			}	
-		} 
+			}
+		}
     }
+    
+    &--center {
+		text-align: center;
+	}
+
+	&--right {
+		text-align: right;
+	}
 }
