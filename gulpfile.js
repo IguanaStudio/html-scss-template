@@ -121,7 +121,7 @@ gulp.task('scss-to-css', function() {
 
     return gulp.src(paths.src.scss)
         .pipe(sass().on('error', sass.logError))
-        .pipe(combineMq({beautify: false}))
+        //.pipe(combineMq({beautify: false}))
         .pipe(autoprefixer())
         .pipe(concat('main.min.css'))
         .pipe(cssnano())
