@@ -24,7 +24,7 @@ var gulp = require('gulp'),
             scripts_dest: 'src/assets/js',
             scripts: 'src/assets/js/*.min.js',
             fonts: 'src/assets/fonts/*',
-            images: ['src/assets/img/*.jpg', 'src/assets/img/*.png']
+            images: 'src/assets/img/**/*'
         },
         dist: {
             html: 'dist',
@@ -32,6 +32,12 @@ var gulp = require('gulp'),
             scripts: 'dist/assets/js',
             fonts: 'dist/assets/fonts',
             images: 'dist/assets/img'
+        },
+		public: {
+            styles: '../../public/assets/css',
+            scripts: '../../public/assets/js',
+            fonts: '../../public/assets/fonts',
+            images: '../../public/assets/img'
         }
     };
 
@@ -77,6 +83,24 @@ gulp.task('build', ['clean', 'scss-to-css', 'vendor-scripts', 'main-js'], functi
     var imgs = gulp.src(paths.src.images)
         .pipe(gulp.dest(paths.dist.images));
 });
+
+
+// public
+gulp.task('public', ['scss-to-css', 'vendor-scripts', 'main-js'], function(){
+    var css = gulp.src(paths.src.css)
+        .pipe(gulp.dest(paths.public.styles));
+
+    var js = gulp.src(paths.src.scripts)
+        .pipe(gulp.dest(paths.public.scripts));
+
+    var fonts = gulp.src(paths.src.fonts)
+        .pipe(gulp.dest(paths.public.fonts));
+
+    var imgs = gulp.src(paths.src.images)
+        .pipe(gulp.dest(paths.public.images));
+});
+
+
 
 //
 // STYLES
