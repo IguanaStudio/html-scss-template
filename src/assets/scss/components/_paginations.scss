@@ -1,61 +1,47 @@
+$pagination-margin: $default-margin;
+$pagination-color: $default-font-color;
+$pagination-font-size: $default-font-size;
 
+$pagination-list-item-margin: 0 2px;
+$pagination-list-item-width: 35px;
+$pagination-list-item-height: 35px;
+$pagination-list-item-radius: $default-radius;
+$pagination-list-item-color: #fff;
+$pagination-list-item-background-color: $key-color-2;
+$pagination-list-item-border: 1px $key-color-2 solid;
+$pagination-list-item-font-weight: $default-font-weight;
+
+$pagination-list-item-color-hover: #fff;
+$pagination-list-item-background-color-hover: $key-color-1;
+$pagination-list-item-border-hover: 1px $key-color-1 solid;
+
+$pagination-list-item-color-active: $pagination-list-item-color-hover;
+$pagination-list-item-background-color-active: $pagination-list-item-background-color-hover;
+$pagination-list-item-border-active: $pagination-list-item-border-hover;
+
+$pagination-list-item-opacity-disabled: 0.5;
+
+$pagination-list-item-next-prev-font-size: $pagination-font-size;
 
 
 .pagination {
-    text-align: left;
-    padding: 0;
-    font-size: 13px;
-    color: $default-font-color;
-    margin: $default-margin;
-	margin-top: 30px;
-    clear: both;
-    
-    .pages {
-        display: inline-block;
-        vertical-align: middle;
-    }
+    font-size: $pagination-font-size;
+    color: $pagination-color;
+    margin: $pagination-margin;
+    @extend .flex, .flex--center-y;
     
     ol {
         list-style: none;
-        display: inline;
         margin: 0;
 		padding: 0;
+		@extend .flex;
         
         li {
-            margin: 0 2px;
+            margin: $pagination-list-item-margin;
             padding: 0;
-            background: none;
-            float: left;
-
-			&::before {
-				display: none;
-			}
-
-			&.prev,
-            &.next {
-                a {
-                    color: #fff;
-                    @include hover() {
-				        //color: #fff;
-                        //background-color: $key-color-2;
-				    }
-                }
-            }
-            
-            &.prev {
-                margin-left: 0;
-                margin-right: 5px;
-                font-size: 16px;
-            }
-            
-            &.next {
-                margin-right: 0;
-                margin-left: 5px;
-                font-size: 16px;
-            }
-            
-            &.disabled {
-            	opacity: 0.5;
+			
+            &.is-disabled {
+            	opacity: $pagination-list-item-opacity-disabled;
             	pointer-events: none;
 				-webkit-touch-callout: none;
 				user-select: none;
@@ -64,33 +50,30 @@
             a,
             span,
 			em {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 36px;
-                height: 36px;
-                color: #fff;
-                font-weight: $default-font-weight;
-                text-align: center;
-                @include transition();
-                background-color: $key-color-2;
-				border: 1px $key-color-2 solid;
-				border-radius: $default-radius;
-				overflow: hidden;
+                @extend .flex, .flex--center-x, .flex--center-y;
+                width: $pagination-list-item-width;
+                height: $pagination-list-item-height;
+				color: $pagination-list-item-color;
+				background-color: $pagination-list-item-background-color;
+                border: $pagination-list-item-border;
+				border-radius: $pagination-list-item-radius;
+				font-weight: $pagination-list-item-font-weight;
+				@include transition();
             }
             
             a {
 				@include hover() {
-				    color: #FFF;
-					border-color: $key-color-1;
-					background-color: $key-color-1;
+				    color: $pagination-list-item-color-hover;
+					background-color: $pagination-list-item-background-color-hover;
+					border: $pagination-list-item-border-hover;
+					
 				}
             }
             
             span {
-                color: #FFF;
-				background-color: $key-color-1;
-                border-color: $key-color-1;
+                color: $pagination-list-item-color-active;
+				background-color: $pagination-list-item-background-color-active;
+                border: $pagination-list-item-border-active;
             }
             
 			em {
@@ -98,30 +81,28 @@
 			}
         }
     }
+
+	&__prev,
+	&__next {
+		font-size: $pagination-list-item-next-prev-font-size;
+	}
     
     @include max-screen($sm-max) {
-    	text-align: center !important;
-		padding-left: 15px;
-		padding-right: 15px;
+    	justify-content: center !important;
 		ol {
 			li {
 				&:not([class]) {
 					display: none;
-				}
-				&.prev
-				&.active
-				&.next {
-					display: flex;
 				}
 			}
 		}
     }
     
     &--center {
-		text-align: center;
+		justify-content: center;
 	}
 
 	&--right {
-		text-align: right;
+		justify-content: flex-end;
 	}
 }

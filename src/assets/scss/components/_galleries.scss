@@ -1,27 +1,29 @@
-$gallery-margin-bottom:                             0;
-$gallery-gutter10-margin-bottom:                    0;
-$gallery-gutter20-margin-bottom:                    0;
-$gallery-xxs-margin-bottom:                         0;
+$gallery-margin: $default-margin;
 
-$gallery-thumbnail-margin-bottom:                   30px;
-$gallery-thumbnail-xxs-margin-bottom:               15px;
-$gallery-thumbnail-gutter10-margin-bottom: 			10px;
-$gallery-thumbnail-gutter20-margin-bottom: 			20px;
+$gallery-thumbnail-margin-bottom: 30px;
+$gallery-thumbnail-gutter10-margin-bottom: 10px;
+$gallery-thumbnail-gutter20-margin-bottom: 20px;
 
-$gallery-thumbnail-background-color: 				$key-color-1;
-$gallery-thumbnail-background-color-opacity: 		0;
-$gallery-thumbnail-background-color-opacity-hover: 	1;
+$gallery-thumbnail-background-color: $key-color-1;
+$gallery-thumbnail-background-color-opacity: 0;
+$gallery-thumbnail-background-color-opacity-hover: 1;
 
-$gallery-thumbnail-icon-font-size:                  45px;
-$gallery-thumbnail-icon-font-size-small:            25px;
-$gallery-thumbnail-icon-opacity-hover:              1;
-$gallery-thumbnail-icon-zoom-out-scale:             2;
-$gallery-thumbnail-icon-zoom-out-scale-hover:       1;
+$gallery-thumbnail-icon-font-size: 45px;
+$gallery-thumbnail-icon-font-size-small: 25px;
+$gallery-thumbnail-icon-opacity-hover: 1;
+$gallery-thumbnail-icon-zoom-out-scale: 2;
+$gallery-thumbnail-icon-zoom-out-scale-hover: 1;
 
-$gallery-thumbnail-img-opacity-hover:               0.2;
-$gallery-thumbnail-img-zoom-scale-hover:            1.1;
+$gallery-thumbnail-img-opacity-hover: 0.2;
+$gallery-thumbnail-img-zoom-scale-hover: 1.1;
 
 
+.gallery {
+	margin: $gallery-margin;
+	
+	&__title {}
+	&__list {}
+}
 
 .thumbnail {
 	position: relative;
@@ -30,15 +32,8 @@ $gallery-thumbnail-img-zoom-scale-hover:            1.1;
 	overflow: hidden;
 	background-color: rgba($gallery-thumbnail-background-color, $gallery-thumbnail-background-color-opacity);
 	@include transition(background);
-
-	img {
-		display: block;
-		width: 100%;
-		height: auto;
-		transform: translateZ(0);
-		@include transition();
-	}
-
+	margin-bottom: $gallery-thumbnail-margin-bottom;
+	
 	@include hover() {
         background: rgba($gallery-thumbnail-background-color, $gallery-thumbnail-background-color-opacity-hover);
 
@@ -50,6 +45,14 @@ $gallery-thumbnail-img-zoom-scale-hover:            1.1;
         	opacity: $gallery-thumbnail-icon-opacity-hover;
         }
     }
+	
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		transform: translateZ(0);
+		@include transition();
+	}
 
 	.ico {
 		font-size: $gallery-thumbnail-icon-font-size;
@@ -66,8 +69,20 @@ $gallery-thumbnail-img-zoom-scale-hover:            1.1;
 			font-size: $gallery-thumbnail-icon-font-size-small;
 		}
 	}
+	
+	&--mb-10 {
+		margin-bottom: $gallery-thumbnail-gutter10-margin-bottom;
+	}
+	
+	&--mb-20 {
+		margin-bottom: $gallery-thumbnail-gutter20-margin-bottom;
+	}
+	
+	&--mb-clear {
+		margin-bottom: 0 !important;
+	}
 
-	&--img-zoom {
+	&--img-zoom-in {
 		img {
 			max-width: 100% !important;
 			@include transition(all, 0.4s, ease);
@@ -106,41 +121,5 @@ $gallery-thumbnail-img-zoom-scale-hover:            1.1;
 				@include transition($delay: 0.15s);
 	        }
 	    }
-	}
-}
-
-.gallery {
-	margin-bottom: $gallery-margin-bottom;
-    
-    @include max-screen($xxs-max) {
-        margin-bottom: $gallery-xxs-margin-bottom;
-    }
-    
-	.thumbnail {
-		margin-bottom: $gallery-thumbnail-margin-bottom;
-	}
-
-	&.gutter-10 {
-		margin-bottom: $gallery-gutter10-margin-bottom;
-
-		.thumbnail {
-			margin-bottom: $gallery-thumbnail-gutter10-margin-bottom;
-
-			@include max-screen($xxs-max) {
-				margin-bottom: $gallery-thumbnail-xxs-margin-bottom;
-			}
-		}
-	}
-
-	&.gutter-20 {
-		margin-bottom: $gallery-gutter20-margin-bottom;
-
-		.thumbnail {
-			margin-bottom: $gallery-thumbnail-gutter20-margin-bottom;
-
-			@include max-screen($xxs-max) {
-				margin-bottom: $gallery-thumbnail-xxs-margin-bottom;
-			}
-		}
 	}
 }
