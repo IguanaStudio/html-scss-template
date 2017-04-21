@@ -1,4 +1,5 @@
 /dist/
+/damian/
 *.sublime-project
 *.sublime-workspace
 .DS_Store
