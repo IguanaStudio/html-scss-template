@@ -5,19 +5,25 @@
 	}
 	
 	.img {
-    	&-left, 
-		&-right {
+		margin: $default-margin;
+		text-align: center;
+
+		img {
+			@include max-screen($xs-min) {
+				width: auto !important;
+			}
+		}
+
+    	&--left, 
+		&--right {
 			max-width: 45%;
 			
 			img {
 				display: block;
-			    height: auto;
-			    max-width: 100%;
 			    width: 100%;
+				
 			    @include max-screen($xs-min) {
 			    	display: inline-block !important;
-				    height: auto !important;
-				    max-width: 100% !important;
 				    width: auto !important;
 		    	} 
 			}
@@ -29,15 +35,15 @@
 				text-align: center !important;
 			}
 		}
-		
-		&-center img {
-			max-width: 100% !important;
-			height: auto !important;
-			@include max-screen($xs-min) {
-				width: auto !important;
-				max-width: 100% !important;
-				height: auto !important;
-			}
+
+		&--left {
+			float: left;
+			margin: 0 30px 15px 0;
+		}
+
+		&--right {
+			float: right;
+			margin: 0 0 15px 30px;
 		}
     }
 }
