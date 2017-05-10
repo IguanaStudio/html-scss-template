@@ -20,7 +20,7 @@ $(document).ready(function(){
 						$element.closest('.radio').addClass('error-radio');
 					}
 				} else if ($element.prop("tagName") == 'SELECT') {
-					$element.closest('.custom-select, .custom-select2, .custom-select2-multiple, .custom-select2-regions-top, .custom-select2-regions-slider, .custom-select2--art-location, .custom-select2-heading, .custom-select2-sort, .br-wrapper').addClass('select-error');
+					$element.closest('.custom-select, .custom-select2, .custom-select2-multiple').addClass('select-error');
 				}
 			},
 			unhighlight: function(element, errorClass, validClass) {
@@ -33,7 +33,7 @@ $(document).ready(function(){
 						$element.closest('.radio').removeClass('error-radio');
 					}
 				} else if ($element.prop("tagName") == 'SELECT') {
-					$element.closest('.custom-select, .custom-select2, .custom-select2-multiple, .custom-select2-regions-top, .custom-select2-regions-slider, .custom-select2--art-location, .custom-select2-heading, .custom-select2-sort, .br-wrapper').removeClass('select-error');
+					$element.closest('.custom-select, .custom-select2, .custom-select2-multiple').removeClass('select-error');
 				}
 			},
 			errorPlacement: function() {
