@@ -21,16 +21,16 @@
 		background-color: $key-color-1;
 		color: #FFF;
     }
-	&-block {
+	&--block {
 		display: block;
 		width: 100%;
 		min-width: 0;
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	&-xs {}
-	&-sm {}
-	&-lg {}
+	&--xs {}
+	&--sm {}
+	&--lg {}
 }
 
 
