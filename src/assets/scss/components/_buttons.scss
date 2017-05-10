@@ -13,7 +13,7 @@
 	text-transform: uppercase;
 	color: #FFF;
 	font-family: $default-font-family;
-	border-radius: 0;
+	border-radius: $default-radius;
 	@include transition();
 	@include hover() {
         border-bottom: 0 none;
