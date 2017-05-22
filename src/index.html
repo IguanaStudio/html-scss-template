@@ -208,16 +208,62 @@
 							</tr>
 						</table>
 						<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Sed ultricies erat in turpis porttitor gravida. <strong>Nullam sit amet tortor</strong> in enim feugiat pharetra. Nullam vulputate vehicula fermentum. Curabitur urna nibh, interdum commodo gravida et, ullamcorper vel arcu. Etiam malesuada nibh ante, a porttitor purus bibendum in. Nam non ligula commodo, consectetur mi ut, tempus nisl. In elit lacus, tristique in euismod non, posuere quis ligula. Ut et velit tristique, placerat diam eget, tincidunt tellus. Sed ut vestibulum augue.</p>
-						<p><a href="#" class="btn">Link</a></p>
-						<p><button class="btn">Button</button></p>
+
+						<h2>Buttons</h2>
+						<h4>Small</h4>
+						<div class="btn-group">
+							<button class="btn btn--small">Button Default</button>
+							<a href="#" class="btn btn--primary btn--small">Button Primary</a>
+							<button class="btn btn--stroke btn--small">Button Stroke</button>
+						</div>
+						<h4>Medium / Default</h4>
+						<div class="btn-group">
+							<button class="btn">Button Default</button>
+							<a href="#" class="btn btn--primary">Button Primary</a>
+							<button class="btn btn--stroke">Button Stroke</button>
+						</div>
+						<h4>Large</h4>
+						<div class="btn-group">
+							<button class="btn btn--large">Button Default</button>
+							<a href="#" class="btn btn--primary btn--large">Button Primary</a>
+							<button class="btn btn--stroke btn--large">Button Stroke</button>
+						</div>
+
 						<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Sed ultricies erat in turpis porttitor gravida. <strong>Nullam sit amet tortor</strong> in enim feugiat pharetra. Nullam vulputate vehicula fermentum. Curabitur urna nibh, interdum commodo gravida et, ullamcorper vel arcu. Etiam malesuada nibh ante, a porttitor purus bibendum in. Nam non ligula commodo, consectetur mi ut, tempus nisl. In elit lacus, tristique in euismod non, posuere quis ligula. Ut et velit tristique, placerat diam eget, tincidunt tellus. Sed ut vestibulum augue.</p>
 						<hr />
 						<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Sed ultricies erat in turpis porttitor gravida. <strong>Nullam sit amet tortor</strong> in enim feugiat pharetra. Nullam vulputate vehicula fermentum. Curabitur urna nibh, interdum commodo gravida et, ullamcorper vel arcu. Etiam malesuada nibh ante, a porttitor purus bibendum in. Nam non ligula commodo, consectetur mi ut, tempus nisl. In elit lacus, tristique in euismod non, posuere quis ligula. Ut et velit tristique, placerat diam eget, tincidunt tellus. Sed ut vestibulum augue.</p>
 					</div>
-					<div class="alert alert-success" role="alert"><strong>Donec sed vestibulum</strong> orci. Vivamus ac malesuada orci.</div>
-					<div class="alert alert-info" role="alert"><h4>Donec sed vestibulum</h4><p>orci. Vivamus ac malesuada orci.</p></div>
-					<div class="alert alert-warning" role="alert"><strong>Donec sed vestibulum</strong> orci. Vivamus ac malesuada orci.</div>
-					<div class="alert alert-danger" role="alert"><strong>Donec sed vestibulum</strong> orci. Vivamus ac malesuada orci.</div>
+					<h2>Alerts</h2>
+					<h4>Without icon</h4>
+					<div class="alert alert--success">
+						<strong>Donec sed vestibulum</strong> orci. Vivamus ac malesuada orci.</div>
+					<div class="alert alert--info">
+						<h4 class="alert__title">Donec sed vestibulum</h4>
+						<p>orci. Vivamus <a href="#">ac malesuada</a> orci.</p>
+					</div>
+					<div class="alert alert--warning"><strong>Donec sed vestibulum</strong> orci. Vivamus ac malesuada orci.</div>
+					<div class="alert alert--danger"><strong>Donec sed vestibulum</strong> orci. Vivamus ac malesuada orci.</div>
+
+					<h4>With icon</h4>
+					<div class="alert alert--icon alert--success">
+						<strong>Donec sed vestibulum</strong> orci. Vivamus ac malesuada orci
+					</div>
+
+					<div class="alert alert--icon alert--info">
+						<h4 class="alert__title">Donec sed vestibulum</h4>
+						<p>orci. Vivamus ac malesuada orci.</p>
+					</div>
+					<div class="alert alert--icon alert--warning alert--fixed"><strong>Donec sed vestibulum</strong> orci. Vivamus ac malesuada orci.</div>
+					<div class="alert alert--icon alert--danger">
+						<ul>
+							<li><strong>Lorem ipsum</strong> dolor sit amet.</li>
+							<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum nostrum, ratione minus, numquam aut molestiae in soluta amet eius adipisci veniam hic velit, dicta consequatur error itaque placeat iure possimus.</li>
+							<li>Lorem ipsum dolor sit <strong>amet dolor.</strong></li>
+							<li>Lorem ipsum dolor sit amet.</li>
+						</ul>
+					</div>
+					
+					<h2>Form</h2>
 					<form action="" method="post" class="form">
 						<div class="form-group">
 							<label for="">Donec sed vestibulum:</label>
@@ -275,14 +321,15 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<div class="button-group">
+							<div class="btn-group">
 								<button class="btn">Sed ultricies erat</button>
 							</div>
 						</div>
 					</form>
 					<div class="wysiwyg">
 						<p>Lorem ipsum dolor sit amet, <strong>consectetur adipiscing</strong> elit. Sed ultricies erat in turpis porttitor gravida. <strong>Nullam sit amet tortor</strong> in enim feugiat pharetra. Nullam vulputate vehicula fermentum. Curabitur urna nibh, interdum commodo gravida et, ullamcorper vel arcu. Etiam malesuada nibh ante, a porttitor purus bibendum in. Nam non ligula commodo, consectetur mi ut, tempus nisl. In elit lacus, tristique in euismod non, posuere quis ligula. Ut et velit tristique, placerat diam eget, tincidunt tellus. Sed ut vestibulum augue.</p>
-					</div>			
+					</div>	
+					<h2>Form horizontal</h2>		
 					<form action="" method="post" class="form form-horizontal">
 						<div class="form-group">
 							<label for="">Donec sed vestibulum:</label>
@@ -350,37 +397,37 @@
 					</div>
 
 					<section class="gallery">
-			    <h3 class="gallery__title">Galeria</h3>
-			    <div class="row gallery__list gutter-10">
-				<div class="col-lg-3 col-md-4 col-xxs-6">
-				    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xxs-6">
-				    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xxs-6">
-				    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xxs-6">
-				    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xxs-6">
-				    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xxs-6">
-				    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xxs-6">
-				    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
-				</div>
-				<div class="col-lg-3 col-md-4 col-xxs-6">
-				    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
-				</div>
-			    </div>
-			</section>
+					    <h3 class="gallery__title">Galeria</h3>
+					    <div class="row gallery__list gutter-10">
+							<div class="col-lg-3 col-md-4 col-xxs-6">
+							    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+							</div>
+							<div class="col-lg-3 col-md-4 col-xxs-6">
+							    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+							</div>
+							<div class="col-lg-3 col-md-4 col-xxs-6">
+							    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+							</div>
+							<div class="col-lg-3 col-md-4 col-xxs-6">
+							    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+							</div>
+							<div class="col-lg-3 col-md-4 col-xxs-6">
+							    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+							</div>
+							<div class="col-lg-3 col-md-4 col-xxs-6">
+							    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+							</div>
+							<div class="col-lg-3 col-md-4 col-xxs-6">
+							    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+							</div>
+							<div class="col-lg-3 col-md-4 col-xxs-6">
+							    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico ico-search-plus"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+							</div>
+					    </div>
+					</section>
 
-					<section class="download-section">
-						<h3>Pliki do pobrania</h3>
+					<!-- <section class="download-section">
+						<h2>Files</h2>
 						<ul class="download">
 							<li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit <span>(1,51mb)</span></a></li>
 							<li><a href="#">Dolorum dicta modi culpa eveniet earum <span>(2,16mb)</span></a></li>
@@ -388,8 +435,30 @@
 							<li><a href="#">Voluptatibus incidunt quos minus sint quam, accusamus eum expedita ab <span>(7,22mb)</span></a></li>
 							<li><a href="#">Lorem ipsum dolor tempora dignissimos <span>(4,63mb)</span></a></li>
 						</ul>
-					</section>
+					</section> -->
 
+					<section class="files">
+						<h2 class="files__title">Files</h2>
+						<ul class="files__list">
+							<li class="files__list-item">
+								<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit <span>(1,51mb)</span></a>
+							</li>
+							<li class="files__list-item">
+								<a href="#">Dolorum dicta modi culpa eveniet earum <span>(2,16mb)</span></a>
+							</li>
+							<li class="files__list-item">
+								<a href="#">Fuga pariatur tempora dignissimos eos <span>(6,71mb)</span></a>
+							</li>
+							<li class="files__list-item">
+								<a href="#">Voluptatibus incidunt quos minus sint quam, accusamus eum expedita ab <span>(7,22mb)</span></a>
+							</li>
+							<li class="files__list-item">
+								<a href="#">Lorem ipsum dolor tempora dignissimos <span>(4,63mb)</span></a>
+							</li>
+						</ul>
+					</section>
+					
+					<h2>Pagination</h2>
 					<div class="pagination">
 						<ol>
 							<li class="pagination__prev is-disabled"><a href="#"><i class="ico ico-chevron-small-left"></i></a></li>

@@ -1,3 +1,57 @@
+// files | default
+$files--margin: 30px 0;
+
+//
+// title 
+//
+$files-title--margin: 30px 0 15px;
+
+//
+// list item before
+//
+$files-list-item-before--content: '\e90a';
+$files-list-item-before--font-family: $default-font-family-icon;
+$files-list-item-before--font-size: 24px;
+$files-list-item-before--color: $key-color-1;
+$files-list-item-before--position-top: 5px;
+$files-list-item-before--position-left: 0;
+
+
+.files {
+	margin: $files--margin;
+	&__title {
+		@extend .h2;
+		margin: $files-title--margin;
+	}
+	&__list {
+		&-item {
+			position: relative;
+			padding: 10px 40px;
+			a {
+				display: block;
+				color: inherit;
+				font-size: inherit;
+				font-weight: inherit;
+				text-transform: inherit;
+				text-decoration: inherit;
+				&::before {
+					content: $files-list-item-before--content;
+					position: absolute;
+					top: $files-list-item-before--position-top;
+					left: $files-list-item-before--position-left;
+					font-family: $files-list-item-before--font-family;
+					font-size: $files-list-item-before--font-size;
+					color: $files-list-item-before--color;
+				}
+				span {
+
+				}
+			}
+		}
+	}
+}
+
+
 .download {
 	margin: $default-margin;
 	li {

@@ -132,7 +132,7 @@ gulp.task('scss-to-css', function() {
                 'html',
                 '.menu-trigger',
                 '.container',
-		'.container-wide',
+		        '.container-wide',
                 '.contaniner-fluid',
                 '.fullhd-limiter'
             ],

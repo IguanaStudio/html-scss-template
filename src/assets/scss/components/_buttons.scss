@@ -1,36 +1,276 @@
+//
+// .btn-group
+//
+$btn-group--margin: 0 -5px 30px;
+$btn-group--btn-margin: 5px;
+
+
+//
+// .btn // default
+//
+$btn-margin: $clear-margin;
+
+$btn-padding-top: 15px;
+$btn-padding-right: 30px;
+$btn-padding-bottom: 15px;
+$btn-padding-left: 30px;
+
+$btn-text-align: center;
+$btn-text-transform: initial;
+$btn-line-height: 1.2;
+$btn-letter-spacing: initial;
+
+$btn-font-size: $default-font-size;
+$btn-font-family: $default-font-family;
+$btn-font-weight: $default-font-weight;
+
+$btn-color: #fff;
+$btn-color--hover: #fff;
+
+$btn-bg-color: $key-color-2;
+$btn-bg-color--hover: $key-color-1;
+
+$btn-border: 2px solid transparent;
+$btn-border--hover: $btn-border;
+$btn-border-radius: 0;
+
+
+//
+// .btn--primary
+//
+$btn-primary--padding-top: $btn-padding-top;
+$btn-primary--padding-right: $btn-padding-right;
+$btn-primary--padding-bottom: $btn-padding-bottom;
+$btn-primary--padding-left: $btn-padding-left;
+
+$btn-primary--text-align: $btn-text-align;
+$btn-primary--text-transform: uppercase;
+$btn-primary--line-height: $btn-line-height;
+$btn-primary--letter-spacing: 1.5px;
+
+$btn-primary--font-size: $btn-font-size;
+$btn-primary--font-family: $btn-font-family;
+$btn-primary--font-weight: 300;
+
+$btn-primary--color: $btn-color;
+$btn-primary--color--hover: $key-color-1;
+
+$btn-primary--bg-color: $key-color-1;
+$btn-primary--bg-color--hover: transparent;
+
+$btn-primary--border: 2px solid transparent;
+$btn-primary--border--hover: 2px solid $key-color-1;
+$btn-primary--border-radius: 5px;
+
+
+//
+// .btn--stroke
+//
+$btn-stroke--padding-top: $btn-padding-top;
+$btn-stroke--padding-right: $btn-padding-right;
+$btn-stroke--padding-bottom: $btn-padding-bottom;
+$btn-stroke--padding-left: $btn-padding-left;
+
+$btn-stroke--text-align: $btn-text-align;
+$btn-stroke--text-transform: initial;
+$btn-stroke--line-height: $btn-line-height;
+$btn-stroke--letter-spacing: $btn-letter-spacing;
+
+$btn-stroke--font-size: $btn-font-size;
+$btn-stroke--font-family: $btn-font-family;
+$btn-stroke--font-weight: $btn-font-weight;
+
+$btn-stroke--color: $key-color-1;
+$btn-stroke--color--hover: $btn-color;
+
+$btn-stroke--bg-color: transparent;
+$btn-stroke--bg-color--hover: $key-color-1;
+
+$btn-stroke--border: 2px solid $key-color-1;
+$btn-stroke--border--hover: 2px solid transparent;
+$btn-stroke--border-radius: 50px;
+
+//
+// .btn--small
+//
+$btn-small--padding-divider: 1.5;
+$btn-small--font-size: $default-font-size - 2px;
+
+	//// don't edit | this code generate small size btn
+	$btn-small--padding-top: $btn-padding-top / $btn-small--padding-divider;
+	$btn-small--padding-right: $btn-padding-right / $btn-small--padding-divider;
+	$btn-small--padding-bottom: $btn-padding-bottom / $btn-small--padding-divider;
+	$btn-small--padding-left: $btn-padding-left / $btn-small--padding-divider;
+
+
+//
+// .btn--large
+//
+$btn-large--padding-divider: 1.5;
+$btn-large--font-size: $default-font-size + 2px;
+
+	//// don't edit | this code generate large size btn
+	$btn-large--padding-top: $btn-padding-top * $btn-large--padding-divider;
+	$btn-large--padding-right: $btn-padding-right * $btn-large--padding-divider;
+	$btn-large--padding-bottom: $btn-padding-bottom * $btn-large--padding-divider;
+	$btn-large--padding-left: $btn-padding-left * $btn-large--padding-divider;
+
+
+// 
+// END VARS
+// 
+
+
+// btn group
+.btn-group {
+	@extend .flex;
+	margin: $btn-group--margin;
+	&--start {
+		@extend .flex--start-x;
+	}
+	&--column {
+		@extend .flex--column;
+	}
+	&--center {
+		@extend .flex--center-x;
+	}
+	&--end {
+		@extend .flex--end-x;
+	}
+	&--space-between {
+		@extend .flex--space-between;
+	}
+	> .btn {
+		margin: $btn-group--btn-margin;
+	}
+}
+
+// default btn
 .btn {
-	margin: 0;
-	border: 0 none;
-	overflow: visible;
+	@extend .flex;
 	cursor: pointer;
-	line-height: 1.2;
-	display: inline-block;
-	text-align: center;
+
+	padding: {
+		top: $btn-padding-top;
+		right: $btn-padding-right;
+		bottom: $btn-padding-bottom;
+		left: $btn-padding-left;
+	}
+
+	margin: $btn-margin;
+
+	text-align: $btn-text-align;
 	text-decoration: none;
-	font-weight: $default-font-weight;
-	padding: 20px 30px;
-	background: $key-color-2;
-	text-transform: uppercase;
-	color: #FFF;
-	font-family: $default-font-family;
-	border-radius: $default-radius;
+	text-transform: $btn-text-transform;
+	line-height: $btn-line-height;
+	letter-spacing: $btn-letter-spacing;
+
+	color: $btn-color;
+	background-color: $btn-bg-color;
+	border: $btn-border;
+	border-radius: $btn-border-radius;
+
+	font-size: $btn-font-size;
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	
 	@include transition();
+
 	@include hover() {
-        border-bottom: 0 none;
+        border: $btn-border--hover;
 		text-decoration: none;
-		background-color: $key-color-1;
-		color: #FFF;
+		background-color: $btn-bg-color--hover;
+		color: $btn-color--hover;
     }
+
+    @include max-screen($xxs-max) {
+    	justify-content: center;
+    	width: 100%;
+    }
+	// mods
+    &--primary {
+    	padding: {
+			top: $btn-primary--padding-top;
+			right: $btn-primary--padding-right;
+			bottom: $btn-primary--padding-bottom;
+			left: $btn-primary--padding-left;
+		}
+
+		text-align: $btn-primary--text-align;
+		text-decoration: none;
+		text-transform: $btn-primary--text-transform;
+		line-height: $btn-primary--line-height;
+		letter-spacing: $btn-primary--letter-spacing;
+
+		font-size: $btn-primary--font-size;
+		font-family: $btn-primary--font-family;
+		font-weight: $btn-primary--font-weight;
+
+    	color: $btn-primary--color;
+    	background-color: $btn-primary--bg-color;
+    	border: $btn-primary--border;
+		border-radius: $btn-primary--border-radius;
+
+    	@include hover() {
+    		color: $btn-primary--color--hover;
+    		background-color: $btn-primary--bg-color--hover;
+    		border: $btn-primary--border--hover;
+    	}
+    }
+    &--stroke {
+    	padding: {
+			top: $btn-stroke--padding-top;
+			right: $btn-stroke--padding-right;
+			bottom: $btn-stroke--padding-bottom;
+			left: $btn-stroke--padding-left;
+		}
+
+		text-align: $btn-stroke--text-align;
+		text-decoration: none;
+		text-transform: $btn-stroke--text-transform;
+		line-height: $btn-stroke--line-height;
+		letter-spacing: $btn-stroke--letter-spacing;
+
+		font-size: $btn-stroke--font-size;
+		font-family: $btn-stroke--font-family;
+		font-weight: $btn-stroke--font-weight;
+
+    	color: $btn-stroke--color;
+    	background-color: $btn-stroke--bg-color;
+    	border: $btn-stroke--border;
+		border-radius: $btn-stroke--border-radius;
+
+    	@include hover() {
+    		color: $btn-stroke--color--hover;
+    		background-color: $btn-stroke--bg-color--hover;
+    		border: $btn-stroke--border--hover;
+    	}
+    }
+    // sizes
+    &--small {
+    	padding: {
+			top: $btn-small--padding-top;
+			right: $btn-small--padding-right;
+			bottom: $btn-small--padding-bottom;
+			left: $btn-small--padding-left;
+		}
+		font-size: $btn-small--font-size;
+    }
+    &--large {
+    	padding: {
+			top: $btn-large--padding-top;
+			right: $btn-large--padding-right;
+			bottom: $btn-large--padding-bottom;
+			left: $btn-large--padding-left;
+		}
+		font-size: $btn-large--font-size;
+    }
+	// other
 	&--block {
 		display: block;
 		width: 100%;
 		min-width: 0;
-		padding-left: 15px;
-		padding-right: 15px;
 	}
-	&--xs {}
-	&--sm {}
-	&--lg {}
 }
 
 
