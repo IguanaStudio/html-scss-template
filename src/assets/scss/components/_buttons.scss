@@ -1,3 +1,6 @@
+// by Eugeniusz Poprocki
+
+
 //
 // .btn-group
 //
@@ -125,21 +128,6 @@ $btn-large--font-size: $default-font-size + 2px;
 .btn-group {
 	@extend .flex;
 	margin: $btn-group--margin;
-	&--start {
-		@extend .flex--start-x;
-	}
-	&--column {
-		@extend .flex--column;
-	}
-	&--center {
-		@extend .flex--center-x;
-	}
-	&--end {
-		@extend .flex--end-x;
-	}
-	&--space-between {
-		@extend .flex--space-between;
-	}
 	> .btn {
 		margin: $btn-group--btn-margin;
 	}
@@ -183,10 +171,10 @@ $btn-large--font-size: $default-font-size + 2px;
 		color: $btn-color--hover;
     }
 
-    @include max-screen($xxs-max) {
-    	justify-content: center;
-    	width: 100%;
-    }
+    // @include max-screen($xxs-max) {
+    // 	justify-content: center;
+    // 	width: 100%;
+    // }
 	// mods
     &--primary {
     	padding: {

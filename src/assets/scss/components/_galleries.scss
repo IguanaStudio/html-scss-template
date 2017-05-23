@@ -1,3 +1,5 @@
+// by Damian Bonar
+
 $gallery-margin: $default-margin;
 
 $gallery-thumbnail-margin-bottom: 30px;
@@ -41,7 +43,8 @@ $gallery-thumbnail-img-zoom-scale-hover: 1.1;
         	opacity: $gallery-thumbnail-img-opacity-hover;
         }
 
-        .ico {
+        .ico,
+		.ico-default {
         	opacity: $gallery-thumbnail-icon-opacity-hover;
         }
     }
@@ -54,7 +57,8 @@ $gallery-thumbnail-img-zoom-scale-hover: 1.1;
 		@include transition();
 	}
 
-	.ico {
+	.ico,
+	.ico-default {
 		font-size: $gallery-thumbnail-icon-font-size;
 		color: #FFF;
 		position: absolute;
@@ -97,26 +101,30 @@ $gallery-thumbnail-img-zoom-scale-hover: 1.1;
 	}
 
 	&--icon-slide {
-		.ico {
+		.ico,
+		.ico-default {
 			top: 25%;
 		}
 
 		@include hover() {
-	        .ico {
+	        .ico,
+			.ico-default {
 	        	top: 50%;
 	        }
 	    }
 	}
 
 	&--icon-zoom-out {
-		.ico {
+		.ico,
+		.ico-default {
 			transform-origin: center center;
 			transform: translate(-50%, -50%) scale($gallery-thumbnail-icon-zoom-out-scale);
 			@include transition($delay: 0s);
 		}
 
 		@include hover() {
-	        .ico {
+	        .ico,
+			.ico-default {
 	        	transform: translate(-50%, -50%) scale($gallery-thumbnail-icon-zoom-out-scale-hover);
 				@include transition($delay: 0.15s);
 	        }

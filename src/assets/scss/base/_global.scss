@@ -175,7 +175,7 @@ ul.list-styled,
         position: relative;
         &::before {
             content: $list-li-icon-content;
-            font-family: $default-font-family-icon;
+            font-family: $list-li-font-family;
             font-size: $list-li-icon-size;
             color: $list-li-icon-color;
             position: absolute;

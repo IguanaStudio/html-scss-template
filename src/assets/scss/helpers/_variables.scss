@@ -18,14 +18,17 @@ $default-font-family: 'Roboto', sans-serif;
 $default-font-weight: 400;
 $default-font-weight-bold: 700;
 $default-font-size: 16px; 
-$default-lead-font-size: 18px; 
-$default-font-family-icon: 'Icons';
+$default-lead-font-size: 18px;
+// icons
+$default-font-family-icon: 'ico-default';
+$project-font-family-icon: 'Icons';
 
 // list
-$list-li-icon-content: '\e912';
-$list-li-icon-size: 10px;
+$list-li-font-family: $default-font-family-icon;
+$list-li-icon-content: '\e020';
+$list-li-icon-size: 13px;
 $list-li-icon-color: $key-color-1;
-$list-li-icon-top: 5px;
+$list-li-icon-top: 2px;
 $list-li-icon-right: 5px;
 $list-li-icon-bottom: 5px;
 $list-li-icon-left: 0;

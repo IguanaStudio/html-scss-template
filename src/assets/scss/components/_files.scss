@@ -1,3 +1,5 @@
+// by Eugeniusz Poprocki
+
 // files | default
 $files--margin: 30px 0;
 
@@ -6,15 +8,46 @@ $files--margin: 30px 0;
 //
 $files-title--margin: 30px 0 15px;
 
+
+//
+// list item
+//
+$files-list-item--position: relative;
+$files-list-item--padding: 10px 40px;
+
+
+//
+// list item info
+//
+$files-list-item-info--color: lighten($default-font-color, 40%);
+$files-list-item-info--font-weight: 300;
+
+
 //
 // list item before
 //
-$files-list-item-before--content: '\e90a';
+$files-list-item-before--content: '\e003';
 $files-list-item-before--font-family: $default-font-family-icon;
 $files-list-item-before--font-size: 24px;
 $files-list-item-before--color: $key-color-1;
 $files-list-item-before--position-top: 5px;
 $files-list-item-before--position-left: 0;
+
+
+//
+// list item a hover
+//
+$files-list-item-a-hover--color: $key-color-1;
+$files-list-item-a-hover--padding: 0 0 0 10px;
+	// &-info element style on a hover 
+$files-list-item-info-a-hover--color: inherit;
+	// ::before element style on a hover
+$files-list-item-a-hover-before--left: 15px;
+
+
+// 
+// END VARS
+// 
 
 
 .files {
@@ -25,15 +58,25 @@ $files-list-item-before--position-left: 0;
 	}
 	&__list {
 		&-item {
-			position: relative;
-			padding: 10px 40px;
+			position: $files-list-item--position;
+			padding: $files-list-item--padding;
 			a {
-				display: block;
+				display: inline-block;
 				color: inherit;
 				font-size: inherit;
 				font-weight: inherit;
 				text-transform: inherit;
 				text-decoration: inherit;
+				@include hover() {
+					color: $files-list-item-a-hover--color;
+					padding: $files-list-item-a-hover--padding;
+					.files__list-item-info {
+						color: $files-list-item-info-a-hover--color;
+					}
+					&::before {
+						left: $files-list-item-a-hover-before--left;
+					}
+				}
 				&::before {
 					content: $files-list-item-before--content;
 					position: absolute;
@@ -42,51 +85,13 @@ $files-list-item-before--position-left: 0;
 					font-family: $files-list-item-before--font-family;
 					font-size: $files-list-item-before--font-size;
 					color: $files-list-item-before--color;
+					@include transition();
 				}
-				span {
-
-				}
+			}
+			&-info {
+				color: $files-list-item-info--color;
+				font-weight: $files-list-item-info--font-weight;
 			}
 		}
 	}
-}
-
-
-.download {
-	margin: $default-margin;
-	li {
-		margin: 0 0 15px;
-		padding: 0;
-		font-weight: $default-font-weight;
-		a {
-			display: inline-block;
-			font-weight: $default-font-weight;
-			color: $default-font-color;
-			position: relative;
-			padding-left: 40px;
-			@include transition();
-			&:before {
-				content: "\e90f";
-				font-family: 'Icons';
-				font-size: 25px;
-				color: $key-color-1;
-				position: absolute;
-				top: -5px;
-				left: 1px;
-				@include transition(left);
-			}
-			span {
-				color: lighten($default-font-color, 40%);
-				font-weight: 300;
-			}
-			@include hover() {
-		        text-decoration: none;
-				color: $key-color-2;
-				padding-left: 50px;
-				&:before {
-					left: 11px;
-				}
-		    }
-		}
-	}	
 }

@@ -1,3 +1,5 @@
+// by Eugeniusz Poprocki
+
 // alert | default
 $alert-position: relative;
 $alert-padding: 25px;
@@ -43,16 +45,17 @@ $alert-fixed--z-index: 99;
 $alert-fixed--margin-bottom: 0;
 $alert-fixed--border-radius: 0;
 
-// alert icon
+// alert icon ::before
 $alert-icon--padding-left: 50px;
-$alert-icon--before-content-font-size: 22px;
-$alert-icon--before-content-position-top: 20px;
-$alert-icon--before-content-position-left: 15px;
+$alert-icon-before--font-size: 22px;
+$alert-icon-before--position-top: 20px;
+$alert-icon-before--position-left: 15px;
+$alert-icon-before--font-family: $default-font-family-icon;
 
-$alert-icon--before-content-success: '\e913';
-$alert-icon--before-content-info: '\e912';
-$alert-icon--before-content-warning: '\e911';
-$alert-icon--before-content-danger: '\e914';
+$alert-icon-before--content-success: '\e008';
+$alert-icon-before--content-info: '\e005';
+$alert-icon-before--content-warning: '\e006';
+$alert-icon-before--content-danger: '\e007';
 
 // 
 // END VARS
@@ -94,6 +97,7 @@ $alert-icon--before-content-danger: '\e914';
 	> p + p {
 		margin-top: 5px;
 	}
+
 	&--fixed {
 		position: fixed;
 		bottom:$alert-fixed--position-bottom;
@@ -107,11 +111,11 @@ $alert-icon--before-content-danger: '\e914';
 		padding-left: $alert-icon--padding-left;
 		&::before {
 			content: '';
-			font-family: $default-font-family-icon;
+			font-family: $alert-icon-before--font-family;
 			position: absolute;
-			top:$alert-icon--before-content-position-top;
-			left:$alert-icon--before-content-position-left;
-			font-size: $alert-icon--before-content-font-size;
+			top:$alert-icon-before--position-top;
+			left:$alert-icon-before--position-left;
+			font-size: $alert-icon-before--font-size;
 		}
 	}
 	
@@ -121,7 +125,7 @@ $alert-icon--before-content-danger: '\e914';
 		border-color: $alert-success--border-color;
 		&.alert--icon {
 			&::before {
-				content: $alert-icon--before-content-success;
+				content: $alert-icon-before--content-success;
 			}
 		}
 	}
@@ -132,7 +136,7 @@ $alert-icon--before-content-danger: '\e914';
 		border-color: $alert-info--border-color;
 		&.alert--icon {
 			&::before {
-				content: $alert-icon--before-content-info;
+				content: $alert-icon-before--content-info;
 			}
 		}
 	}
@@ -143,7 +147,7 @@ $alert-icon--before-content-danger: '\e914';
 		border-color: $alert-warning--border-color;
 		&.alert--icon {
 			&::before {
-				content: $alert-icon--before-content-warning;
+				content: $alert-icon-before--content-warning;
 			}
 		}
 	}
@@ -154,7 +158,7 @@ $alert-icon--before-content-danger: '\e914';
 		border-color: $alert-danger--border-color;
 		&.alert--icon {
 			&::before {
-				content: $alert-icon--before-content-danger;
+				content: $alert-icon-before--content-danger;
 			}
 		}
 	}
