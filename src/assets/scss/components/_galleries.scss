@@ -2,6 +2,8 @@
 
 $gallery-margin: $default-margin;
 
+$gallery-title-margin: $default-margin;
+
 $gallery-thumbnail-margin-bottom: 30px;
 $gallery-thumbnail-gutter10-margin-bottom: 10px;
 $gallery-thumbnail-gutter20-margin-bottom: 20px;
@@ -23,8 +25,16 @@ $gallery-thumbnail-img-zoom-scale-hover: 1.1;
 .gallery {
 	margin: $gallery-margin;
 	
-	&__title {}
-	&__list {}
+	&__title {
+        	@extend .h3;
+		margin: $gallery-title-margin;
+    	}
+    
+	&__list {
+        &-item {
+            
+        }
+    }
 }
 
 .thumbnail {
