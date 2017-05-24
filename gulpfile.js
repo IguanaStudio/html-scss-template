@@ -147,7 +147,7 @@ gulp.task('scss-to-css', function() {
         //.pipe(combineMq({beautify: false}))
         .pipe(autoprefixer())
         .pipe(concat('main.min.css'))
-        .pipe(cssnano())
+        .pipe(cssnano({ minifyFontValues: false, discardUnused: false }))
         .pipe(postcss(processors))
         .pipe(gulp.dest(paths.src.css_dest))
         .pipe(browserSync.stream());
