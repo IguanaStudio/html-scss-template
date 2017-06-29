@@ -3,7 +3,7 @@ Project: Iguana default front-end template;
 Authors: Mariusz Gałka, Damian Bonar, Eugeniusz Poprocki;
 Company: Iguana Sp. z o.o.;
 
-Created date: 2016-10-18; 
+Created date: 2016-10-18;
 Last update date: 2017-05-23;
 
 Version: 0.9;
@@ -11,36 +11,37 @@ Version: 0.9;
 
 @import
 	'helpers/_variables.scss',
-	 
+
     'vendors/_flexboxgrid.scss',
     'vendors/_media-queries.scss',
     'vendors/_fancybox.scss',
-	'vendors/_jcf.scss',
 	'vendors/owl/_owl.carousel.scss',
-    
+
     'helpers/_mixins.scss',
     'helpers/_helpers.scss',
-    
+
     'base/_normalize.scss',
     'base/_global.scss',
     'base/_fonts.scss',
-    
+
 	'components/_alerts.scss',
 	'components/_buttons.scss',
 	'components/_files.scss',
 	'components/_forms.scss',
-	'components/_galleries.scss',
+    'components/_galleries.scss',
+    'components/_jcf-checkbox.scss',
+    'components/_jcf-radio.scss',
+	'components/_jcf-select.scss',
 	'components/_lists.scss',
     'components/_maps.scss',
     'components/_paginations.scss',
 	'components/_sliders.scss',
     'components/_wysiwyg.scss',
-	 
+
 	'layout/_grid.scss',
-	'layout/_breadcrumbs.scss', 
+	'layout/_breadcrumbs.scss',
     'layout/_header.scss',
     'layout/_footer.scss',
-	  
-	'pages/_common.scss'; 
-	 
-	
+
+	'pages/_common.scss';
+

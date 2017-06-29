@@ -16,26 +16,29 @@
     color: $default-font-color;
 }
 
-input, 
-select, 
+input,
+select,
 textarea,
 .jcf-select {
+    border: 1px solid #E2E2E2;
+    color: $default-font-color;
+    font-family: $default-font-family;
+    font-size: $default-font-size;
     width: 100%;
     margin: 0;
     padding: 15px 20px;
-    font-size: $default-font-size;
-    color: $default-font-color;
-    border: 1px solid #E2E2E2;
     outline: none;
-    font-family: $default-font-family;
-    @include transition();
+    @include transition;
+
     &.error {
-	    border-color: #D30C0C;
+	    border-color: #d30c0c;
 	}
+
     &:focus {
 	    border-color: #C8C8C8;
 	    box-shadow: 0 0 5px 1px rgba(0,0,0,0.05);
 	}
+
 	&[disabled] {
 		text-shadow: 1px 1px #FFF;
 	    border-color: #d9d9d9;
@@ -59,54 +62,59 @@ textarea {
     vertical-align: top;
 }
 
-label {
-    display: inline-block;
-    font-weight: $default-font-weight;
-    margin-bottom: 5px;
-    max-width: 100%;
-}
 
-.help-block {
-	opacity: 0.6;
-    display: block;
-    margin-bottom: 8px;
-    margin-top: 5px;
-    font-size: 80%;
-}
+.form {
+    margin: $default-margin;
 
-.static-control {
-	border: 1px solid transparent;
-    color: #000;
-    font-size: $default-font-size;
-    font-weight: $default-font-weight;
-    padding: 15px 0;
-    width: 100%;
-}
+    &__group {
+        margin: 0 0 25px;
+        position: relative;
+    }
 
-.form-group {
-	margin-bottom: 25px;
-	position: relative;
-}
+    &__info {
+        opacity: 0.6;
+        display: block;
+        margin: 5px 0 0;
+        font-size: 80%;
+    }
 
-.button-group {
-	margin-top: 20px;
-	overflow: hidden;
-	.btn {
-		@include max-screen($xs-max) {
-			width: 100%;
-		    clear: both;
-		    display: block;
-		}
-	}
-}
+    &__label {
+        color: $default-font-color;
+        display: block;
+        font-weight: $default-font-weight;
+        margin: 0 0 10px;
+    }
 
-.recaptcha {
-	text-align: left;
+    &__static-control {
+        border: 1px solid transparent;
+        color: #000;
+        font-size: $default-font-size;
+        font-weight: $default-font-weight;
+        padding: 15px 0;
+        width: 100%;
+    }
+
+    &__checkbox,
+    &__radio {
+        margin: 10px 0;
+    }
+
+    &__action {
+        margin: 25px 0 0;
+
+        @include max-screen($xs-max) {
+            .btn {
+                width: 100%;
+                clear: both;
+                display: block;
+            }
+        }
+    }
 }
 
 .form {
 	margin: $default-margin;
-	
+
 	&-horizontal {
 		label {
 			text-align: left;
@@ -118,7 +126,7 @@ label {
 				width: 100%;
 			}
 		}
-		
+
 		.form-group {
 			margin-bottom: 10px;
 			margin-left: 0;
@@ -133,7 +141,7 @@ label {
 				clear: both;
 			}
 		}
-		
+
 		.field-group,
 		.button-group  {
 			margin-left: 200px;
@@ -147,24 +155,23 @@ label {
 
 .checkbox,
 .radio {
-	margin: 10px 0;
 	&:before,
 	&:after {
 		display: table;
 		line-height: 0;
-		content: "";
+		content: '';
 	}
-	
+
 	&:after {
 		clear: both;
 	}
-	
-	input {
+
+	&__input {
 		float: left;
 		margin-top: 4px;
 	}
-	
-	label {
+
+	&__label {
 		margin: 0 0 0 25px;
 		overflow: hidden;
 		display: block;
@@ -173,12 +180,11 @@ label {
 		width: auto;
 		padding-top: 0;
 	}
-	
-	.radio-info,
-	.checkbox-info {
-		margin: 2px 0 8px 35px;
+
+	&__info {
+		margin: 2px 0 0 25px;
 		opacity: 0.6;
 		display: block;
-		font-size: 12px;
+		font-size: 80%;
 	}
 }
