@@ -1,7 +1,6 @@
 .jcf-checkbox {
     vertical-align: middle;
     display: inline-block;
-    position: absolute;
     overflow: hidden;
     cursor: default;
     background: #fff;
@@ -9,6 +8,7 @@
     margin: 0 3px 0 0;
     height: 16px;
     width: 16px;
+    position: relative;
 
     span {
         position: absolute;

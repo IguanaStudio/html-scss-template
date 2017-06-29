@@ -1,7 +1,6 @@
 .jcf-radio {
     vertical-align: middle;
     display: inline-block;
-    position: absolute;
     overflow: hidden;
     cursor: default;
     background-color: #fff;
@@ -10,6 +9,7 @@
     margin: 0 3px 0 0;
     height: 16px;
     width: 16px;
+    position: relative;
 
     span {
         display: none;

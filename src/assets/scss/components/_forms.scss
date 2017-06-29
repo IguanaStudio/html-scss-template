@@ -155,16 +155,17 @@ textarea {
 
 .checkbox,
 .radio {
-	&:before,
-	&:after {
-		display: table;
-		line-height: 0;
-		content: '';
-	}
+    @extend .flex, .flex--center-y, .flex--nowrap;
+	// &:before,
+	// &:after {
+	// 	display: table;
+	// 	line-height: 0;
+	// 	content: '';
+	// }
 
-	&:after {
-		clear: both;
-	}
+	// &:after {
+	// 	clear: both;
+	// }
 
 	&__input {
 		float: left;
@@ -172,7 +173,6 @@ textarea {
 	}
 
 	&__label {
-		margin: 0 0 0 25px;
 		overflow: hidden;
 		display: block;
 		text-align: left;
