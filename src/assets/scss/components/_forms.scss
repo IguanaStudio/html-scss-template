@@ -156,27 +156,18 @@ textarea {
 .checkbox,
 .radio {
     @extend .flex, .flex--center-y, .flex--nowrap;
-	// &:before,
-	// &:after {
-	// 	display: table;
-	// 	line-height: 0;
-	// 	content: '';
-	// }
 
-	// &:after {
-	// 	clear: both;
-	// }
+    .jcf-checkbox {
+        align-self: flex-start;
+    }
 
 	&__input {
-		float: left;
-		margin-top: 4px;
 	}
 
 	&__label {
 		overflow: hidden;
 		display: block;
 		text-align: left;
-		float: none;
 		width: auto;
 		padding-top: 0;
 	}
