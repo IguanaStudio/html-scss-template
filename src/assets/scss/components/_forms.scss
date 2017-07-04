@@ -18,8 +18,7 @@
 
 input,
 select,
-textarea,
-.jcf-select {
+textarea {
     border: 1px solid #E2E2E2;
     color: $default-font-color;
     font-family: $default-font-family;
@@ -27,6 +26,7 @@ textarea,
     width: 100%;
     margin: 0;
     padding: 15px 20px;
+    line-height: inherit;
     outline: none;
     @include transition;
 
@@ -52,9 +52,9 @@ input[type="radio"] {
     width: auto;
 }
 
-select {
-    padding: 14px 18px;
-}
+// select {
+//     padding: 14px 18px;
+// }
 
 textarea {
     margin: 0;
@@ -155,14 +155,20 @@ textarea {
 
 .checkbox,
 .radio {
-    @extend .flex, .flex--center-y, .flex--nowrap;
+    @extend .flex, .flex--nowrap;
 
-    .jcf-checkbox {
-        align-self: flex-start;
+    .jcf-checkbox,
+    .jcf-radio {
+        margin: 2px 0 0;
     }
 
 	&__input {
+        margin: 2px 0 0;
 	}
+
+    &__field {
+        margin: 0 0 0 10px;
+    }
 
 	&__label {
 		overflow: hidden;
@@ -173,7 +179,7 @@ textarea {
 	}
 
 	&__info {
-		margin: 2px 0 0 25px;
+		margin: 2px 0 0;
 		opacity: 0.6;
 		display: block;
 		font-size: 80%;
