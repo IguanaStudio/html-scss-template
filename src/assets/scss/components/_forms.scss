@@ -163,6 +163,7 @@ textarea {
 }
 
 .form {
+    $this: &;
     margin: $form-margin;
 
     &__group {
@@ -212,7 +213,7 @@ textarea {
     }
 
     &--horizontal {
-        .form__label {
+        #{$this}__label {
             text-align: $form-label-forizontal-text-align;
             margin: $form-label-forizontal-margin;
             float: left;
@@ -224,7 +225,7 @@ textarea {
             }
         }
 
-        .form__field {
+        #{$this}__field {
             margin: $form-field-horizontal-margin;
 
             @include max-screen($xs-max) {
@@ -232,7 +233,7 @@ textarea {
             }
         }
 
-        .form__actions {
+        #{$this}__actions {
             margin: $form-actions-horizontal-margin;
 
             @include max-screen($xs-max) {
