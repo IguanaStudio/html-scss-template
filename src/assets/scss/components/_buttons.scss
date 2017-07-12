@@ -135,7 +135,7 @@ $btn-large--font-size: $default-font-size + 2px;
 
 // default btn
 .btn {
-	@extend .flex;
+	@extend .flex, .flex--inline;
 	cursor: pointer;
 
 	padding: {
