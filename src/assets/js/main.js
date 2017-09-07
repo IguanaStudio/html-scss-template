@@ -10,36 +10,47 @@ $(document).ready(function(){
 
 	if($.fn.validate) {
 		$.validator.setDefaults({
-			highlight: function(element, errorClass, validClass) {
-				var $element = $(element);
-				$element.addClass(errorClass).removeClass(validClass);
-				if ($element.attr('type') == 'checkbox' || $element.attr('type') == 'radio') {
-					if ($element.attr('type') == 'checkbox') {
-						$element.closest('.checkbox').addClass('error-checkbox');
-					} else if ($element.attr('type') == 'radio') {
-						$element.closest('.radio').addClass('error-radio');
-					}
-				} else if ($element.prop("tagName") == 'SELECT') {
-					$element.closest('.custom-select, .custom-select2, .custom-select2-multiple').addClass('select-error');
-				}
-			},
-			unhighlight: function(element, errorClass, validClass) {
-				var $element = $(element);
-				$element.removeClass(errorClass).addClass(validClass);
-				if ($element.attr('type') == 'checkbox' || $element.attr('type') == 'radio') {
-					if ($element.attr('type') == 'checkbox') {
-						$element.closest('.checkbox').removeClass('error-checkbox');
-					} else if ($element.attr('type') == 'radio') {
-						$element.closest('.radio').removeClass('error-radio');
-					}
-				} else if ($element.prop("tagName") == 'SELECT') {
-					$element.closest('.custom-select, .custom-select2, .custom-select2-multiple').removeClass('select-error');
-				}
-			},
-			errorPlacement: function() {
-			},
-			ignore: ':hidden:not([type="hidden"]):not(select)'
-		});
+            highlight: function(element, errorClass, validClass) {
+                var $element = $(element);
+                $element.addClass(errorClass).removeClass(validClass);
+                if ($element.attr('type') == 'checkbox' || $element.attr('type') == 'radio') {
+                    if ($element.attr('type') == 'checkbox') {
+                        $element.closest('.checkbox').addClass('error-checkbox');
+                    } else if ($element.attr('type') == 'radio') {
+                        $element.closest('.radio').addClass('error-radio');
+                    }
+                } else if ($element.prop("tagName") == 'SELECT') {
+                    $element.closest('.custom-select, .custom-select-multiple, .custom-select-default').addClass('error-select');
+                } else if ($element.prop("tagName") == 'TEXTAREA') {
+                    $element.closest('.wysiwyg-editor').addClass('error-wysiwyg');
+                }
+            },
+            unhighlight: function(element, errorClass, validClass) {
+                var $element = $(element);
+                $element.removeClass(errorClass).addClass(validClass);
+                if ($element.attr('type') == 'checkbox' || $element.attr('type') == 'radio') {
+                    if ($element.attr('type') == 'checkbox') {
+                        $element.closest('.checkbox').removeClass('error-checkbox');
+                    } else if ($element.attr('type') == 'radio') {
+                        $element.closest('.radio').removeClass('error-radio');
+                    }
+                } else if ($element.prop("tagName") == 'SELECT') {
+                    $element.closest('.custom-select, .custom-select-multiple, .custom-select-default').removeClass('error-select');
+                } else if ($element.prop("tagName") == 'TEXTAREA') {
+                    $element.closest('.wysiwyg-editor').removeClass('error-wysiwyg');
+                }
+            },
+            errorPlacement: function(error, element) {
+                if (element.closest('.custom-select').hasClass('error-select'))
+                    error.insertAfter(element.closest('.custom-select'));
+                else if (element.closest('.checkbox').hasClass('error-checkbox'))
+                    error.insertAfter(element.closest('.checkbox'));
+                else if (element.closest('.wysiwyg-editor').hasClass('error-wysiwyg'))
+                    error.insertAfter(element.closest('.wysiwyg-editor'));
+                else
+                    error.insertAfter(element);
+            }
+        });
 
 		$('form.validate').each(function() {
 			$(this).validate();
