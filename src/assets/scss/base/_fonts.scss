@@ -4,11 +4,10 @@
 
 @font-face {
   font-family: $project-font-family-icon;
-  src:  url('../fonts/icomoon.eot?c9lpec');
-  src:  url('../fonts/icomoon.eot?c9lpec#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?c9lpec') format('truetype'),
-    url('../fonts/icomoon.woff?c9lpec') format('woff'),
-    url('../fonts/icomoon.svg?c9lpec#Icons') format('svg');
+  src:
+    url('../fonts/icons.ttf') format('truetype'),
+    url('../fonts/icons.woff') format('woff'),
+    url('../fonts/icons.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -25,68 +24,203 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.ico-pinterest:before {
-  content: "\e914";
+.ico-twitter:before {
+  content: "\e936";
 }
-.ico-chevron-right:before {
-  content: "\e912";
-}
-.ico-chevron-left:before {
-  content: "\e913";
-}
-.ico-file:before {
-  content: "\e90f";
-}
-.ico-search-plus:before {
-  content: "\e910";
-}
-.ico-search:before {
-  content: "\e911";
+.ico-pause:before {
+  content: "\e935";
 }
 .ico-arrow-right:before {
-  content: "\e90c";
+  content: "\e92d";
 }
-.ico-arrow-down:before {
-  content: "\e90d";
+.ico-chevron-right:before {
+  content: "\e92e";
 }
-.ico-arrow-up:before {
-  content: "\e90e";
+.ico-bronze-medal .path1:before {
+  content: "\e92f";
+  color: rgb(241, 84, 63);
 }
-.ico-arrow-left:before {
-  content: "\e90b";
+.ico-bronze-medal .path2:before {
+  content: "\e930";
+  margin-left: -0.7705078125em;
+  color: rgb(248, 182, 76);
 }
-.ico-circle-plus:before {
+.ico-bronze-medal .path3:before {
+  content: "\e931";
+  margin-left: -0.7705078125em;
+  color: rgb(255, 112, 88);
+}
+.ico-bronze-medal .path4:before {
+  content: "\e932";
+  margin-left: -0.7705078125em;
+  color: rgb(242, 164, 61);
+}
+.ico-bronze-medal .path5:before {
+  content: "\e933";
+  margin-left: -0.7705078125em;
+  color: rgb(248, 182, 76);
+}
+.ico-bronze-medal .path6:before {
+  content: "\e934";
+  margin-left: -0.7705078125em;
+  color: rgb(242, 164, 61);
+}
+.ico-bag:before {
   content: "\e900";
 }
-.ico-circle-minus:before {
+.ico-chevron-left:before {
   content: "\e901";
 }
-.ico-shield:before {
+.ico-arrow-left:before {
   content: "\e902";
 }
-.ico-cart:before {
+.ico-gold-medal .path1:before {
   content: "\e903";
+  color: rgb(241, 84, 63);
 }
-.ico-box:before {
+.ico-gold-medal .path2:before {
   content: "\e904";
+  margin-left: -0.7705078125em;
+  color: rgb(248, 182, 76);
 }
-.ico-mail:before {
+.ico-gold-medal .path3:before {
   content: "\e905";
+  margin-left: -0.7705078125em;
+  color: rgb(255, 112, 88);
 }
-.ico-marker:before {
+.ico-gold-medal .path4:before {
   content: "\e906";
+  margin-left: -0.7705078125em;
+  color: rgb(255, 209, 92);
 }
-.ico-facebook-logo:before {
+.ico-gold-medal .path5:before {
   content: "\e907";
+  margin-left: -0.7705078125em;
+  color: rgb(248, 182, 76);
 }
-.ico-instagram-logo:before {
+.ico-gold-medal .path6:before {
   content: "\e908";
+  margin-left: -0.7705078125em;
+  color: rgb(255, 209, 92);
 }
-.ico-twitter-logo:before {
+.ico-silver-medal .path1:before {
   content: "\e909";
+  color: rgb(241, 84, 63);
 }
-.ico-youtube-logo:before {
+.ico-silver-medal .path2:before {
   content: "\e90a";
+  margin-left: -0.7705078125em;
+  color: rgb(163, 163, 163);
+}
+.ico-silver-medal .path3:before {
+  content: "\e90b";
+  margin-left: -0.7705078125em;
+  color: rgb(255, 112, 88);
+}
+.ico-silver-medal .path4:before {
+  content: "\e90c";
+  margin-left: -0.7705078125em;
+  color: rgb(196, 196, 196);
+}
+.ico-silver-medal .path5:before {
+  content: "\e90d";
+  margin-left: -0.7705078125em;
+  color: rgb(163, 163, 163);
+}
+.ico-silver-medal .path6:before {
+  content: "\e90e";
+  margin-left: -0.7705078125em;
+  color: rgb(196, 196, 196);
+}
+.ico-tune:before {
+  content: "\e90f";
+}
+.ico-play2:before {
+  content: "\e910";
+}
+.ico-cd:before {
+  content: "\e911";
+}
+.ico-speaker:before {
+  content: "\e912";
+}
+.ico-microphone:before {
+  content: "\e913";
+}
+.ico-clef:before {
+  content: "\e914";
+}
+.ico-microphone2:before {
+  content: "\e915";
+}
+.ico-speaker2:before {
+  content: "\e916";
+}
+.ico-cart:before {
+  content: "\e917";
+}
+.ico-pin:before {
+  content: "\e918";
+}
+.ico-check:before {
+  content: "\e919";
+}
+.ico-earth:before {
+  content: "\e91a";
+}
+.ico-lastfm:before {
+  content: "\e91b";
+}
+.ico-users:before {
+  content: "\e91c";
+}
+.ico-facebook:before {
+  content: "\e91d";
+}
+.ico-skype:before {
+  content: "\e91e";
+}
+.ico-youtube:before {
+  content: "\e91f";
+}
+.ico-picture:before {
+  content: "\e920";
+}
+.ico-lock:before {
+  content: "\e921";
+}
+.ico-pen:before {
+  content: "\e922";
+}
+.ico-close:before {
+  content: "\e923";
+}
+.ico-unlock:before {
+  content: "\e924";
+}
+.ico-repeat:before {
+  content: "\e925";
+}
+.ico-flag:before {
+  content: "\e926";
+}
+.ico-play:before {
+  content: "\e927";
+}
+.ico-resize:before {
+  content: "\e928";
+}
+.ico-favourite:before {
+  content: "\e929";
+}
+.ico-tune2:before {
+  content: "\e92a";
+}
+.ico-ok:before {
+  content: "\e92b";
+}
+.ico-user:before {
+  content: "\e92c";
 }
 
 
@@ -97,9 +231,9 @@
 @font-face {
   font-family: $default-font-family-icon;
   src:
-    url('../fonts/ico-default.ttf?673vtl') format('truetype'),
-    url('../fonts/ico-default.woff?673vtl') format('woff'),
-    url('../fonts/ico-default.svg?673vtl#ico-default') format('svg');
+    url('../fonts/icons-default.ttf') format('truetype'),
+    url('../fonts/icons-default.woff') format('woff'),
+    url('../fonts/icons-default.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -112,8 +246,6 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
