@@ -45,17 +45,15 @@ $(document).ready(function(){
                     error.insertAfter(element.closest('.custom-select'));
                 else if (element.closest('.checkbox').hasClass('error-checkbox'))
                     error.insertAfter(element.closest('.checkbox'));
+                else if (element.closest('.radio').hasClass('error-radio'))
+                    error.insertAfter(element.closest('.radio'));
                 else if (element.closest('.wysiwyg-editor').hasClass('error-wysiwyg'))
                     error.insertAfter(element.closest('.wysiwyg-editor'));
                 else
                     error.insertAfter(element);
-            }
+            },
+            ignore: ':hidden:not([type="hidden"]):not(select):not(.bbcode-editor)'
         });
-
-		$('form.validate').each(function() {
-			$(this).validate();
-		});
-	}
 
     if($.fn.owlCarousel) {
         $('.slider').owlCarousel({
