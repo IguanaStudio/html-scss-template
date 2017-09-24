@@ -132,6 +132,8 @@ a {
     font-weight: $link-weight;
     color: $link-color;
     text-decoration: none;
+    cursor: pointer;
+    
     @include hover() {
         color: $link-color-hover;
     }

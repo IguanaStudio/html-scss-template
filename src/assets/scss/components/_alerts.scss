@@ -9,8 +9,8 @@ $alert-border-radius: $default-radius;
 $alert-font-size: $default-font-size;
 
 // title 
-$alert-title-font-size: 20px;
-$alert-title-margin: 0 0 2px;
+$alert-title-font-size: 18px;
+$alert-title-margin: 0;
 
 // list
 $alert-ul-list-style: disc;
@@ -44,12 +44,12 @@ $alert-fixed--position-left: 0;
 $alert-fixed--z-index: 99;
 $alert-fixed--margin-bottom: 0;
 $alert-fixed--border-radius: 0;
-
+ 
 // alert icon ::before
-$alert-icon--padding-left: 50px;
+$alert-icon--padding-left: 60px;
 $alert-icon-before--font-size: 22px;
-$alert-icon-before--position-top: 20px;
-$alert-icon-before--position-left: 15px;
+$alert-icon-before--position-top: 22px;
+$alert-icon-before--position-left: 25px;
 $alert-icon-before--font-family: $default-font-family-icon;
 
 $alert-icon-before--content-success: '\e008';
@@ -74,6 +74,7 @@ $alert-icon-before--content-danger: '\e007';
 		display: block;
 		font-size: $alert-title-font-size;
 		margin: $alert-title-margin;
+        font-weight: $default-font-weight-bold;
 		color: inherit;
 	}
 
@@ -107,6 +108,7 @@ $alert-icon-before--content-danger: '\e007';
 		margin-bottom: $alert-fixed--margin-bottom;
 		border-radius: $alert-fixed--border-radius;
 	}
+    
 	&--icon {
 		padding-left: $alert-icon--padding-left;
 		&::before {

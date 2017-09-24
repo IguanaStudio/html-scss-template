@@ -133,6 +133,7 @@ textarea {
     padding: $form-fields-padding;
     line-height: inherit;
     outline: none;
+    appearance: none;
     @include transition;
 
     &.error {
