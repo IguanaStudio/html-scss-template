@@ -205,6 +205,7 @@ $btn-large--font-size: $default-font-size + 2px;
     		border: $btn-primary--border--hover;
     	}
     }
+    
     &--stroke {
     	padding: {
 			top: $btn-stroke--padding-top;
@@ -234,6 +235,7 @@ $btn-large--font-size: $default-font-size + 2px;
     		border: $btn-stroke--border--hover;
     	}
     }
+    
     // sizes
     &--small {
     	padding: {
@@ -244,6 +246,7 @@ $btn-large--font-size: $default-font-size + 2px;
 		}
 		font-size: $btn-small--font-size;
     }
+    
     &--large {
     	padding: {
 			top: $btn-large--padding-top;
@@ -253,6 +256,7 @@ $btn-large--font-size: $default-font-size + 2px;
 		}
 		font-size: $btn-large--font-size;
     }
+    
 	// other
 	&--block {
 		display: block;
@@ -260,9 +264,3 @@ $btn-large--font-size: $default-font-size + 2px;
 		min-width: 0;
 	}
 }
-
-
-
-
-
-
