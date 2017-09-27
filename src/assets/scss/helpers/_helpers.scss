@@ -843,7 +843,7 @@
 
 .block {
     display: block;
-    
+
     @include max-screen($xxs-max) {
         &--xxs {
             display: block;
@@ -883,6 +883,11 @@
     .visible-xxs {
         display: block !important;
     }
+
+    .visible-inline-xxs {
+        display: inline !important;
+    }
+
     .hidden-xxs {
         display: none !important;
     }
@@ -893,6 +898,11 @@
     .visible-xs {
         display: block !important;
     }
+
+    .visible-inline-xs {
+        display: inline !important;
+    }
+
     .hidden-xs {
         display: none !important;
     }
@@ -903,6 +913,11 @@
     .visible-sm {
         display: block !important;
     }
+
+    .visible-inline-sm {
+        display: inline !important;
+    }
+
     .hidden-sm {
         display: none !important;
     }
@@ -914,6 +929,11 @@
     .visible-md {
         display: block !important;
     }
+
+    .visible-inline-md {
+        display: inline !important;
+    }
+
     .hidden-md {
         display: none !important;
     }
@@ -924,6 +944,11 @@
     .visible-lg {
         display: block !important;
     }
+
+    .visible-inline-lg {
+        display: inline !important;
+    }
+
     .hidden-lg {
         display: none !important;
     }
@@ -1062,35 +1087,35 @@
 }
 
 .cmt {
-	margin-top: 0 !important;	
+	margin-top: 0 !important;
 }
 
 .cmr {
-	margin-right: 0 !important;	
+	margin-right: 0 !important;
 }
 
 .cmb {
-	margin-bottom: 0 !important;	
+	margin-bottom: 0 !important;
 }
 
 .cml {
-	margin-left: 0 !important;	
+	margin-left: 0 !important;
 }
 
 .cpt {
-	padding-top: 0 !important;	
+	padding-top: 0 !important;
 }
 
 .cpr {
-	padding-right: 0 !important;	
+	padding-right: 0 !important;
 }
 
 .cpb {
-	padding-bottom: 0 !important;	
+	padding-bottom: 0 !important;
 }
 
 .cpl {
-	padding-left: 0 !important;	
+	padding-left: 0 !important;
 }
 
 //
