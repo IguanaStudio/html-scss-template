@@ -4,3 +4,4 @@
 *.sublime-workspace
 .sublime-gulp.cache
 .DS_Store
+package-lock.json

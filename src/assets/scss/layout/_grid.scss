@@ -1,39 +1,32 @@
-.container-wide {
-	width: 1720px;
-}
-
 //
-// custom gaps
+// custom gutters
 //
-.no-gutter {
+.no-gutters {
     margin-right: 0;
     margin-left: 0;
 }
 
-.no-gutter > [class*='col-'],
-.no-gutter > [class*='flex-'] > [class*='col-'] {
+.no-gutters > [class*='col-'] {
     padding-right: 0;
     padding-left: 0;
 }
 
-.gutter-10 {
+.gutters-10 {
     margin-right: -5px;
     margin-left: -5px;
 }
 
-.gutter-10 > [class*='col-'],
-.gutter-10 > [class*='flex-'] > [class*='col-'] {
+.gutters-10 > [class*='col-'] {
     padding-right: 5px;
     padding-left: 5px;
 }
 
-.gutter-20 {
+.gutters-20 {
     margin-right: -10px;
     margin-left: -10px;
 }
 
-.gutter-20 > [class*='col-'],
-.gutter-20 > [class*='flex-'] > [class*='col-'] {
+.gutters-20 > [class*='col-'] {
     padding-right: 10px;
     padding-left: 10px;
 }

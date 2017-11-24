@@ -1,3 +1,31 @@
+.w-25 {
+    width: 25% !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+.w-75 {
+    width: 75% !important;
+}
+
+.w-100 {
+    width: 100% !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // flex
 //
@@ -1121,22 +1149,15 @@
 //
 // clearfix
 //
-.cf {
-    &:before,
-    &:after {
-        content: '';
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
+.clearfix {
+    @include clearfix;
 }
 
 //
-// fullhd limiter
+// max width limiter
 //
-.fullhd-limiter {
-    max-width: $fullhd-limiter;
+.max-width-limiter {
+    max-width: $max-width-limiter;
     margin: 0 auto;
 }
 

@@ -1,10 +1,7 @@
-// 
-// body
-// 
-
 // colors
 $key-color-1: #39c81d;
 $key-color-2: #29445a;
+
 $default-font-color: #000;
 $heading-color: #000;
 $bg-color-body: #FFF;
@@ -14,12 +11,21 @@ $border-color: #ccc;
 $color-accept: #2ecc71;
 $color-decline: #e74c3c;
 
+$color-success: #2ecc71; //dodano
+$color-danger: #e74c3c; //dodano
+$color-warning: #fec007; //dodano
+$color-info: #3498db; //dodano
+
+$default-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1); //dodano
+
 // font
 $default-font-family: 'Roboto', sans-serif;
 $default-font-weight: 400;
 $default-font-weight-bold: 700;
 $default-font-size: 16px; 
+
 $default-lead-font-size: 18px;
+$default-lead-font-weight: 300;
 
 // icons
 $default-font-family-icon: 'Icons Default';
@@ -113,8 +119,8 @@ $heading-6-line-height: $heading-line-height;
 // 
 // MEDIA QUERIES
 // 
-$xxs-max: 479px;
-$xs-min: 480px;
+$xxs-max: 575px;
+$xs-min: 576px;
 $xs-max: 767px;
 $sm-min: 768px;
 $sm-max: 991px;
@@ -122,5 +128,21 @@ $md-min: 992px;
 $md-max: 1199px;
 $lg-min: 1200px;
 $lg-max: 1679px;
+$xlg-min: 1680px;
 
-$fullhd-limiter: 1920px;
+
+// 
+// CONTAINERS
+//
+$xs-container-width: 540px;
+$xs-container-wide-width: 540px;
+$sm-container-width: 720px;
+$sm-container-wide-width: 720px;
+$md-container-width: 960px;
+$md-container-wide-width: 960px;
+$lg-container-width: 1200px;
+$lg-container-wide-width: 1200px;
+$xlg-container-width: 1200px;
+$xlg-container-wide-width: 1640px;
+
+$max-width-limiter: 1920px;

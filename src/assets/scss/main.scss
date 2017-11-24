@@ -2,23 +2,18 @@
 Project: Iguana default front-end template;
 Authors: Mariusz Gałka, Damian Bonar, Eugeniusz Poprocki;
 Company: Iguana Sp. z o.o.;
-
-Created date: 2016-10-18;
-Last update date: 2017-05-23;
-
-Version: 0.9;
-*/
-
+*/ 
+ 
 @import
 	'helpers/_variables.scss',
 
     'vendors/_flexboxgrid.scss',
-    'vendors/_media-queries.scss',
     'vendors/_fancybox.scss',
 	'vendors/owl/_owl.carousel.scss',
 
     'helpers/_mixins.scss',
     'helpers/_helpers.scss',
+    'helpers/_animations.scss',
 
     'base/_normalize.scss',
     'base/_global.scss',
