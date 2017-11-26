@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function() {
 
 	if($.fn.fancybox) {
 		$.extend(true, $.fancybox.defaults, {
@@ -86,11 +86,13 @@ $(document).ready(function(){
             highlight: function(element, errorClass, validClass) {
                 var $element = $(element);
                 $element.addClass(errorClass).removeClass(validClass);
-                if ($element.attr('type') == 'checkbox' || $element.attr('type') == 'radio') {
+                if ($element.attr('type') == 'checkbox' || $element.attr('type') == 'radio' || $element.attr('type') == 'file') {
                     if ($element.attr('type') == 'checkbox') {
                         $element.closest('.checkbox').addClass('error-checkbox');
                     } else if ($element.attr('type') == 'radio') {
                         $element.closest('.radio').addClass('error-radio');
+                    } else if ($element.attr('type') == 'file') {
+                        $element.closest('.fileuploader').addClass('error-fileuploader');
                     }
                 } else if ($element.prop("tagName") == 'SELECT') {
                     $element.closest('.select').addClass('error-select');
@@ -101,11 +103,13 @@ $(document).ready(function(){
             unhighlight: function(element, errorClass, validClass) {
                 var $element = $(element);
                 $element.removeClass(errorClass).addClass(validClass);
-                if ($element.attr('type') == 'checkbox' || $element.attr('type') == 'radio') {
+                if ($element.attr('type') == 'checkbox' || $element.attr('type') == 'radio' || $element.attr('type') == 'file') {
                     if ($element.attr('type') == 'checkbox') {
                         $element.closest('.checkbox').removeClass('error-checkbox');
                     } else if ($element.attr('type') == 'radio') {
                         $element.closest('.radio').removeClass('error-radio');
+                    } else if ($element.attr('type') == 'file') {
+                        $element.closest('.fileuploader').removeClass('error-fileuploader');
                     }
                 } else if ($element.prop("tagName") == 'SELECT') {
                     $element.closest('.select').removeClass('error-select');
@@ -122,6 +126,8 @@ $(document).ready(function(){
                     error.insertAfter(element.closest('.radio'));
                 else if (element.closest('.wysiwyg-editor').hasClass('error-wysiwyg'))
                     error.insertAfter(element.closest('.wysiwyg-editor'));
+                else if (element.closest('.fileuploader').hasClass('error-fileuploader'))
+                    error.insertAfter(element.closest('.fileuploader'));
                 else
                     error.insertAfter(element);
             },
@@ -169,15 +175,43 @@ $(document).ready(function(){
 			useCustomScroll: false
 		});
 
-		jcf.replace($('.select-jcf select'));
+        jcf.replace($('.select-jcf select'));
 		jcf.replace($('[type="radio"]'));
 		jcf.replace($('[type="checkbox"]'));
 	}
     
-//    .select-default select
-//    .select-filter select
-//    .select-multiple select
-    
+    if ($.fn.select2) {
+        $('.select-default select').each(function(){
+            var customSelectParent = $(this).parent('.select-default');
+            
+            $(this).select2({
+                language: 'pl',
+                placeholder: 'Wybierz',
+                dropdownParent: customSelectParent,
+                minimumResultsForSearch: Infinity
+            });
+        });
+
+        $('.select-filter select').each(function(){
+            var customSelectParent = $(this).parent('.select-filter');
+            
+            $(this).select2({
+                language: 'pl',
+                placeholder: 'Wybierz',
+                dropdownParent: customSelectParent
+            });
+        });
+        
+        $('.select-multiple select').each(function(){
+            var customSelectParent = $(this).parent('.select-multiple');
+            
+            $(this).select2({
+                language: 'pl',
+                placeholder: 'Wybierz',
+                dropdownParent: customSelectParent
+            });
+        });
+    }
     
 	$('.wysiwyg iframe').each(function(){
 		$(this).wrap('<div class="embed-responsive embed-responsive--16by9"></div>');

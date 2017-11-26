@@ -6,18 +6,17 @@ Company: Iguana Sp. z o.o.;
  
 @import
 	'helpers/_variables.scss',
-
-    'vendors/_flexboxgrid.scss',
-    'vendors/_fancybox.scss',
-	'vendors/owl/_owl.carousel.scss',
-
     'helpers/_mixins.scss',
     'helpers/_helpers.scss',
     'helpers/_animations.scss',
-
+    
     'base/_normalize.scss',
     'base/_global.scss',
     'base/_fonts.scss',
+    
+    'vendors/_flexboxgrid.scss',
+    'vendors/_fancybox.scss',
+	'vendors/owl/_owl.carousel.scss',
 
 	'components/_alerts.scss',
 	'components/_buttons.scss',
@@ -27,7 +26,6 @@ Company: Iguana Sp. z o.o.;
     'components/_jcf-checkbox.scss',
     'components/_jcf-radio.scss',
 	'components/_jcf-select.scss',
-	'components/_lists.scss',
     'components/_maps.scss',
     'components/_paginations.scss',
 	'components/_sliders.scss',
@@ -39,4 +37,3 @@ Company: Iguana Sp. z o.o.;
     'layout/_footer.scss',
 
 	'pages/_common.scss';
-

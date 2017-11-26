@@ -59,8 +59,7 @@ $files-list-item-a-hover-before--left: 10px;
 	margin: $files--margin;
     
 	&__title {
-		@extend .h2;
-		margin: $files-title--margin;
+		//margin: $files-title--margin;
 	}
     
 	&__list {

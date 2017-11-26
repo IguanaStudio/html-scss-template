@@ -26,9 +26,8 @@ $gallery-thumbnail-img-zoom-scale-hover: 1.1;
 	margin: $gallery-margin;
 	
 	&__title {
-        	@extend .h3;
-		margin: $gallery-title-margin;
-    	}
+        //margin: $gallery-title-margin;
+    }
     
 	&__list {
         &-item {
@@ -52,7 +51,7 @@ $gallery-thumbnail-img-zoom-scale-hover: 1.1;
 		img {
         	opacity: $gallery-thumbnail-img-opacity-hover;
         }
-
+        
         .ico,
 		.ico-default {
         	opacity: $gallery-thumbnail-icon-opacity-hover;

@@ -7,16 +7,13 @@ $heading-color: #000;
 $bg-color-body: #FFF;
 $border-color: #ccc;
 
-// standard colors
-$color-accept: #2ecc71;
-$color-decline: #e74c3c;
+$color-success: #2ecc71;
+$color-danger: #e74c3c;
+$color-warning: #fec007;
+$color-info: #3498db;
 
-$color-success: #2ecc71; //dodano
-$color-danger: #e74c3c; //dodano
-$color-warning: #fec007; //dodano
-$color-info: #3498db; //dodano
-
-$default-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1); //dodano
+// shadow
+$default-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1);
 
 // font
 $default-font-family: 'Roboto', sans-serif;
@@ -70,33 +67,33 @@ $selection-color: #fff;
 //
 // heading
 //
-$heading-weight: 300 !default;
+$heading-weight: 400 !default;
 $heading-line-height: 1.25;
 $heading-margin: 0 0 25px !default;
 
 // h1
-$heading-1-size: 36px !default;
+$heading-1-size: 38px !default;
 $heading-1-weight: $heading-weight;
 $heading-1-margin: $heading-margin;
 $heading-1-color: $heading-color;
 $heading-1-line-height: $heading-line-height;
 
 // h2
-$heading-2-size: 30px !default;
+$heading-2-size: 34px !default;
 $heading-2-weight: $heading-weight;
 $heading-2-margin: $heading-margin;
 $heading-2-color: $heading-color;
 $heading-2-line-height: $heading-line-height;
 
 // h3
-$heading-3-size: 26px !default;
+$heading-3-size: 30px !default;
 $heading-3-weight: $heading-weight;
 $heading-3-margin: $heading-margin;
 $heading-3-color: $heading-color;
 $heading-3-line-height: $heading-line-height;
 
 // h4
-$heading-4-size: 24px !default;
+$heading-4-size: 26px !default;
 $heading-4-weight: $heading-weight;
 $heading-4-margin: $heading-margin;
 $heading-4-color: $heading-color;
@@ -110,7 +107,7 @@ $heading-5-color: $heading-color;
 $heading-5-line-height: $heading-line-height;
 
 // h6
-$heading-6-size: 20px !default;
+$heading-6-size: 18px !default;
 $heading-6-weight: $heading-weight;
 $heading-6-margin: $heading-margin;
 $heading-6-color: $heading-color;
@@ -127,8 +124,8 @@ $sm-max: 991px;
 $md-min: 992px;
 $md-max: 1199px;
 $lg-min: 1200px;
-$lg-max: 1679px;
-$xlg-min: 1680px;
+$lg-max: 1599px;
+$xlg-min: 1600px;
 
 
 // 
@@ -143,6 +140,6 @@ $md-container-wide-width: 960px;
 $lg-container-width: 1200px;
 $lg-container-wide-width: 1200px;
 $xlg-container-width: 1200px;
-$xlg-container-wide-width: 1640px;
+$xlg-container-wide-width: 1570px;
 
 $max-width-limiter: 1920px;

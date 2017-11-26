@@ -39,7 +39,7 @@ $form-field-horizontal-margin-mobile: 0;
 // .form__static-control
 //
 $form-static-control-border: 1px solid transparent;
-$form-static-control-color: #000;
+$form-static-control-color: $default-font-color;
 $form-static-control-font-size: $default-font-size;
 $form-static-control-font-weight: $default-font-weight;
 $form-static-control-padding: 15px 0;
@@ -161,6 +161,10 @@ textarea {
     margin: 0;
     resize: none;
     vertical-align: top;
+}
+
+select {
+    padding: $form-fields-padding;
 }
 
 .form {
