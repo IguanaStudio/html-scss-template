@@ -1,6 +1,6 @@
 .top {
 	background-color: #f9fafc;
-	padding: 30px 0;
+	padding: 25px 0;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -36,30 +36,7 @@
 	}
 
 	&__nav {
-		ul {
-			li {
-				float: left;
-				position: relative;
-
-				a {
-					display: block;
-					color: $default-font-color;
-					padding: 10px 0;
-					@include hover() {
-						color: $key-color-1;
-					}
-
-					&.active {
-						font-weight: 700;
-						color: $key-color-1;
-					}
-				}
-			}
-
-			li + li {
-				margin-left: 50px;
-			}
-		}
+		
 	}
 
 }
@@ -248,6 +225,5 @@
                 }
             } 
 		}
-
 	}
 }

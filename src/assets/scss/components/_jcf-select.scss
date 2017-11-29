@@ -2,11 +2,12 @@
     display: inline-block;
     vertical-align: top;
     position: relative;
-    border: 1px solid #e2e2e2;
+    border: $form-fields-border;
     background-color: #fff;
+    border-radius: $form-fields-border-radius;
     width: 100%;
-    height: 53px;
-
+    //height: 54px;
+ 
     select {
         z-index: 1;
         left: 0;
@@ -19,16 +20,26 @@
         overflow: hidden;
         cursor: default;
         display: block;
-        font-family: $default-font-family;
-        font-size: $default-font-size;
-        line-height: 53px;
-        margin: 0 50px 0 20px;
+        font-family: $form-fields-font-family;
+        font-weight: $form-fields-font-weight;
+        font-size: $form-fields-font-size;
+        //line-height: 54px;
+        //margin: 0 50px 0 20px;
+        padding: $form-fields-padding;
+        line-height: inherit;
+        
+        .jcf-option-placeholder {
+            color: $form-placeholder-color;
+        }
+        
+        .error-select & span {
+            color: $color-danger;
+        }
     }
 
     &-opener {
         position: absolute;
         text-align: center;
-        background-color: #e2e2e2;
         width: 50px;
         bottom: 0;
         right: 0;
@@ -41,12 +52,17 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            color: $default-font-color;
         }
     }
 
-    .jcf-drop-flipped {
+    .jcf-drop-flipped.jcf-select-drop {
         bottom: 100%;
         top: auto;
+        
+        .jcf-select-drop-content {
+            border-radius: $form-fields-border-radius $form-fields-border-radius 0 0;
+        }
     }
 
     &.jcf-compact-multiple {
@@ -58,13 +74,18 @@
             content: '...';
         }
     }
+    
+    .error-select & {
+        border-color: $color-danger;
+        //background-color: #fff8f8;
+    }
 }
 
 .jcf-select-drop {
     body > & {
         position: absolute;
         margin: -1px 0 0;
-        z-index: 9999;
+        z-index: 490;
     }
 
     body > &.jcf-drop-flipped {
@@ -74,14 +95,16 @@
     .jcf-select & {
         position: absolute;
         margin-top: 0px;
-        z-index: 9999;
+        z-index: 490;
         top: 100%;
         left: -1px;
         right: -1px;
     }
 
     .jcf-select-drop-content {
-        border: 1px solid #e2e2e2;
+        border: $form-fields-border;
+        border-radius: 0 0 $form-fields-border-radius $form-fields-border-radius;
+        overflow: hidden;
     }
 
     &.jcf-compact-multiple {
@@ -91,7 +114,7 @@
         }
 
         .jcf-selected {
-            background-color: #e2e2e2;
+            background-color: #ced1d7;
             color: #000;
         }
 
@@ -100,9 +123,9 @@
             content: '';
             height: 4px;
             width: 8px;
-            margin:-7px 5px 0 -3px;
-            border:3px solid #777;
-            border-width:0 0 3px 3px;
+            margin: -7px 5px 0 -3px;
+            border: 3px solid #777;
+            border-width: 0 0 3px 3px;
             -moz-transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
             -webkit-transform: rotate(-45deg);
@@ -117,7 +140,7 @@
 .jcf-list-box {
     overflow: hidden;
     display: inline-block;
-    border: 1px solid #b8c3c9;
+    border: $form-fields-border;
     min-width: 200px;
     margin: 0 15px;
 }
@@ -146,6 +169,12 @@
         li {
             overflow: hidden;
             display: block;
+            
+            &:last-child {
+                .jcf-option {
+                    border-bottom: 0 none;
+                }
+            }
         }
     }
 
@@ -154,19 +183,26 @@
     }
 
     .jcf-option {
-        white-space: nowrap;
         overflow: hidden;
         cursor: default;
         display: block;
-        padding: 10px 20px;
+        padding: $form-fields-padding;
         color: $default-font-color;
-        min-height: 14px;
         height: 1%;
+        font-size: $form-fields-font-size;
+        border-bottom: $form-fields-border;
+        line-height: $small-line-height;
+        @include transition();
+        
+        &-placeholder {
+            display: none;
+        }
     }
 
     .jcf-disabled {
-        background: #fff !important;
-        color: #aaa !important;
+        background: $form-fields-disabled-bg !important;
+        color: $form-fields-disabled-color !important;
+        border-color: $form-fields-disabled-border;
     }
 
     .jcf-optgroup-caption {
@@ -183,8 +219,11 @@
     }
 }
 
-.jcf-select-drop .jcf-hover,
-.jcf-list-box .jcf-selected {
-    background: #e6e6e6;
-    color: #000;
+.jcf-select-drop .jcf-hover {
+    background: #f1f1f1;
+    color: $key-color-1;
+}
+
+.jcf-select-drop .jcf-selected {
+    color: $key-color-1;
 }

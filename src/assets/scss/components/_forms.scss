@@ -3,10 +3,12 @@
 //
 $form-margin: $default-margin;
 
+
 //
 // .form__group
 //
 $form-group-margin: 0 0 25px;
+
 
 //
 // .form__info
@@ -14,6 +16,7 @@ $form-group-margin: 0 0 25px;
 $form-info-opacity: 0.6;
 $form-info-margin: 5px 0 0;
 $form-info-font-size: 80%;
+
 
 //
 // .form__label
@@ -29,25 +32,29 @@ $form-label-forizontal-margin-mobile: 0;
 $form-label-forizontal-width: 180px;
 $form-label-forizontal-width-mobile: 100%;
 
+
 //
 // .form__field
 //
 $form-field-horizontal-margin: 0 0 0 200px;
 $form-field-horizontal-margin-mobile: 0;
 
+
 //
-// .form__static-control
+// .form__plaintext-control
 //
-$form-static-control-border: 1px solid transparent;
-$form-static-control-color: $default-font-color;
-$form-static-control-font-size: $default-font-size;
-$form-static-control-font-weight: $default-font-weight;
-$form-static-control-padding: 15px 0;
+$form-plaintext-control-border: 1px solid transparent;
+$form-plaintext-control-color: $default-font-color;
+$form-plaintext-control-font-size: $default-font-size;
+$form-plaintext-control-font-weight: $default-font-weight;
+$form-plaintext-control-padding: 15px 0;
+
 
 //
 // .form__checkbox, .form__radio
 //
 $form-chr-margin: 10px 0;
+
 
 //
 // .form__actions
@@ -56,10 +63,12 @@ $form-actions-margin: 25px 0 0;
 $form-actions-horizontal-margin: 0 0 0 200px;
 $form-actions-horizontal-margin-mobile: 0;
 
+
 //
 // placeholder
 //
-$form-placeholder-color: $default-font-color;
+$form-placeholder-color: lighten($default-font-color, 60%);
+
 
 //
 // input, select, textarea
@@ -68,22 +77,25 @@ $form-fields-font-family: $default-font-family;
 $form-fields-font-size: $default-font-size;
 $form-fields-font-weight: 400;
 
+$form-fields-bg: #fff;
 $form-fields-border: 1px solid #e2e2e2;
+$form-fields-border-radius: $default-radius;
 $form-fields-color: $default-font-color;
 $form-fields-padding: 15px 20px;
 $form-fields-width: 100%;
 
-$form-fields-error-border: #d30c0c;
+$form-fields-error-border: $color-danger;
 $form-fields-focus-border: #C8C8C8;
 $form-fields-focus-shadow: 0 0 5px 1px rgba(0,0,0,0.05);
 $form-fields-disabled-border: #d9d9d9;
-$form-fields-disabled-background: #f2f2f2;
+$form-fields-disabled-bg: #f2f2f2;
 $form-fields-disabled-color: #999;
+
 
 //
 // .checkbox, radio
 //
-$chr-jcf-margin: 2px 0 0;
+$chr-jcf-margin: 1px 0 0;
 
 $chr-input-margin: 2px 0 0;
 
@@ -101,6 +113,7 @@ $chr-info-font-size: 80%;
 
 
 //---[end vars]-----------------------------------------//
+
 
 ::-webkit-input-placeholder {
     color: $form-placeholder-color;
@@ -124,6 +137,7 @@ input,
 select,
 textarea {
     border: $form-fields-border;
+    border-radius: $form-fields-border-radius;
     color: $form-fields-color;
     font-family: $form-fields-font-family;
     font-size: $form-fields-font-size;
@@ -132,6 +146,7 @@ textarea {
     margin: 0;
     padding: $form-fields-padding;
     line-height: inherit;
+    background-color: $form-fields-bg;
     outline: none;
     appearance: none;
     @include transition;
@@ -147,7 +162,7 @@ textarea {
 
 	&[disabled] {
 	    border-color: $form-fields-disabled-border;
-	    background-color: $form-fields-disabled-background;
+	    background-color: $form-fields-disabled-bg;
 	    color: $form-fields-disabled-color;
 	}
 }
@@ -164,7 +179,33 @@ textarea {
 }
 
 select {
-    padding: $form-fields-padding;
+    
+}
+
+label.error {
+    margin: 0;
+    font-size: 11px;
+    font-weight: $default-font-weight;
+    background-color: $color-danger;
+    color: #fff;
+    border-radius: $default-radius;
+    padding: 5px 9px;
+    line-height: 1.2;
+    position: relative;
+    display: inline-block;
+    margin-top: 5px;
+    text-align: left;
+    
+    &::before {
+        @include pseudo;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 4px 4px 4px;
+        border-color: transparent transparent $color-danger transparent;
+        left: 6px;
+        top: -4px;
+    }
 }
 
 .form {
@@ -191,13 +232,21 @@ select {
         margin: $form-label-margin;
     }
 
-    &__static-control {
-        border: $form-static-control-border;
-        color: $form-static-control-color;
-        font-size: $form-static-control-font-size;
-        font-weight: $form-static-control-font-weight;
-        padding: $form-static-control-padding;
+    &__plaintext-control {
+        border: $form-plaintext-control-border;
+        color: $form-plaintext-control-color;
+        font-size: $form-plaintext-control-font-size;
+        font-weight: $form-plaintext-control-font-weight;
+        padding: $form-plaintext-control-padding;
         width: 100%;
+    }
+    
+    &__input {
+        
+    }
+    
+    &__textarea {
+        
     }
 
     &__checkbox,

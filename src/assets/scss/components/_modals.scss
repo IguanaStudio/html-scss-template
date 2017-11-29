@@ -1,0 +1,61 @@
+.fancybox-is-modal.fancybox-is-open .fancybox-slide {
+	padding: 0 15px;
+}
+
+.modal {
+	padding: 0 !important;
+	margin: 45px 0 15px !important;
+	background: #FFF;
+	width: 100%;
+	max-width: 800px;
+	overflow: visible !important;
+    border-radius: $default-radius;
+    display: none;
+	
+	&__title {
+
+	}
+	
+	&__close {
+		@extend .flex, .flex--center-y, .flex--nowrap;
+        position: absolute;
+        top: -30px;
+        right: 0;
+        flex-shrink: 0;
+        color: #fff;
+        font-size: 12px;
+		@include transition();
+        line-height: 1;
+        font-weight: $default-font-weight;
+		
+        @include hover() {
+			color: $key-color-1;
+		}
+        
+        > span {
+            font-size: 12px;
+            font-weight: $default-font-weight;
+            margin-right: 8px;
+        }
+	}
+	
+	&__inner {
+		padding: 50px;
+	}
+    
+    //
+    // MODAL OPENING CLOSING EFFECTS
+    //
+    .fancybox-is-modal & {
+        transform: translateY(-50px);
+        @include transition();
+    }
+    
+    .fancybox-is-modal .fancybox-slide--current & {
+        transform: translateY(0);
+    }
+
+    .fancybox-is-modal.fancybox-is-closing & {
+        transform: translateY(100px);
+    }
+}

@@ -1,32 +1,42 @@
-.w-25 {
-    width: 25% !important;
+//
+// margin, padding generator
+//
+$spacing-values: 10 20 30 40 50;
+@each $size in $spacing-values {
+    .pt-#{$size} {
+        padding-top: #{$size}px !important;
+    }
+    
+    .pr-#{$size} {
+        padding-right: #{$size}px !important;
+    }
+    
+    .pb-#{$size} {
+        padding-bottom: #{$size}px !important;
+    }
+    
+    .pl-#{$size} {
+        padding-left: #{$size}px !important;
+    }
+    
+    .mt-#{$size} {
+        margin-top: #{$size}px !important;
+    }
+    
+    .mr-#{$size} {
+        margin-right: #{$size}px !important;
+    }
+    
+    .mb-#{$size} {
+        margin-bottom: #{$size}px !important;
+    }
+    
+    .ml-#{$size} {
+        margin-left: #{$size}px !important;
+    }
 }
 
-.w-50 {
-    width: 50% !important;
-}
-
-.w-75 {
-    width: 75% !important;
-}
-
-.w-100 {
-    width: 100% !important;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
 // flex
 //
 .flex {
@@ -1175,6 +1185,7 @@
 	pointer-events: none;
 	-webkit-touch-callout: none;
 	user-select: none;
+    
     &--opacity {
         opacity: .5;
     }
@@ -1225,7 +1236,7 @@
 		//margin-bottom: $default-margin-bottom;
 		overflow-y: hidden;
 		-ms-overflow-style: -ms-autohiding-scrollbar;
-		border: 1px $key-color-2 solid;
+		border: 1px solid $border-color;
 	}
 
 	table {
@@ -1241,7 +1252,7 @@
 *[data-preload] {
 	visibility: hidden;
 
-	&.loaded {
+	&.is-loaded {
 		visibility: visible;
 	}
 }
@@ -1259,7 +1270,7 @@
 		height: 300px;
 	}
 
-	&:before {
+	&::before {
 		@include pseudo;
 		top: 0;
 		right: 0;
@@ -1269,11 +1280,11 @@
 		background: #fff url("../img/preloader.gif") no-repeat center center;
 	}
 
-	&.loaded {
+	&.is-loaded {
 		height: auto !important;
 		overflow: visible;
 
-		&:before {
+		&::before {
 			display: none;
 		}
 	}

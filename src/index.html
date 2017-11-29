@@ -23,13 +23,13 @@
 				<div class="flex flex--space-between flex--center-y">
 					<div class="top__logo"><a href="#"><img src="http://placehold.it/300x150" alt=""></a></div>
 					<div class="top__nav hidden-md">
-						<nav>
-							<ul>
-								<li><a href="#">Lorem ipsum</a></li>
-								<li><a href="#">Praesent sed</a></li>
-								<li><a href="#" class="active">Donec interdum</a></li>
-								<li><a href="#">Curabitur eget</a></li>
-								<li><a href="#">Cras commodo</a></li>
+						<nav class="nav">
+							<ul class="nav__list">
+								<li class="nav__item"><a href="#">Lorem ipsum</a></li>
+								<li class="nav__item"><a href="#">Praesent sed</a></li>
+								<li class="nav__item"><a href="#" class="active">Donec interdum</a></li>
+								<li class="nav__item"><a href="#">Curabitur eget</a></li>
+								<li class="nav__item"><a href="#">Cras commodo</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -275,6 +275,20 @@
                     
                     <br><hr><br>
                     
+                    <h2>Modal</h2>
+                    <p><a class="btn" data-fancybox data-src="#sample-modal" data-options='{"modal": "true"}'>Open modal</a></p>
+                    <div class="modal" id="sample-modal">
+                        <a class="modal__close js-modal-close"><span>Zamknij</span><i class="ico-default ico-default-cross"></i></a>
+                        <div class="modal__inner">
+                            <h3 class="modal__title">Modal title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptatem voluptatibus tempora, eligendi esse reprehenderit officia. Eaque architecto maiores eveniet exercitationem, dolore ex iste sapiente, veniam ullam unde impedit numquam.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptatem voluptatibus tempora, eligendi esse reprehenderit officia. Eaque architecto maiores eveniet exercitationem, dolore ex iste sapiente, veniam ullam unde impedit numquam.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit voluptatem voluptatibus tempora, eligendi esse reprehenderit officia. Eaque architecto maiores eveniet exercitationem, dolore ex iste sapiente, veniam ullam unde impedit numquam.</p>
+                        </div>
+                    </div>
+                    
+                    <br><hr><br>
+                    
 					<h2>Forms</h2>
 					
                     <h5><em>Default version</em></h5>
@@ -282,7 +296,7 @@
 						<div class="form__group">
 							<label for="f-" class="form__label">Donec sed vestibulum:</label>
 							<div class="form__field">
-								<div class="form__static-control">Lolek</div>
+								<div class="form__plaintext-control">Lolek</div>
 							</div>
 						</div>
 						<div class="form__group">
@@ -295,21 +309,24 @@
 						<div class="form__group">
 							<label for="f-" class="form__label">Donec sed vestibulum:</label>
 							<div class="form__field">
-								<select name="" class="form__select" id="f-">
-									<option value="">Sed ultricies erat in turpis</option>
-									<option value="">Vivamus ac malesuada</option>
-									<option value="">Sed ultricies erat in turpis</option>
-									<option value="">Vivamus ac malesuada</option>
-									<option value="">Sed ultricies erat in turpis</option>
-									<option value="">Vivamus ac malesuada</option>
-								</select>
+								<div class="select">
+                                    <select name="" class="form__select" id="f-">
+                                        <option value="">Select</option>
+                                        <option value="">Vivamus ac malesuada</option>
+                                        <option value="">Sed ultricies erat in turpis</option>
+                                        <option value="">Vivamus ac malesuada</option>
+                                        <option value="">Sed ultricies erat in turpis</option>
+                                        <option value="">Vivamus ac malesuada</option>
+                                    </select>
+                                </div>
 							</div>
 						</div>
 						<div class="form__group">
 							<label for="f-" class="form__label">Donec sed vestibulum:</label>
 							<div class="form__field">
-								<div class="select select-jcf">
-									<select name="" class="form__select" id="f-">
+								<div class="select">
+									<select name="" class="form__select js-select-jcf" id="f-">
+									    <option class="placeholder">Select</option>
 										<option value="">Sed ultricies erat in turpis</option>
 										<option value="">Vivamus ac malesuada</option>
 										<option value="">Sed ultricies erat in turpis</option>
@@ -322,67 +339,83 @@
 						</div>
 						<div class="form__group">
 							<div class="form__field">
-								<div class="checkbox">
-									<input type="checkbox" name="" id="f-" class="checkbox__input">
-									<div class="checkbox__text">
-										<label for="f-" class="checkbox__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" name="" id="f-" class="checkbox__input">
-									<div class="checkbox__text">
-										<label for="f-" class="checkbox__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" name="" id="f-" class="checkbox__input">
-									<div class="checkbox__text">
-										<label for="f-" class="checkbox__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" name="" id="f-" class="checkbox__input">
-									<div class="checkbox__text">
-										<label for="f-" class="checkbox__label">Donec sed vestibulum</label>
-										<div class="checkbox__info">Excepteur sint occaecat cupidatat non.</div>
-									</div>
-								</div>
+							    <div class="form__checkbox">
+							        <div class="checkbox">
+                                        <input type="checkbox" name="" id="f-" class="checkbox__input js-checkbox">
+                                        <div class="checkbox__text">
+                                            <label for="f-" class="checkbox__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+							    </div>
+							    <div class="form__checkbox">
+							        <div class="checkbox">
+                                        <input type="checkbox" name="" id="f-" class="checkbox__input js-checkbox">
+                                        <div class="checkbox__text">
+                                            <label for="f-" class="checkbox__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+							    </div>
+							    <div class="form__checkbox">
+							        <div class="checkbox">
+                                        <input type="checkbox" name="" id="f-" class="checkbox__input js-checkbox">
+                                        <div class="checkbox__text">
+                                            <label for="f-" class="checkbox__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+							    </div>
+							    <div class="form__checkbox">
+							        <div class="checkbox">
+                                        <input type="checkbox" name="" id="f-" class="checkbox__input js-checkbox">
+                                        <div class="checkbox__text">
+                                            <label for="f-" class="checkbox__label">Donec sed vestibulum</label>
+                                            <div class="checkbox__info">Excepteur sint occaecat cupidatat non.</div>
+                                        </div>
+                                    </div>
+							    </div>
 							</div>
 						</div>
 						<div class="form__group">
 							<div class="form__field">
-								<div class="radio">
-									<input type="radio" name="" id="f-" class="radio__input">
-									<div class="radio__text">
-										<label for="f-" class="radio__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="radio">
-									<input type="radio" name="" id="f-" class="radio__input">
-									<div class="radio__text">
-										<label for="f-" class="radio__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="radio">
-									<input type="radio" name="" id="f-" class="radio__input">
-									<div class="radio__text">
-										<label for="f-" class="radio__label">Donec sed vestibulum</label>
-										<div class="checkbox__info">Excepteur sint occaecat cupidatat non.</div>
-									</div>
-								</div>
-								<div class="radio">
-									<input type="radio" name="" id="f-" class="radio__input">
-									<div class="radio__text">
-										<label for="f-" class="radio__label">Donec sed vestibulum</label>
-										<div class="radio__info">Excepteur sint occaecat cupidatat non.</div>
-									</div>
-								</div>
+								<div class="form__radio">
+								    <div class="radio">
+                                        <input type="radio" name="" id="f-" class="radio__input js-radio">
+                                        <div class="radio__text">
+                                            <label for="f-" class="radio__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <div class="radio">
+                                        <input type="radio" name="" id="f-" class="radio__input js-radio">
+                                        <div class="radio__text">
+                                            <label for="f-" class="radio__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <div class="radio">
+                                        <input type="radio" name="" id="f-" class="radio__input js-radio">
+                                        <div class="radio__text">
+                                            <label for="f-" class="radio__label">Donec sed vestibulum</label>
+                                            <div class="checkbox__info">Excepteur sint occaecat cupidatat non.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <div class="radio">
+                                        <input type="radio" name="" id="f-" class="radio__input js-radio">
+                                        <div class="radio__text">
+                                            <label for="f-" class="radio__label">Donec sed vestibulum</label>
+                                            <div class="radio__info">Excepteur sint occaecat cupidatat non.</div>
+                                        </div>
+                                    </div>
+                                </div>
 							</div>
 						</div>
 						<div class="form__group">
 							<label for="f-" class="form__label">Donec sed vestibulum:</label>
 							<div class="form__field">
-								<textarea name="" rows="5" class="form__input" id="f-" placeholder="Vivamus ac malesuada"></textarea>
+								<textarea name="" rows="5" class="form__textarea" id="f-" placeholder="Vivamus ac malesuada"></textarea>
 							</div>
 						</div>
 						<div class="form__actions">
@@ -395,7 +428,7 @@
 						<div class="form__group">
 							<label for="f-" class="form__label">Donec sed vestibulum:</label>
 							<div class="form__field">
-								<div class="form__static-control">Lolek</div>
+								<div class="form__plaintext-control">Lolek</div>
 							</div>
 						</div>
 						<div class="form__group">
@@ -408,23 +441,25 @@
 						<div class="form__group">
 							<label for="f-" class="form__label">Donec sed vestibulum:</label>
 							<div class="form__field">
-								<select name="" class="form__select" id="f-">
-									<option>-- Select --</option>
-									<option value="">Sed ultricies erat in turpis</option>
-									<option value="">Vivamus ac malesuada</option>
-									<option value="">Sed ultricies erat in turpis</option>
-									<option value="">Vivamus ac malesuada</option>
-									<option value="">Sed ultricies erat in turpis</option>
-									<option value="">Vivamus ac malesuada</option>
-								</select>
+								<div class="select">
+                                    <select name="" class="form__select" id="f-">
+                                        <option>Select</option>
+                                        <option value="">Sed ultricies erat in turpis</option>
+                                        <option value="">Vivamus ac malesuada</option>
+                                        <option value="">Sed ultricies erat in turpis</option>
+                                        <option value="">Vivamus ac malesuada</option>
+                                        <option value="">Sed ultricies erat in turpis</option>
+                                        <option value="">Vivamus ac malesuada</option>
+                                    </select>
+								</div>
 							</div>
 						</div>
 						<div class="form__group">
 							<label for="f-" class="form__label">Donec sed vestibulum:</label>
 							<div class="form__field">
-								<div class="select select-jcf">
-									<select name="" class="form__select" id="f-">
-										<option>-- Select --</option>
+								<div class="select">
+									<select name="" class="form__select js-select-jcf" id="f-">
+										<option class="placeholder">Select</option>
 										<option value="">Sed ultricies erat in turpis</option>
 										<option value="">Vivamus ac malesuada</option>
 										<option value="">Sed ultricies erat in turpis</option>
@@ -437,61 +472,77 @@
 						</div>
 						<div class="form__group">
 							<div class="form__field">
-								<div class="checkbox">
-									<input type="checkbox" name="" id="f-" class="checkbox__input">
-									<div class="checkbox__text">
-										<label for="f-" class="checkbox__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" name="" id="f-" class="checkbox__input">
-									<div class="checkbox__text">
-										<label for="f-" class="checkbox__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" name="" id="f-" class="checkbox__input">
-									<div class="checkbox__text">
-										<label for="f-" class="checkbox__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="checkbox">
-									<input type="checkbox" name="" id="f-" class="checkbox__input">
-									<div class="checkbox__text">
-										<label for="f-" class="checkbox__label">Donec sed vestibulum</label>
-										<div class="checkbox__info">Excepteur sint occaecat cupidatat non.</div>
-									</div>
-								</div>
+								<div class="form__checkbox">
+							        <div class="checkbox">
+                                        <input type="checkbox" name="" id="f-" class="checkbox__input js-checkbox">
+                                        <div class="checkbox__text">
+                                            <label for="f-" class="checkbox__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+							    </div>
+							    <div class="form__checkbox">
+							        <div class="checkbox">
+                                        <input type="checkbox" name="" id="f-" class="checkbox__input js-checkbox">
+                                        <div class="checkbox__text">
+                                            <label for="f-" class="checkbox__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+							    </div>
+							    <div class="form__checkbox">
+							        <div class="checkbox">
+                                        <input type="checkbox" name="" id="f-" class="checkbox__input js-checkbox">
+                                        <div class="checkbox__text">
+                                            <label for="f-" class="checkbox__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+							    </div>
+							    <div class="form__checkbox">
+							        <div class="checkbox">
+                                        <input type="checkbox" name="" id="f-" class="checkbox__input js-checkbox">
+                                        <div class="checkbox__text">
+                                            <label for="f-" class="checkbox__label">Donec sed vestibulum</label>
+                                            <div class="checkbox__info">Excepteur sint occaecat cupidatat non.</div>
+                                        </div>
+                                    </div>
+							    </div>
 							</div>
 						</div>
 						<div class="form__group">
 							<div class="form__field">
-								<div class="radio">
-									<input type="radio" name="" id="f-" class="radio__input">
-									<div class="radio__text">
-										<label for="f-" class="radio__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="radio">
-									<input type="radio" name="" id="f-" class="radio__input">
-									<div class="radio__text">
-										<label for="f-" class="radio__label">Donec sed vestibulum</label>
-									</div>
-								</div>
-								<div class="radio">
-									<input type="radio" name="" id="f-" class="radio__input">
-									<div class="radio__text">
-										<label for="f-" class="radio__label">Donec sed vestibulum</label>
-										<div class="checkbox__info">Excepteur sint occaecat cupidatat non.</div>
-									</div>
-								</div>
-								<div class="radio">
-									<input type="radio" name="" id="f-" class="radio__input">
-									<div class="radio__text">
-										<label for="f-" class="radio__label">Donec sed vestibulum</label>
-										<div class="radio__info">Excepteur sint occaecat cupidatat non.</div>
-									</div>
-								</div>
+								<div class="form__radio">
+								    <div class="radio">
+                                        <input type="radio" name="" id="f-" class="radio__input js-radio">
+                                        <div class="radio__text">
+                                            <label for="f-" class="radio__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <div class="radio">
+                                        <input type="radio" name="" id="f-" class="radio__input js-radio">
+                                        <div class="radio__text">
+                                            <label for="f-" class="radio__label">Donec sed vestibulum</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <div class="radio">
+                                        <input type="radio" name="" id="f-" class="radio__input js-radio">
+                                        <div class="radio__text">
+                                            <label for="f-" class="radio__label">Donec sed vestibulum</label>
+                                            <div class="checkbox__info">Excepteur sint occaecat cupidatat non.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__radio">
+                                    <div class="radio">
+                                        <input type="radio" name="" id="f-" class="radio__input js-radio">
+                                        <div class="radio__text">
+                                            <label for="f-" class="radio__label">Donec sed vestibulum</label>
+                                            <div class="radio__info">Excepteur sint occaecat cupidatat non.</div>
+                                        </div>
+                                    </div>
+                                </div>
 							</div>
 						</div>
 						<div class="form__group">
@@ -510,30 +561,30 @@
 					<section class="gallery">
                         <h3 class="gallery__title">Gallery</h3>
 						<div class="gallery__list">
-							<div class="row gutter-10">
+							<div class="row gutters-10">
 								<div class="col-lg-3 col-md-4 col-xxs-6">
-								    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+								    <a href="http://pipsum.com/1200x800.jpg" class="gallery__item thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
 								</div>
 								<div class="col-lg-3 col-md-4 col-xxs-6">
-								    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+								    <a href="http://pipsum.com/1200x800.jpg" class="gallery__item thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
 								</div>
 								<div class="col-lg-3 col-md-4 col-xxs-6">
-								    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+								    <a href="http://pipsum.com/1200x800.jpg" class="gallery__item thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
 								</div>
 								<div class="col-lg-3 col-md-4 col-xxs-6">
-								    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+								    <a href="http://pipsum.com/1200x800.jpg" class="gallery__item thumbnail thumbnail--mb-10 thumbnail--icon-zoom-out" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
 								</div>
 								<div class="col-lg-3 col-md-4 col-xxs-6">
-								    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+								    <a href="http://pipsum.com/1200x800.jpg" class="gallery__item thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
 								</div>
 								<div class="col-lg-3 col-md-4 col-xxs-6">
-								    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+								    <a href="http://pipsum.com/1200x800.jpg" class="gallery__item thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
 								</div>
 								<div class="col-lg-3 col-md-4 col-xxs-6">
-								    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+								    <a href="http://pipsum.com/1200x800.jpg" class="gallery__item thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
 								</div>
 								<div class="col-lg-3 col-md-4 col-xxs-6">
-								    <a href="http://pipsum.com/1200x800.jpg" class="thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
+								    <a href="http://pipsum.com/1200x800.jpg" class="gallery__item thumbnail thumbnail--mb-10 thumbnail--img-zoom-in thumbnail--icon-slide" data-fancybox="gallery"><i class="ico-default ico-default-search"></i><img alt="Tytuł zdjęcia" src="http://pipsum.com/600x450.jpg"></a>
 								</div>
 							</div>
 					   </div>
@@ -544,20 +595,20 @@
 					<section class="files">
 						<h3 class="files__title">Files</h3>
 						<ul class="files__list">
-							<li class="files__list-item">
-								<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit <span class="files__list-item-info">(1,51mb)</span></a>
+							<li class="files__item">
+								<a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit <span class="files__info">(1,51mb)</span></a>
 							</li>
-							<li class="files__list-item">
-								<a href="#">Dolorum dicta modi culpa eveniet earum <span class="files__list-item-info">(2,16mb)</span></a>
+							<li class="files__item">
+								<a href="#">Dolorum dicta modi culpa eveniet earum <span class="files__info">(2,16mb)</span></a>
 							</li>
-							<li class="files__list-item">
-								<a href="#">Fuga pariatur tempora dignissimos eos <span class="files__list-item-info">(6,71mb)</span></a>
+							<li class="files__item">
+								<a href="#">Fuga pariatur tempora dignissimos eos <span class="files__info">(6,71mb)</span></a>
 							</li>
-							<li class="files__list-item">
-								<a href="#">Voluptatibus incidunt quos minus sint quam, accusamus eum expedita ab <span class="files__list-item-info">(7,22mb)</span></a>
+							<li class="files__item">
+								<a href="#">Voluptatibus incidunt quos minus sint quam, accusamus eum expedita ab <span class="files__info">(7,22mb)</span></a>
 							</li>
-							<li class="files__list-item">
-								<a href="#">Lorem ipsum dolor tempora dignissimos <span class="files__list-item-info">(4,63mb)</span></a>
+							<li class="files__item">
+								<a href="#">Lorem ipsum dolor tempora dignissimos <span class="files__info">(4,63mb)</span></a>
 							</li>
 						</ul>
 					</section>
@@ -566,17 +617,17 @@
                     
 					<h2>Pagination</h2>
 					<div class="pagination">
-						<ol>
-							<li class="pagination__prev is-disabled"><a href="#"><i class="ico-default ico-default-chevron-left"></i></a></li>
-							<li><a href="#">1</a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li class="is-active"><span>4</span></li>
-							<li><a href="#">5</a></li>
-							<li><a href="#">6</a></li>
-							<li><em>...</em></li>
-							<li><a href="#">7</a></li>
-							<li class="pagination__next"><a href="#"><i class="ico-default ico-default-chevron-right"></i></a></li>
+						<ol class="pagination__list">
+							<li class="pagination__item pagination__item--prev is-disabled"><a href="#"><i class="ico-default ico-default-chevron-left"></i></a></li>
+							<li class="pagination__item"><a href="#">1</a></li>
+							<li class="pagination__item"><a href="#">2</a></li>
+							<li class="pagination__item"><a href="#">3</a></li>
+							<li class="pagination__item is-active"><span>4</span></li>
+							<li class="pagination__item"><a href="#">5</a></li>
+							<li class="pagination__item"><a href="#">6</a></li>
+							<li class="pagination__item"><em>...</em></li>
+							<li class="pagination__item"><a href="#">7</a></li>
+							<li class="pagination__item pagination__item--next"><a href="#"><i class="ico-default ico-default-chevron-right"></i></a></li>
 						</ol>
 					</div>
                     

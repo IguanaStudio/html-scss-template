@@ -1,0 +1,28 @@
+.nav {
+    &__list {
+        @extend .flex, .flex--center-y;
+    }
+    
+    &__item {
+        position: relative;
+        margin-right: 50px;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+        
+        > a {
+            display: block;
+            color: $default-font-color;
+            padding: 10px 0;
+            @include hover() {
+                color: $key-color-1;
+            }
+
+            &.is-active {
+                font-weight: 700;
+                color: $key-color-1;
+            }
+        }
+    }
+}

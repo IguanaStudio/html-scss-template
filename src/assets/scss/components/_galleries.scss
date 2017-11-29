@@ -5,8 +5,8 @@ $gallery-margin: $default-margin;
 $gallery-title-margin: $default-margin;
 
 $gallery-thumbnail-margin-bottom: 30px;
-$gallery-thumbnail-gutter10-margin-bottom: 10px;
-$gallery-thumbnail-gutter20-margin-bottom: 20px;
+$gallery-thumbnail-gutters10-margin-bottom: 10px;
+$gallery-thumbnail-gutters20-margin-bottom: 20px;
 
 $gallery-thumbnail-background-color: $key-color-1;
 $gallery-thumbnail-background-color-opacity: 0;
@@ -26,13 +26,15 @@ $gallery-thumbnail-img-zoom-scale-hover: 1.1;
 	margin: $gallery-margin;
 	
 	&__title {
-        //margin: $gallery-title-margin;
+
     }
     
 	&__list {
-        &-item {
-            
-        }
+        
+    }
+    
+    &__item {
+
     }
 }
 
@@ -84,11 +86,11 @@ $gallery-thumbnail-img-zoom-scale-hover: 1.1;
 	}
 	
 	&--mb-10 {
-		margin-bottom: $gallery-thumbnail-gutter10-margin-bottom;
+		margin-bottom: $gallery-thumbnail-gutters10-margin-bottom;
 	}
 	
 	&--mb-20 {
-		margin-bottom: $gallery-thumbnail-gutter20-margin-bottom;
+		margin-bottom: $gallery-thumbnail-gutters20-margin-bottom;
 	}
 	
 	&--mb-clear {

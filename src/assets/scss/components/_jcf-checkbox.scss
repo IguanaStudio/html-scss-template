@@ -4,28 +4,31 @@
     overflow: hidden;
     cursor: default;
     background: #fff;
-    border: 1px solid #777;
-    margin: 0 3px 0 0;
-    height: 16px;
-    width: 16px;
+    border: 1px $border-color solid;
+    border-radius: $default-radius;
+    margin: 0;
+    height: 20px;
+    width: 20px;
     position: relative;
+	@include transition();
 
     span {
         position: absolute;
-        display: none;
-        height: 4px;
-        width: 8px;
+        opacity: 0;
+        height: 6px;
+        width: 12px;
         top: 50%;
         left: 50%;
         margin: -7px 0 0 -6px;
-        border: 3px solid #777;
-        border-width: 0 0 3px 3px;
+        border: 2px solid #fff;
+        border-width: 0 0 2px 2px;
         -moz-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=0.7071067811865483, M12=0.7071067811865467, M21=-0.7071067811865467, M22=0.7071067811865483, SizingMethod='auto expand')";
-    }
+    	@include transition();
+	}
 
     input[type="checkbox"] {
         position: absolute;
@@ -37,12 +40,29 @@
         top: 0;
     }
 
-    &.jcf-checked span{
-        display: block;
+    &.jcf-checked {
+        border-color: $key-color-1;
+        background-color: $key-color-1;
+
+        span {
+            opacity: 1;
+        }
+        
+        + .checkbox__text label {
+            color: $default-font-color;
+        }
+    }
+	
+	&.jcf-focus {
+        border-color: $key-color-1;
+    }
+    
+    .error-checkbox & {
+        background-color: $color-danger !important;
+        border-color: $color-danger !important;
     }
 }
 
 :root .jcf-checkbox span {
-    margin:-4px 0 0 -5px;
+    margin:-4px 0 0 -6px;
 }
-

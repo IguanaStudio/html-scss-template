@@ -1,5 +1,3 @@
-// by Eugeniusz Poprocki
-
 // alert | default
 $alert-position: relative;
 $alert-padding: 25px;
@@ -17,45 +15,45 @@ $alert-ul-list-style: disc;
 $alert-ul-padding-left: 20px;
 
 // alert success
-$alert-success--color: #3c763d;
-$alert-success--bg-color: #dff0d8;
-$alert-success--border-color: #d6e9c6;
+$alert-success-color: #3c763d;
+$alert-success-bg-color: #dff0d8;
+$alert-success-border-color: #d6e9c6;
 
 // alert info
-$alert-info--color: #31708f;
-$alert-info--bg-color: #d9edf7;
-$alert-info--border-color: #bce8f1;
+$alert-info-color: #31708f;
+$alert-info-bg-color: #d9edf7;
+$alert-info-border-color: #bce8f1;
 
 // alert warning
-$alert-warning--color: #8a6d3b;
-$alert-warning--bg-color: #fcf8e3;
-$alert-warning--border-color: #faebcc;
+$alert-warning-color: #8a6d3b;
+$alert-warning-bg-color: #fcf8e3;
+$alert-warning-border-color: #faebcc;
 
 // alert danger
-$alert-danger--color: #a94442;
-$alert-danger--bg-color: #f2dede;
-$alert-danger--border-color: #ebccd1;
+$alert-danger-color: #a94442;
+$alert-danger-bg-color: #f2dede;
+$alert-danger-border-color: #ebccd1;
 
 // alert fixed
-$alert-fixed--position-top: 0;
-$alert-fixed--position-right: 0;
-$alert-fixed--position-bottom: 0;
-$alert-fixed--position-left: 0;
-$alert-fixed--z-index: 99;
-$alert-fixed--margin-bottom: 0;
-$alert-fixed--border-radius: 0;
+$alert-fixed-position-top: 0;
+$alert-fixed-position-right: 0;
+$alert-fixed-position-bottom: 0;
+$alert-fixed-position-left: 0;
+$alert-fixed-z-index: 99;
+$alert-fixed-margin-bottom: 0;
+$alert-fixed-border-radius: 0;
  
 // alert icon ::before
-$alert-icon--padding-left: 60px;
-$alert-icon-before--font-size: 22px;
-$alert-icon-before--position-top: 22px;
-$alert-icon-before--position-left: 25px;
-$alert-icon-before--font-family: $default-font-family-icon;
+$alert-icon-padding-left: 60px;
+$alert-icon-before-font-size: 22px;
+$alert-icon-before-position-top: 22px;
+$alert-icon-before-position-left: 25px;
+$alert-icon-before-font-family: $default-font-family-icon;
 
-$alert-icon-before--content-success: '\e008';
-$alert-icon-before--content-info: '\e005';
-$alert-icon-before--content-warning: '\e006';
-$alert-icon-before--content-danger: '\e007';
+$alert-icon-before-content-success: '\e008';
+$alert-icon-before-content-info: '\e005';
+$alert-icon-before-content-warning: '\e006';
+$alert-icon-before-content-danger: '\e007';
 
 // 
 // END VARS
@@ -101,66 +99,70 @@ $alert-icon-before--content-danger: '\e007';
 
 	&--fixed {
 		position: fixed;
-		bottom:$alert-fixed--position-bottom;
-		left:$alert-fixed--position-left;
-		right:$alert-fixed--position-right;
-		z-index: $alert-fixed--z-index;
-		margin-bottom: $alert-fixed--margin-bottom;
-		border-radius: $alert-fixed--border-radius;
+		bottom:$alert-fixed-position-bottom;
+		left:$alert-fixed-position-left;
+		right:$alert-fixed-position-right;
+		z-index: $alert-fixed-z-index;
+		margin-bottom: $alert-fixed-margin-bottom;
+		border-radius: $alert-fixed-border-radius;
 	}
     
 	&--icon {
-		padding-left: $alert-icon--padding-left;
-		&::before {
+		padding-left: $alert-icon-padding-left;
+		
+        &::before {
 			content: '';
-			font-family: $alert-icon-before--font-family;
+			font-family: $alert-icon-before-font-family;
 			position: absolute;
-			top:$alert-icon-before--position-top;
-			left:$alert-icon-before--position-left;
-			font-size: $alert-icon-before--font-size;
+			top:$alert-icon-before-position-top;
+			left:$alert-icon-before-position-left;
+			font-size: $alert-icon-before-font-size;
 		}
 	}
 	
 	&--success {
-		color: $alert-success--color;
-		background-color: $alert-success--bg-color;
-		border-color: $alert-success--border-color;
-		&.alert--icon {
+		color: $alert-success-color;
+		background-color: $alert-success-bg-color;
+		border-color: $alert-success-border-color;
+		
+        &.alert--icon {
 			&::before {
-				content: $alert-icon-before--content-success;
+				content: $alert-icon-before-content-success;
 			}
 		}
 	}
 	
 	&--info {
-		color: $alert-info--color;
-		background-color: $alert-info--bg-color;
-		border-color: $alert-info--border-color;
+		color: $alert-info-color;
+		background-color: $alert-info-bg-color;
+		border-color: $alert-info-border-color;
 		&.alert--icon {
 			&::before {
-				content: $alert-icon-before--content-info;
+				content: $alert-icon-before-content-info;
 			}
 		}
 	}
 	
 	&--warning {
-		color: $alert-warning--color;
-		background-color: $alert-warning--bg-color;
-		border-color: $alert-warning--border-color;
-		&.alert--icon {
+		color: $alert-warning-color;
+		background-color: $alert-warning-bg-color;
+		border-color: $alert-warning-border-color;
+		
+        &.alert--icon {
 			&::before {
-				content: $alert-icon-before--content-warning;
+				content: $alert-icon-before-content-warning;
 			}
 		}
 	}
 	
 	&--danger {
-		color: $alert-danger--color;
-		background-color: $alert-danger--bg-color;
-		border-color: $alert-danger--border-color;
-		&.alert--icon {
+		color: $alert-danger-color;
+		background-color: $alert-danger-bg-color;
+		border-color: $alert-danger-border-color;
+		
+        &.alert--icon {
 			&::before {
-				content: $alert-icon-before--content-danger;
+				content: $alert-icon-before-content-danger;
 			}
 		}
 	}

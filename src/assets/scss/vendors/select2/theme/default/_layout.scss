@@ -1,0 +1,111 @@
+.select2-container--default {
+  @import "single";
+  @import "multiple";
+
+  &.select2-container--open.select2-container--above {
+    .select2-selection--single, .select2-selection--multiple {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  &.select2-container--open.select2-container--below {
+    .select2-selection--single, .select2-selection--multiple {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .select2-search--dropdown {
+    .select2-search__field {
+      border: 1px solid darken($border-color, 3%);
+    }
+  }
+
+  .select2-search--inline {
+    .select2-search__field {
+      background: transparent;
+      border: none;
+      outline: 0;
+      box-shadow: none;
+      -webkit-appearance: textfield;
+    }
+  }
+
+  .select2-results > .select2-results__options {
+    max-height: 210px;
+    overflow-y: auto;
+  }
+
+  .select2-results__option {
+    &[role=group] {
+      padding: 0;
+    }
+
+    &[aria-disabled=true] {
+      color: #919191;
+    }
+      
+    &[aria-selected=true] {
+      color: $key-color-1;
+      
+    }
+ 
+    .select2-results__option {
+      padding-left: 28px;
+    }
+      
+  }
+
+  .select2-results__option--highlighted[aria-selected] {
+    color: $key-color-1;
+    background-color: #f1f1f1;
+  }
+
+    
+  .select2-results__group {
+    cursor: default;
+    display: block;
+    padding: 10px 18px; 
+  }
+    
+  .error-select & {
+      .select2-selection--single {
+          border-color: $color-danger;
+          background-color: #fff8f8;
+          
+          .select2-selection__placeholder {
+              color: $color-danger;
+          }
+      }
+      
+      .select2-selection--multiple {
+          border-color: $color-danger;
+          background-color: #fff8f8;
+          
+          .select2-search__field {
+              color: $color-danger;
+              
+              &::-webkit-input-placeholder {
+                color: $color-danger;
+              }
+
+              &:-moz-placeholder {
+                color: $color-danger;
+              }
+
+              &::-moz-placeholder {
+                color: $color-danger;
+              }
+
+              &:-ms-input-placeholder {
+                color: $color-danger;
+              } 
+          }
+      }
+      
+      &.select2-container--open .select2-dropdown {
+          border-color: $color-danger;
+      }
+  }  
+}

@@ -27,77 +27,82 @@ $pagination-list-item-next-prev-font-size: $pagination-font-size;
 
 
 .pagination {
+    @extend .flex, .flex--center-y;
     font-size: $pagination-font-size;
     color: $pagination-color;
     margin: $pagination-margin;
-    @extend .flex, .flex--center-y;
     
-    ol {
+    &__list {
+        @extend .flex;
         list-style: none;
-        margin: 0;
-		padding: 0;
-		@extend .flex;
+        margin: $clear-margin;
+		padding: $clear-padding;
+    }
+    
+    &__item {
+        margin: $pagination-list-item-margin;
+        padding: $clear-padding;
         
-        li {
-            margin: $pagination-list-item-margin;
-            padding: 0;
-			
-            &.is-disabled {
-            	opacity: $pagination-list-item-opacity-disabled;
-            	pointer-events: none;
-				-webkit-touch-callout: none;
-				user-select: none;
-            } 
-            
-            a,
-            span,
-			em {
-                @extend .flex, .flex--center-x, .flex--center-y;
-                width: $pagination-list-item-width;
-                height: $pagination-list-item-height;
-				color: $pagination-list-item-color;
-				background-color: $pagination-list-item-background-color;
-                border: $pagination-list-item-border;
-				border-radius: $pagination-list-item-radius;
-				font-weight: $pagination-list-item-font-weight;
-				@include transition();
+        @include max-screen($sm-max) {
+            display: none;
+        }
+        
+        a,
+        span,
+        em {
+            @extend .flex, .flex--center-x, .flex--center-y;
+            width: $pagination-list-item-width;
+            height: $pagination-list-item-height;
+            color: $pagination-list-item-color;
+            background-color: $pagination-list-item-background-color;
+            border: $pagination-list-item-border;
+            border-radius: $pagination-list-item-radius;
+            font-weight: $pagination-list-item-font-weight;
+            @include transition();
+        }
+
+        a {
+            @include hover() {
+                color: $pagination-list-item-color-hover;
+                background-color: $pagination-list-item-background-color-hover;
+                border: $pagination-list-item-border-hover;
+
             }
-            
-            a {
-				@include hover() {
-				    color: $pagination-list-item-color-hover;
-					background-color: $pagination-list-item-background-color-hover;
-					border: $pagination-list-item-border-hover;
-					
-				}
+        }
+
+        span {
+            color: $pagination-list-item-color-active;
+            background-color: $pagination-list-item-background-color-active;
+            border: $pagination-list-item-border-active;
+        }
+
+        em {
+            font-style: normal;
+        }
+        
+        &.is-disabled {
+            opacity: $pagination-list-item-opacity-disabled;
+            @extend .disabled;
+        }
+        
+        &.is-active {
+            @include max-screen($sm-max) {
+                display: block;
             }
+        }
+        
+        &--prev,
+        &--next {
+            font-size: $pagination-list-item-next-prev-font-size;
             
-            span {
-                color: $pagination-list-item-color-active;
-				background-color: $pagination-list-item-background-color-active;
-                border: $pagination-list-item-border-active;
+            @include max-screen($sm-max) {
+                display: block;
             }
-            
-			em {
-				font-style: normal;
-			}
         }
     }
-
-	&__prev,
-	&__next {
-		font-size: $pagination-list-item-next-prev-font-size;
-	}
     
     @include max-screen($sm-max) {
-    	justify-content: center !important;
-		ol {
-			li {
-				&:not([class]) {
-					display: none;
-				}
-			}
-		}
+        justify-content: center !important;
     }
     
     &--center {

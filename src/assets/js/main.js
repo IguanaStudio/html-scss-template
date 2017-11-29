@@ -1,6 +1,6 @@
 $(function() {
 
-	if($.fn.fancybox) {
+	if ($.fn.fancybox) {
 		$.extend(true, $.fancybox.defaults, {
 			hash : false,
 			lang : 'pl',
@@ -34,22 +34,13 @@ $(function() {
 			e.preventDefault();
 			$.fancybox.close();
 		});
+        
+        $('.modal').on('click', '[data-fancybox]', function(){
+            parent.jQuery.fancybox.getInstance().close();
+        });
 		
 		/*function openModal(src, $trigger)
         {
-            var modalTitle, modalHiddenData = null;
-            
-            $trigger = (typeof $trigger !== 'undefined') ?  $trigger : false;
-            
-            if ($trigger !== false)
-            {
-                modalTitle = $trigger.data('title');
-                modalHiddenData = $trigger.data('hidden-data');
-
-                modalTitle = (typeof modalTitle !== 'undefined' && modalTitle !== '') ?  modalTitle : null;
-                modalHiddenData = (typeof modalHiddenData !== 'undefined' && modalHiddenData !== '') ?  modalHiddenData : null;
-            }
-
             $.fancybox.close();
 			$.fancybox.open({
 				src: src,
@@ -58,16 +49,14 @@ $(function() {
 					modal : true,
 					smallBtn: false,
 					beforeShow: function( instance, current ) {
-						if (modalTitle !== null) $('.modal__title', $(src)).html(modalTitle);
-						if (modalHiddenData !== null) $('.modal__hidden-data', $(src)).val(modalHiddenData);
+
 					},
 					afterClose: function( instance, current ) {
-						if (modalTitle !== null) $('.modal__title', $(src)).html('');
-						if (modalHiddenData !== null) $('.modal__hidden-data', $(src)).val('');
+
 					}
 				}
 			});
-        }
+        }*/
         
         if (window.location.hash !== '') {
             if ($(window.location.hash+'-modal').length) {
@@ -78,7 +67,7 @@ $(function() {
                 
                 openModal(window.location.hash+'-modal');
             }
-        }*/
+        }
 	}
 	
 	if($.fn.validate) {
@@ -175,14 +164,14 @@ $(function() {
 			useCustomScroll: false
 		});
 
-        jcf.replace($('.select-jcf select'));
-		jcf.replace($('[type="radio"]'));
-		jcf.replace($('[type="checkbox"]'));
+        jcf.replace($('.js-select-jcf'));
+		jcf.replace($('.js-radio'));
+		jcf.replace($('.js-checkbox'));
 	}
     
     if ($.fn.select2) {
-        $('.select-default select').each(function(){
-            var customSelectParent = $(this).parent('.select-default');
+        $('.js-select-default').each(function(){
+            var customSelectParent = $(this).parent('.select');
             
             $(this).select2({
                 language: 'pl',
@@ -192,8 +181,8 @@ $(function() {
             });
         });
 
-        $('.select-filter select').each(function(){
-            var customSelectParent = $(this).parent('.select-filter');
+        $('.js-select-filter').each(function(){
+            var customSelectParent = $(this).parent('.select');
             
             $(this).select2({
                 language: 'pl',
@@ -202,8 +191,8 @@ $(function() {
             });
         });
         
-        $('.select-multiple select').each(function(){
-            var customSelectParent = $(this).parent('.select-multiple');
+        $('.js-select-multiple').each(function(){
+            var customSelectParent = $(this).parent('.select');
             
             $(this).select2({
                 language: 'pl',
@@ -218,25 +207,22 @@ $(function() {
 	});
 
 	$('.wysiwyg table').each(function(){
-		var mT = $(this).css('marginTop');
-		var mB = $(this).css('marginBottom');
-		$(this).css('marginBottom','0').css('marginTop','0').wrap('<div class="table-responsive" style="margin-bottom: '+mB+'; margin-top: '+mT+';"></div>');
+		var mT = $(this).css('margin-top'),
+            mB = $(this).css('margin-bottom');
+		$(this).css('margin-bottom','0').css('margin-top','0').wrap('<div class="table-responsive" style="margin-bottom: '+mB+'; margin-top: '+mT+';"></div>');
 	});
 
 	$('.js-mobile-menu').on('click', function(){
 		$('html').toggleClass('is-menu-open');
 	});
 
-	minimizeTop();
-        
-        
-        
-        
-        
+	minimizeTop(); 
 });
 
 $(window).on('load', function(){
-
+    
+    $('[data-preload]').addClass('is-loaded');
+    $('[data-preloader]').addClass('loaded');
 });
 
 function minimizeTop()

@@ -1,53 +1,51 @@
-// by Eugeniusz Poprocki
-
 // files | default
-$files--margin: 30px 0;
+$files-margin: 0;
 
 //
 // title 
 //
-$files-title--margin: 30px 0 15px;
+$files-title-margin: 30px 0 15px;
 
 
 //
 // list item
 //
-$files-list-item--position: relative;
+$files-list-item-position: relative;
 
 
 //
 // list item a 
 //
-$files-list-item-a--padding: 10px 40px;
+$files-list-item-a-padding: 10px 40px;
 
 
 //
 // list item info
 //
-$files-list-item-info--color: lighten($default-font-color, 40%);
-$files-list-item-info--font-weight: 300;
+$files-list-item-info-color: lighten($default-font-color, 40%);
+$files-list-item-info-font-weight: 300;
 
 
 //
 // list item before
 //
-$files-list-item-before--content: '\e003';
-$files-list-item-before--font-family: $default-font-family-icon;
-$files-list-item-before--font-size: 24px;
-$files-list-item-before--color: $key-color-1;
-$files-list-item-before--position-top: 5px;
-$files-list-item-before--position-left: 0;
+$files-list-item-before-content: '\e003';
+$files-list-item-before-font-family: $default-font-family-icon;
+$files-list-item-before-font-size: 24px;
+$files-list-item-before-color: $key-color-1;
+$files-list-item-before-position-top: 5px;
+$files-list-item-before-position-left: 0;
 
 
 //
 // list item a hover
 //
-$files-list-item-a-hover--color: $key-color-1;
-$files-list-item-a-hover--padding: 10px 40px 10px 50px;
+$files-list-item-a-hover-color: $key-color-1;
+$files-list-item-a-hover-padding: 10px 40px 10px 50px;
 	// &-info element style on a hover 
-$files-list-item-info-a-hover--color: inherit;
+$files-list-item-info-a-hover-color: inherit;
 	// ::before element style on a hover
-$files-list-item-a-hover-before--left: 10px;
+$files-list-item-a-hover-before-left: 10px;
 
 
 // 
@@ -56,54 +54,56 @@ $files-list-item-a-hover-before--left: 10px;
 
 
 .files {
-	margin: $files--margin;
+	margin: $files-margin;
     
 	&__title {
-		//margin: $files-title--margin;
+
 	}
     
 	&__list {
-		&-item {
-			position: $files-list-item--position;
-            
-			a {
-				display: inline-block;
-				color: inherit;
-				font-size: inherit;
-				font-weight: inherit;
-				text-transform: inherit;
-				text-decoration: inherit;
-                padding: $files-list-item-a--padding;
-                
-				@include hover() {
-					color: $files-list-item-a-hover--color;
-					padding: $files-list-item-a-hover--padding;
-					
-                    .files__list-item-info {
-						color: $files-list-item-info-a-hover--color;
-					}
-                    
-					&::before {
-						left: $files-list-item-a-hover-before--left;
-					}
-				}
-                
-				&::before {
-					content: $files-list-item-before--content;
-					position: absolute;
-					top: $files-list-item-before--position-top;
-					left: $files-list-item-before--position-left;
-					font-family: $files-list-item-before--font-family;
-					font-size: $files-list-item-before--font-size;
-					color: $files-list-item-before--color;
-					@include transition();
-				}
-			}
-            
-			&-info {
-				color: $files-list-item-info--color;
-				font-weight: $files-list-item-info--font-weight;
-			}
-		}
+		
 	}
+    
+    &__item {
+        position: $files-list-item-position;
+
+        a {
+            display: inline-block;
+            color: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+            text-transform: inherit;
+            text-decoration: inherit;
+            padding: $files-list-item-a-padding;
+
+            @include hover() {
+                color: $files-list-item-a-hover-color;
+                padding: $files-list-item-a-hover-padding;
+
+                .files__info {
+                    color: $files-list-item-info-a-hover-color;
+                }
+
+                &::before {
+                    left: $files-list-item-a-hover-before-left;
+                }
+            }
+
+            &::before {
+                content: $files-list-item-before-content;
+                position: absolute;
+                top: $files-list-item-before-position-top;
+                left: $files-list-item-before-position-left;
+                font-family: $files-list-item-before-font-family;
+                font-size: $files-list-item-before-font-size;
+                color: $files-list-item-before-color;
+                @include transition();
+            }
+        }
+    }
+    
+    &__info {
+        color: $files-list-item-info-color;
+        font-weight: $files-list-item-info-font-weight;
+    }
 }
