@@ -222,7 +222,7 @@ $(function() {
 $(window).on('load', function(){
     
     $('[data-preload]').addClass('is-loaded');
-    $('[data-preloader]').addClass('loaded');
+    $('[data-preloader]').addClass('is-loaded');
 });
 
 function minimizeTop()
