@@ -31,6 +31,10 @@ body {
     background: $bg-color-body;
     @include transition(padding-top);
 	padding-top: 125px;
+    
+    @include max-screen($md-max) {
+        padding-top: 87px;
+    }
 }
 
 h1,

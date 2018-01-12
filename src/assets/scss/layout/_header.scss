@@ -5,8 +5,17 @@
 	top: 0;
 	width: 100%;
 	z-index: 500;
-	box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+	box-shadow: 0 2px 15px rgba(0, 0, 0, 0);
 	@include transition();
+    
+    @include max-screen($md-max) {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+    }
+    
+    .is-top-shadow & {
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
 
 	.is-top-minimize & {
 		padding: 15px 0;
@@ -20,6 +29,10 @@
 		margin-right: 30px;
 		max-width: 150px;
 		@include transition();
+        
+        @include max-screen($md-max) {
+            max-width: 115px !important;
+        }
 
 		a {
 			@include hover() {
@@ -36,194 +49,14 @@
 	}
 
 	&__nav {
-		
-	}
-
-}
-
-.menu-trigger {
-	display: none;
-	width: 50px;
-	height: 50px;
-	position: relative;
-	cursor: pointer;
-	float: right;
-	overflow: hidden;
-	border-radius: 50%;
-	background: $key-color-1;
-	@include transition(all,.5s,ease-in-out);
-	@include rotate(0);
-    z-index: 810;
-	
-	&__inner {
-		margin: 12px;
-		position: relative;
-		display: block;
-		width: 26px;
-		height: 26px;
-		
-		span {
-			display: block;
-			position: absolute;
-			height: 4px;
-			width: 50%;
-			background: #FFF;
+         
+        
+		.is-menu-open & {
 			opacity: 1;
-			@include transition(all,.25s,ease-in-out);
-			@include rotate(0);
-			&:nth-child(even) {
-				right: 0;
-				border-radius: 0 4px 4px 0;
-			}
-			&:nth-child(odd) {
-				left: 0;
-				border-radius: 4px 0 0 4px;
-			}
-			&:nth-child(1),
-			&:nth-child(2) {
-				top: 2px;
-			}
-			&:nth-child(3),
-			&:nth-child(4) {
-				top: 11px;
-			}
-			&:nth-child(4) {
-				right: auto;
-				left: 50%;
-			}
-			&:nth-child(5),
-			&:nth-child(6) {
-				top: 20px;
-			}
+			visibility: visible;
+			display: block !important;
 		}
-	}
-    
-    .is-menu-open & {
-		&__inner span {
-			&:nth-child(1),
-			&:nth-child(6) {
-				@include rotate(45);
-			}
-			&:nth-child(2),
-			&:nth-child(5) {
-				@include rotate(-45);
-			}
-			&:nth-child(1) {
-				left: 3px;
-				top: 8px;
-			}
-			&:nth-child(2) {
-				right: 3px;
-				left: auto;
-				top: 8px;
-			}
-			&:nth-child(3) {
-				left: -50%;
-				opacity: 0;
-			}
-			&:nth-child(4) {
-				left: 100%;
-				opacity: 0;
-			}
-			&:nth-child(5) {
-				left: 3px;
-				top: 15px;
-			}
-			&:nth-child(6) {
-				right: 3px;
-				left: auto;
-				top: 15px;
-			}
-		}
-	}
-	
-	&--small {
-		width: 40px;
-		height: 40px;
-		
-		.menu-trigger {
-			&__inner {
-				margin: 10px;
-				position: relative;
-				display: block;
-				width: 20px;
-				height: 20px;
-
-				span {
-					display: block;
-					position: absolute;
-					height: 3px;
-					width: 50%;
-					background: #FFF;
-					opacity: 1;
-					@include transition(all,.25s,ease-in-out);
-					@include rotate(0);
-
-					&:nth-child(even) {
-						right: 0;
-						border-radius: 0 3px 3px 0;
-					}
-					&:nth-child(odd) {
-						left: 0;
-						border-radius: 3px 0 0 3px;
-					}
-					&:nth-child(1),
-					&:nth-child(2) {
-						top: 2px;
-					}
-					&:nth-child(3),
-					&:nth-child(4) {
-						top: 9px;
-					}
-					&:nth-child(4) {
-						right: auto;
-						left: 50%;
-					}
-					&:nth-child(5),
-					&:nth-child(6) {
-						top: 16px;
-					}
-				}
-			}
-
-            .is-menu-open & {
-                &__inner span {
-                    &:nth-child(1),
-                    &:nth-child(6) {
-                        @include rotate(45);
-                    }
-                    &:nth-child(2),
-                    &:nth-child(5) {
-                        @include rotate(-45);
-                    }
-                    &:nth-child(1) {
-                        left: 2px;
-                        top: 6px;
-                    }
-                    &:nth-child(2) {
-                        right: 2px;
-                        left: auto;
-                        top: 6px;
-                    }
-                    &:nth-child(3) {
-                        left: -50%;
-                        opacity: 0;
-                    }
-                    &:nth-child(4) {
-                        left: 100%;
-                        opacity: 0;
-                    }
-                    &:nth-child(5) {
-                        left: 2px;
-                        top: 12px;
-                    }
-                    &:nth-child(6) {
-                        right: 2px;
-                        left: auto;
-                        top: 12px;
-                    }
-                }
-            } 
-		}
+        
+        
 	}
 }
