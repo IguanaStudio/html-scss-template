@@ -11,7 +11,7 @@
 	background: $key-color-1;
 	@include transition(all,.5s,ease-in-out);
 	@include rotate(0);
-    z-index: 810;
+    z-index: 901;
 	
 	&__inner {
 		margin: 12px;
@@ -57,6 +57,8 @@
 	}
     
     .is-menu-open & {
+        background-color: $key-color-2;
+        
 		&__inner span {
 			&:nth-child(1),
 			&:nth-child(6) {

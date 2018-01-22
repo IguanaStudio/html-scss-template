@@ -229,11 +229,3 @@ OTHERS
     left: $left;
     position: absolute;
 }
-
-@mixin clearfix() {
-    &::after {
-        display: block;
-        content: "";
-        clear: both;
-    }
-}

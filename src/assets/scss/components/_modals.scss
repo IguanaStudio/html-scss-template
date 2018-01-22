@@ -1,13 +1,13 @@
 .fancybox-is-modal.fancybox-is-open .fancybox-slide {
-	padding: 0 15px;
+	//padding: 0 15px;
 }
 
 .modal {
 	padding: 0 !important;
-	margin: 45px 0 15px !important;
+	margin: 45px 15px 15px !important;
 	background: #FFF;
 	width: 100%;
-	max-width: 800px;
+	max-width: calc(800px - 30px);
 	overflow: visible !important;
     border-radius: $default-radius;
     display: none;

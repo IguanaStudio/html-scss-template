@@ -1,3 +1,19 @@
+.color-key-1 {
+    color: $key-color-1 !important;
+}
+
+.color-key-2 {
+    color: $key-color-2 !important;
+}
+
+.bg-color-key-1 {
+    background-color: $key-color-1 !important;
+}
+
+.bg-color-key-2 {
+    background-color: $key-color-2 !important;
+}
+
 .lead {
 	font-size: $default-lead-font-size;
     font-weight: $default-lead-font-weight;

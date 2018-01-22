@@ -1,0 +1,28 @@
+%inner-padding {
+    padding: 40px;
+}
+
+%clearfix {
+    &::after {
+        display: block;
+        content: "";
+        clear: both;
+    }
+}
+
+%disabled-scroll {
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+}
+
+%disabled {
+	pointer-events: none;
+	-webkit-touch-callout: none;
+	user-select: none;
+    
+    &--opacity {
+        opacity: .5;
+    }
+}

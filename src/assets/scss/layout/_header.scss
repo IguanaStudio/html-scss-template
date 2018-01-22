@@ -1,5 +1,5 @@
 .top {
-	background-color: #f9fafc;
+	background-color: #fff;
 	padding: 25px 0;
 	position: fixed;
 	top: 0;
@@ -49,14 +49,26 @@
 	}
 
 	&__nav {
-         
-        
-		.is-menu-open & {
-			opacity: 1;
-			visibility: visible;
-			display: block !important;
-		}
-        
-        
+        @include max-screen($md-max) {
+            display: block !important;
+            background-color: rgba($key-color-1, .98);
+			margin: $clear-margin;
+            padding: $clear-padding;
+			opacity: 0;
+			visibility: hidden;
+			position: fixed;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: 900;
+			@include transition();
+            
+            .is-menu-open & {
+                overflow-y: auto;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
 	}
 }

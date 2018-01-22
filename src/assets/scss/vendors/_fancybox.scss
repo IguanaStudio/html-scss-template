@@ -303,6 +303,8 @@ body.fancybox-iosfix {
   opacity: 0.6; }
 
 .fancybox-button svg {
+  width: auto;
+  height: auto;
   display: block;
   position: relative;
   overflow: visible;
@@ -313,6 +315,9 @@ body.fancybox-iosfix {
   stroke: currentColor;
   stroke-linejoin: round;
   stroke-width: 3; }
+
+.fancybox-button--share {
+  display: none; }
 
 .fancybox-button--share svg path {
   stroke-width: 1; }

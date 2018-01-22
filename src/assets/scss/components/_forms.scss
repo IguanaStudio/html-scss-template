@@ -41,13 +41,13 @@ $form-field-horizontal-margin-mobile: 0;
 
 
 //
-// .form__plaintext-control
+// .form__plaintext
 //
-$form-plaintext-control-border: 1px solid transparent;
-$form-plaintext-control-color: $default-font-color;
-$form-plaintext-control-font-size: $default-font-size;
-$form-plaintext-control-font-weight: $default-font-weight;
-$form-plaintext-control-padding: 15px 0;
+$form-plaintext-border: 1px solid transparent;
+$form-plaintext-color: $default-font-color;
+$form-plaintext-font-size: $default-font-size;
+$form-plaintext-font-weight: $default-font-weight;
+$form-plaintext-padding: 15px 0;
 
 
 //
@@ -232,12 +232,12 @@ label.error {
         margin: $form-label-margin;
     }
 
-    &__plaintext-control {
-        border: $form-plaintext-control-border;
-        color: $form-plaintext-control-color;
-        font-size: $form-plaintext-control-font-size;
-        font-weight: $form-plaintext-control-font-weight;
-        padding: $form-plaintext-control-padding;
+    &__plaintext {
+        border: $form-plaintext-border;
+        color: $form-plaintext-color;
+        font-size: $form-plaintext-font-size;
+        font-weight: $form-plaintext-font-weight;
+        padding: $form-plaintext-padding;
         width: 100%;
     }
     

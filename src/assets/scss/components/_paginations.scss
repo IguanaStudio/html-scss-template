@@ -82,7 +82,7 @@ $pagination-list-item-next-prev-font-size: $pagination-font-size;
         
         &.is-disabled {
             opacity: $pagination-list-item-opacity-disabled;
-            @extend .disabled;
+            @extend %disabled;
         }
         
         &.is-active {

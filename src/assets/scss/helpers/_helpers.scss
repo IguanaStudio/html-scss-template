@@ -1160,7 +1160,7 @@ $spacing-values: 10 20 30 40 50;
 // clearfix
 //
 .clearfix {
-    @include clearfix;
+    @extend %clearfix;
 }
 
 //
@@ -1175,20 +1175,11 @@ $spacing-values: 10 20 30 40 50;
 // disabled scroll
 //
 .disabled-scroll {
-    height: 100%;
-    overflow: hidden;
-    width: 100%;
-    position: fixed;
+    @extend %disabled-scroll;
 }
 
 .disabled {
-	pointer-events: none;
-	-webkit-touch-callout: none;
-	user-select: none;
-    
-    &--opacity {
-        opacity: .5;
-    }
+	@extend %disabled;
 }
 
 //
@@ -1277,7 +1268,8 @@ $spacing-values: 10 20 30 40 50;
 		bottom: 0;
 		left: 0;
 		z-index: 100;
-		background: #fff url("../img/preloader.gif") no-repeat center center;
+		background: #fff url("../img/preloader.svg") no-repeat center center;
+        background-size: 60px 60px;
 	}
 
 	&.is-loaded {

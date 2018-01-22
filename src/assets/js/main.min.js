@@ -20,7 +20,7 @@ $(function() {
 
 		$('.js-magnific').fancybox();
 		
-		/*$(document).on('click', '.js-modal', function(e) {
+		$(document).on('click', '.js-modal', function(e) {
 			var modal = $(this).data('modal');
             
 			if ($(modal).length)
@@ -28,7 +28,7 @@ $(function() {
 				openModal(modal, $(this));
 				e.preventDefault();
 			}
-		});*/
+		});
 		
 		$(document).on('click', '.js-modal-close', function(e) {
 			e.preventDefault();
@@ -39,7 +39,7 @@ $(function() {
             parent.jQuery.fancybox.getInstance().close();
         });
 		
-		/*function openModal(src, $trigger)
+		function openModal(src, $trigger)
         {
             $.fancybox.close();
 			$.fancybox.open({
@@ -56,7 +56,7 @@ $(function() {
 					}
 				}
 			});
-        }*/
+        }
         
         if (window.location.hash !== '') {
             if ($(window.location.hash+'-modal').length) {
@@ -220,6 +220,34 @@ $(function() {
         jumper($(this).data('target'), $(this).data('offset'));
         e.preventDefault();
     });
+    
+    var prevWindowMode = null,
+        windowWidth = $(window).width();
+    
+    $(window).on('resize.rwd', function(e) {
+    	var windowMode = 0;
+        
+    	windowWidth = $(window).width();
+    	
+    	if (windowWidth > 1199) {
+    		windowMode = 0;
+        } else {
+    		windowMode = 1;
+    	}
+    	
+        if (windowMode != prevWindowMode)
+        {
+            prevWindowMode = windowMode;
+            switch (windowMode)
+            {
+                case 0:
+                    $('html').removeClass('is-menu-open');
+                    break;
+                 case 1:
+                    break;
+            }
+        } 
+    }).trigger('resize.rwd');
 
     
     shadowTop();
@@ -262,6 +290,6 @@ function jumper(target, offset) {
     offset = ($.isNumeric(parseInt(offset)) ? parseInt(offset) : 0);
     
     $('html, body').animate({
-        scrollTop: $(target).offset().top+offset
+        scrollTop: $(target).offset().top + offset
     }, 1000);
 }
