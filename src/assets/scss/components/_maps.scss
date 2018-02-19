@@ -1,4 +1,8 @@
 .map {
 	background: #fff url("../img/preloader.svg") no-repeat center center;
     background-size: 60px 60px;
+    z-index: 300;
+    width: 100%;
+    min-height: 400px;
+    //margin-bottom: 40px;
 }
