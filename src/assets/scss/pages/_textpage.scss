@@ -1,0 +1,46 @@
+.textpage {
+
+    &__tabs {
+        background-color: #f1f5f7;
+    }
+
+    &__gallery {
+        padding-top:30px;
+    }
+}
+
+.textpage-container {
+    background-color: white;
+    border-radius: 4px;
+    border: 0 solid #dfdfdf;
+    padding: 30px;
+
+    .wysiwyg {
+        text-align: justify;
+        p {
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        ol, ul {
+            li {
+                font-size: 13px;
+
+                &::before {
+                    font-size: 10px;
+                    top: 2px;
+                }
+            }
+        }
+
+        table tr, th, td {
+            font-size: 10px;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        table th {
+            padding: 2px 15px;
+        }
+    }
+}
