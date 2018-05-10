@@ -1180,6 +1180,10 @@ $spacing-values: 10 20 30 40 50;
 
 .disabled {
 	@extend %disabled;
+	
+	&--opacity {
+		opacity: .5;
+	}
 }
 
 //
