@@ -8,6 +8,11 @@
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
+  
+  @include screen(360px, $xxs-max) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 
 .row {
